@@ -1,3 +1,4 @@
+import AdminPacientes from "./pages/AdminPacientes"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-      
+      <AdminPacientes />
     </>
   )
 }
