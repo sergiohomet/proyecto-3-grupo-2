@@ -35,43 +35,43 @@ const FormularioPacientes = () => {
         <h5 className="mb-3 font-bold">Datos del propietario</h5>
         <div className="mb-2">
           <label
-            htmlFor="nombre"
+            htmlFor="name"
             className="block text-gray-700 uppercase font-bold text-start"
           >
             Nombre
           </label>
           <input
-            id="nombre"
+            id="name"
             type="text"
-            name="nombre"
+            name="name"
             placeholder="Ejemplo: Nicolas, Matias, etc"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("nombre")}
+            {...register("name")}
           />
-          {errors.nombre?.message && (
+          {errors.name?.message && (
             <Error>
-              <p>{errors.nombre.message}</p>
+              <p>{errors.name.message}</p>
             </Error>
           )}
         </div>
         <div className="mb-2">
           <label
-            htmlFor="apellido"
+            htmlFor="lastname"
             className="block text-gray-700 uppercase font-bold text-start"
           >
             Apellido
           </label>
           <input
-            id="apellido"
+            id="lastname"
             type="text"
-            name="apellido"
+            name="lastname"
             placeholder="Ejemplo: Rodriguez, Navarro, Burgos, etc"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("apellido")}
+            {...register("lastname")}
           />
-          {errors.apellido?.message && (
+          {errors.lastname?.message && (
             <Error>
-              <p>{errors.apellido.message}</p>
+              <p>{errors.lastname.message}</p>
             </Error>
           )}
         </div>
@@ -98,22 +98,22 @@ const FormularioPacientes = () => {
         </div>
         <div className="mb-2">
           <label
-            htmlFor="telefono"
+            htmlFor="phone"
             className="block text-gray-700 uppercase font-bold text-start"
           >
             Telefono
           </label>
           <input
-            id="telefono"
+            id="phone"
             type="text"
-            name="telefono"
+            name="phone"
             placeholder="Ejemplo: 3813414*** (Sin 0 ni 15)"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("telefono")}
+            {...register("phone")}
           />
-          {errors.telefono?.message && (
+          {errors.phone?.message && (
             <Error>
-              <p>{errors.telefono.message}</p>
+              <p>{errors.phone.message}</p>
             </Error>
           )}
         </div>
@@ -121,64 +121,64 @@ const FormularioPacientes = () => {
         <h5 className="mt-4 font-bold">Datos de la mascota</h5>
         <div className="mb-2">
           <label
-            htmlFor="mascota"
+            htmlFor="pet"
             className="block text-gray-700 uppercase font-bold text-start"
           >
             Mascota
           </label>
           <input
-            id="mascota"
+            id="pet"
             type="text"
-            name="mascota"
+            name="pet"
             placeholder="Ejemplo: Hook"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("mascota")}
+            {...register("pet")}
           />
-          {errors.mascota?.message && (
+          {errors.pet?.message && (
             <Error>
-              <p>{errors.mascota.message}</p>
+              <p>{errors.pet.message}</p>
             </Error>
           )}
         </div>
         <div className="mb-2">
           <label
-            htmlFor="especie"
+            htmlFor="kind"
             className="block text-gray-700 uppercase font-bold text-start"
           >
             Especie
           </label>
           <input
-            id="especie"
+            id="kind"
             type="text"
-            name="especie"
+            name="kind"
             placeholder="Ejemplo: Perro, gato, etc"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("especie")}
+            {...register("kind")}
           />
-          {errors.especie?.message && (
+          {errors.kind?.message && (
             <Error>
-              <p>{errors.especie.message}</p>
+              <p>{errors.kind.message}</p>
             </Error>
           )}
         </div>
         <div className="mb-2">
           <label
-            htmlFor="raza"
+            htmlFor="breed"
             className="block text-gray-700 uppercase font-bold text-start"
           >
             Raza
           </label>
           <input
-            id="raza"
+            id="breed"
             type="text"
-            name="raza"
+            name="breed"
             placeholder="Ejemplo: Bulldog, sharpei, firulais, etc"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("raza")}
+            {...register("breed")}
           />
-          {errors.raza?.message && (
+          {errors.breed?.message && (
             <Error>
-              <p>{errors.raza.message}</p>
+              <p>{errors.breed.message}</p>
             </Error>
           )}
         </div>
