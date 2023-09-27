@@ -3,7 +3,7 @@ import Paciente from "./Paciente"
 
 const ListadoPaciente = () => {
   return (
-    <div className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll'>
+    <div className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll mt-3 md:mt-0'>
 
         {pacientes && pacientes.length ? (
         <>
@@ -11,7 +11,7 @@ const ListadoPaciente = () => {
 
             <p className='text-lg'>
             Administra tus {''}
-            <span className='text-indigo-600 font-bold text-xl'>Pacientes y Citas</span>
+            <span className='text-indigo-600 font-bold text-xl'>Pacientes</span>
             </p>
 
             { pacientes.map( (paciente) =>

@@ -1,31 +1,37 @@
 import React from "react";
 
 const Paciente = ({ paciente }) => {
-  const { mascota, propietario, email, alta, sintomas } = paciente;
+  const { nombre, apellido, email, telefono, mascota, especie, raza } =
+    paciente;
 
   return (
     <div className="bg-white shadow-md mx-5 md:mx-0 mr-5 rounded-xl px-5 py-4 text-start mb-3">
-      <p className="font-bold mb-3 text-gray-700 uppercase">
-        Nombre de la Mascota:{" "}
-        <span className="font-normal normal-case">{mascota}</span>
+      <h5 className="text-center font-bold">Datos del dueño</h5>
+      <p className="font-bold mb-1 text-gray-700 uppercase">
+        Nombre: <span className="font-normal normal-case">{nombre}</span>
       </p>
-      <p className="font-bold mb-3 text-gray-700 uppercase">
-        Propietario:{" "}
-        <span className="font-normal normal-case">{propietario}</span>
+      <p className="font-bold mb-1 text-gray-700 uppercase">
+        Apellido: <span className="font-normal normal-case">{apellido}</span>
       </p>
-      <p className="font-bold mb-3 text-gray-700 uppercase">
+      <p className="font-bold mb-1 text-gray-700 uppercase">
         Email: <span className="font-normal normal-case">{email}</span>
       </p>
-      <p className="font-bold mb-3 text-gray-700 uppercase">
-        Fecha de Alta:{" "}
-        <span className="font-normal normal-case">{alta}</span>
-      </p>
-      <p className="font-bold mb-3 text-gray-700 uppercase">
-        Síntomas:{" "}
-        <span className="font-normal normal-case">{sintomas}</span>
+      <p className="font-bold mb-1 text-gray-700 uppercase">
+        Teléfono: <span className="font-normal normal-case">{telefono}</span>
       </p>
 
-      <div>
+      <h5 className="text-center my-2 font-bold">Datos de la mascota</h5>
+      <p className="font-bold mb-1 text-gray-700 uppercase">
+        Nombre: <span className="font-normal normal-case">{mascota}</span>
+      </p>
+      <p className="font-bold mb-1 text-gray-700 uppercase">
+        Especie: <span className="font-normal normal-case">{especie}</span>
+      </p>
+      <p className="font-bold mb-1 text-gray-700 uppercase">
+        Raza: <span className="font-normal normal-case">{raza}</span>
+      </p>
+
+      <div className="mt-3">
         <button
           type="button"
           className="bg-blue-700 hover:bg-blue-800 px-4 py-2 mr-2 text-white font-bold rounded transition-all"

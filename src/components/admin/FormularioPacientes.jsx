@@ -1,19 +1,22 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { PACIENTES_SCHEMA } from "../../helpers/validationSchema";
+import { PACIENTE_SCHEMA } from "../../helpers/validationSchema";
 import Error from "../Error";
 
 const FormularioPacientes = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(PACIENTES_SCHEMA),
+    resolver: yupResolver(PACIENTE_SCHEMA)
   });
 
   const onSubmit = (data) => {
     console.log(data);
+
+    reset();
   };
 
   return (
@@ -29,45 +32,46 @@ const FormularioPacientes = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white shadow-md rounded-lg py-3 px-3"
       >
+        <h5 className="mb-3 font-bold">Datos del propietario</h5>
         <div className="mb-2">
           <label
-            htmlFor="mascota"
+            htmlFor="nombre"
             className="block text-gray-700 uppercase font-bold text-start"
           >
-            Nombre Mascota
+            Nombre
           </label>
           <input
-            id="mascota"
+            id="nombre"
             type="text"
-            name="mascota"
-            placeholder="Nombre de la mascota"
+            name="nombre"
+            placeholder="Ejemplo: Nicolas, Matias, etc"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("mascota")}
+            {...register("nombre")}
           />
-          {errors.mascota?.message && (
+          {errors.nombre?.message && (
             <Error>
-              <p>{errors.mascota.message}</p>
+              <p>{errors.nombre.message}</p>
             </Error>
           )}
         </div>
         <div className="mb-2">
           <label
-            htmlFor="propietario"
+            htmlFor="apellido"
             className="block text-gray-700 uppercase font-bold text-start"
           >
-            Nombre Propietario
+            Apellido
           </label>
           <input
-            id="propietario"
+            id="apellido"
             type="text"
-            name="propietario"
-            placeholder="Nombre del propietario"
+            name="apellido"
+            placeholder="Ejemplo: Rodriguez, Navarro, Burgos, etc"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("propietario")}
+            {...register("apellido")}
           />
-          {errors.propietario?.message && (
+          {errors.apellido?.message && (
             <Error>
-              <p>{errors.propietario.message}</p>
+              <p>{errors.apellido.message}</p>
             </Error>
           )}
         </div>
@@ -82,7 +86,7 @@ const FormularioPacientes = () => {
             id="email"
             type="email"
             name="username"
-            placeholder="Email Contacto"
+            placeholder="Ejemplo: correo@correo.com"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
             {...register("username")}
           />
@@ -94,41 +98,87 @@ const FormularioPacientes = () => {
         </div>
         <div className="mb-2">
           <label
-            htmlFor="alta"
+            htmlFor="telefono"
             className="block text-gray-700 uppercase font-bold text-start"
           >
-            Fecha de alta
+            Telefono
           </label>
           <input
-            id="alta"
-            type="date"
-            name="alta"
+            id="telefono"
+            type="text"
+            name="telefono"
+            placeholder="Ejemplo: 3813414*** (Sin 0 ni 15)"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            {...register("alta")}
+            {...register("telefono")}
           />
-          {errors.alta?.message && (
+          {errors.telefono?.message && (
             <Error>
-              <p>{errors.alta.message}</p>
+              <p>{errors.telefono.message}</p>
+            </Error>
+          )}
+        </div>
+
+        <h5 className="mt-4 font-bold">Datos de la mascota</h5>
+        <div className="mb-2">
+          <label
+            htmlFor="mascota"
+            className="block text-gray-700 uppercase font-bold text-start"
+          >
+            Mascota
+          </label>
+          <input
+            id="mascota"
+            type="text"
+            name="mascota"
+            placeholder="Ejemplo: Hook"
+            className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
+            {...register("mascota")}
+          />
+          {errors.mascota?.message && (
+            <Error>
+              <p>{errors.mascota.message}</p>
             </Error>
           )}
         </div>
         <div className="mb-2">
           <label
-            htmlFor="sintomas"
+            htmlFor="especie"
             className="block text-gray-700 uppercase font-bold text-start"
           >
-            Síntomas
+            Especie
           </label>
-          <textarea
-            id="sintomas"
-            name="sintomas"
+          <input
+            id="especie"
+            type="text"
+            name="especie"
+            placeholder="Ejemplo: Perro, gato, etc"
             className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
-            placeholder="Describe los Síntomas..."
-            {...register("sintomas")}
+            {...register("especie")}
           />
-          {errors.sintomas?.message && (
+          {errors.especie?.message && (
             <Error>
-              <p>{errors.sintomas.message}</p>
+              <p>{errors.especie.message}</p>
+            </Error>
+          )}
+        </div>
+        <div className="mb-2">
+          <label
+            htmlFor="raza"
+            className="block text-gray-700 uppercase font-bold text-start"
+          >
+            Raza
+          </label>
+          <input
+            id="raza"
+            type="text"
+            name="raza"
+            placeholder="Ejemplo: Bulldog, sharpei, firulais, etc"
+            className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
+            {...register("raza")}
+          />
+          {errors.raza?.message && (
+            <Error>
+              <p>{errors.raza.message}</p>
             </Error>
           )}
         </div>
