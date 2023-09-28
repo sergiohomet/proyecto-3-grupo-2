@@ -1,34 +1,34 @@
 import React from "react";
 
 const Paciente = ({ paciente }) => {
-  const { nombre, apellido, email, telefono, mascota, especie, raza } =
-    paciente;
+  const { name, lastname, email, phone, pet, kind, breed } = paciente;
 
   return (
-    <div className="bg-white shadow-md mx-5 md:mx-0 mr-5 rounded-xl px-5 py-4 text-start mb-3">
+    <>
+      <div className="bg-white shadow-md mx-5 md:mx-0 mr-5 rounded-xl px-5 py-4 text-start mb-3">
       <h5 className="text-center font-bold">Datos del dueño</h5>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Nombre: <span className="font-normal normal-case">{nombre}</span>
+        Nombre: <span className="font-normal normal-case mt">{name}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Apellido: <span className="font-normal normal-case">{apellido}</span>
+        Apellido: <span className="font-normal normal-case">{lastname}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
         Email: <span className="font-normal normal-case">{email}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Teléfono: <span className="font-normal normal-case">{telefono}</span>
+        Teléfono: <span className="font-normal normal-case">{phone}</span>
       </p>
 
       <h5 className="text-center my-2 font-bold">Datos de la mascota</h5>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Nombre: <span className="font-normal normal-case">{mascota}</span>
+        Nombre: <span className="font-normal normal-case">{pet}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Especie: <span className="font-normal normal-case">{especie}</span>
+        Especie: <span className="font-normal normal-case">{kind}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Raza: <span className="font-normal normal-case">{raza}</span>
+        Raza: <span className="font-normal normal-case">{breed}</span>
       </p>
 
       <div className="mt-3">
@@ -46,6 +46,7 @@ const Paciente = ({ paciente }) => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 
