@@ -1,25 +1,25 @@
-import { pacientes } from "../../helpers/data";
-import Paciente from "./Paciente";
+import { turnos } from "../../helpers/data";
+import Turnos from "./Turnos";
 
-const ListadoPaciente = () => {
+const ListadoTurnos = () => {
   return (
     <>
       <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll mt-3 md:mt-0">
-        {pacientes && pacientes.length ? (
+        {turnos && turnos.length ? (
           <>
             <h2 className="font-black text-3xl text-center">
-              Listado Pacientes
+              Listado turnos
             </h2>
 
             <p className="text-lg">
-              Administra tus {""}
+              Administra los {""}
               <span className="text-indigo-600 font-bold text-xl">
-                Pacientes
+                turnos
               </span>
             </p>
 
-            {pacientes.map((paciente) => (
-              <Paciente key={paciente.id} paciente={paciente} />
+            {turnos.map((turno) => (
+              <Turnos key={turno.id} turno={turno} />
             ))}
           </>
         ) : (
@@ -29,7 +29,7 @@ const ListadoPaciente = () => {
             </h2>
 
             <p className="text-lg mt-5 mb-5">
-              Comienza agregado pacientes {""}
+              Comienza agregado turnos {""}
               <span className="text-indigo-600 font-bold text-xl">
                 y aparecerán en este lugar
               </span>
@@ -41,4 +41,4 @@ const ListadoPaciente = () => {
   );
 };
 
-export default ListadoPaciente;
+export default ListadoTurnos;

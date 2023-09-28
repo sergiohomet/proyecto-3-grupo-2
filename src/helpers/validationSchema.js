@@ -41,3 +41,17 @@ export const PACIENTE_SCHEMA = yup.object({
     .min(2, "Minimo 2 caracteres")
     .max(10, "Maximo 10 caracteres"),
 });
+
+export const TURNOS_SCHEMA = yup.object({
+  id: yup.string().default(() => Math.random().toString(36).substring(7)),
+
+  vet: yup.string().required('Seleccione un veterinario'),
+  pet: yup
+    .string()
+    .required("El nombre de la mascota es obligatorio")
+    .min(2, "Minimo 2 caracteres")
+    .max(10, "Maximo 10 caracteres"),
+  date: yup.string().required('Seleccione una fecha'),
+  hour: yup.string().required('Seleccione una hora'),
+  details: yup.string().required('Los detalles son obligatorios'),
+})

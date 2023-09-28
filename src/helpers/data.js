@@ -50,3 +50,46 @@ export const pacientes = [
     breed: "German Shepherd",
   },
 ];
+
+export const turnos = [
+  {
+    vet: "Dr. Jack",
+    pet: "Rocky",
+    date: "2021-01-01",
+    hour: "10:00 AM",
+    details: "appointment details 1",
+    id: 1,
+  },
+  {
+    vet: "Dr. Lisa",
+    pet: "Jack",
+    date: "2021-01-02",
+    hour: "11:00 AM",
+    details: "appointment details 2",
+    id: 2,
+  },
+  {
+    vet: "Dr. Jack",
+    pet: "Luna",
+    date: "2021-01-03",
+    hour: "12:00 PM",
+    details: "appointment details 3",
+    id: 3,
+  },
+  {
+    vet: "Dr. Lisa",
+    pet: "Charlie",
+    date: "2021-01-04",
+    hour: "13:00 PM",
+    details: "appointment details 4",
+    id: 4,
+  },
+  {
+    vet: "Dr. Jack",
+    pet: "Joe",
+    date: "2021-01-05",
+    hour: "14:00 PM",
+    details: "appointment details 5",
+    id: 5,
+  },
+];
