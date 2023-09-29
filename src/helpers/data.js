@@ -23,7 +23,7 @@ export const pacientes = [
     id: 3,
     name: "Michael",
     lastname: "Johnson",
-    email: "michaeljohnson@example.com",
+    email: "michaeljohn@example.com",
     phone: 4567891230,
     pet: "Charlie",
     kind: "Dog",

@@ -6,7 +6,7 @@ const CarrouselPacientesCard = ({ paciente }) => {
   return (
     <>
       <div className="container">
-        <Card className="mt-6 w-full md:w-96 mx-auto mb-3">
+        <Card className="w-fit lg:w-9/12 mb-5 flex mx-auto">
           <CardBody>
             <div className="text-start">
               <h5 className="text-center font-bold text-dark">

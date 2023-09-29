@@ -5,7 +5,7 @@ import CarrouselTurnos from '../components/admin/CarrouselTurnos'
 const AdminIndex = () => {
   return (
     <>
-        <div className='mx-auto text-center w-full'>
+        <div className='mx-auto text-center w-full mb-4'>
             <h1 className='text-center'>
                 Administración de {''}
                 <br />

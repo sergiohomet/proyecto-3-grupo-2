@@ -6,9 +6,7 @@ import CarrouselTurnosCard from "./CarrouselTurnosCard";
 import useScreenSize from "../../hooks/useScreenSize";
 
 const CarrouselTurnos = () => {
-  const { width, height } = useScreenSize();
-
-  console.log(`width ${width} - height ${height}`);
+  const { width } = useScreenSize();
 
   const grupoTurnos = [];
   for (let i = 0; i < turnos.length; i += 3) {
