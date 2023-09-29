@@ -49,6 +49,16 @@ export const pacientes = [
     kind: "Dog",
     breed: "German Shepherd",
   },
+  {
+    id: 6,
+    name: "Joe",
+    lastname: "Mama",
+    email: "davidmiller@example.com",
+    phone: 3216549870,
+    pet: "Rocky",
+    kind: "Dog",
+    breed: "German Shepherd",
+  },
 ];
 
 export const turnos = [
@@ -91,5 +101,13 @@ export const turnos = [
     hour: "14:00 PM",
     details: "appointment details 5",
     id: 5,
+  },
+  {
+    vet: "Dr. Jack",
+    pet: "Joe",
+    date: "2021-01-05",
+    hour: "14:00 PM",
+    details: "appointment details 5",
+    id: 6,
   },
 ];
