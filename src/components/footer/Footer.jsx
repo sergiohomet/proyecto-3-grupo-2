@@ -1,41 +1,43 @@
 import React from 'react'
-
-
+import styled from "styled-components";
 
 const Footer = () => {
     return (
-      <div className='main-footer'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-3 col-sm-6'>
-              <h4>Lorem, ipsum.</h4>
-              <ul className='list-unstyled'>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div className='col-md-3 col-sm-6'>
-              <h4>Lorem, ipsum.</h4>
-              <ul className='list-unstyled'>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            
+      <div className="main-footer">
+        <div className="footer-middle">
+          <div className="container">
+            <div className="row">
+               {/*comlumna 1 */}
+              <div className="col-md-3 col-sm-6">
+                <h4>Lorem, ipsum.</h4>
+                <ul className="list-unstyled">
+                  <li>Acerca de Nosotros</li>
+                  <li>telefono de contacto</li>
+                  <li>ubicacion</li>
+                  <li>correo electronico</li>
   
-          </div>
-          {/*boton del footer*/}
-          <div className='footer-bottom'>
-            <p className='text-xs-enter'>
-            &copy;{new Date().getFullYear()}  Esta pagina es del equipo 2
-            </p>
+                </ul>
+              </div>
+              {/*columna 2*/}
+              <div className="col-md-3 col-sm-6">
+                <h4>redes sociales</h4>
+                <ul className="list-unstyled">
+                  <li>facebook</li>
+                  <li>instagram</li>
+                  <li>twiter</li>
+                </ul>
+              </div>
+            </div>
+            {/*boton del footer*/}
+            <div className="footer-bottom">
+              <p className="text-xs-enter">
+                &copy;{new Date().getFullYear()} Esta pagina es del equipo 2
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      
-    )
-  }
+    );
+  };
   
-  export default Footer
+  export default Footer;
