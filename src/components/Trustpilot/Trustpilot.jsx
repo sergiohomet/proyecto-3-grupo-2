@@ -1,5 +1,6 @@
 import React from "react";
-import TrustpilotCard from "./TrustpilotCard";
+
+import TrustpilotGrid from "./TrustpilotGrid";
 
 const Trustpilot = () => {
   return (
@@ -23,7 +24,7 @@ const Trustpilot = () => {
           </div>
         </div>
         <div className="col-8">
-          <TrustpilotCard />
+          <TrustpilotGrid />
         </div>
       </div>
     </>

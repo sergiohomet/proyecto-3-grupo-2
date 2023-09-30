@@ -1,4 +1,4 @@
-import Index from "./pages/Index";
+import Index from "./pages";
 import { Route, Routes } from "react-router-dom";
 import AdminPacientes from "./pages/AdminPacientes";
 import AdminTurnos from "./pages/AdminTurnos";
