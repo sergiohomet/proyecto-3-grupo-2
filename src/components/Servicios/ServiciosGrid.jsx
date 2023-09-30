@@ -5,13 +5,11 @@ import ServiciosCards from "./ServiciosCards";
 const ServiciosGrid = () => {
   return (
     <>
-      <div className="row">
-        {servicios.map((data) => (
-          <div className="col-6">
-            <ServiciosCards data={data} />
-          </div>
-        ))}
-      </div>
+      {servicios.map((data) => (
+        <div key={data.id} className="col-3">
+          <ServiciosCards data={data} key={data.id} />
+        </div>
+      ))}
     </>
   );
 };

@@ -1,7 +1,13 @@
 import React from "react";
 
 const Weather = () => {
-  return <div>Weather</div>;
+  return (
+    <>
+      <div className="card text-center">
+        <div className="card-body">Weather</div>
+      </div>
+    </>
+  );
 };
 
 export default Weather;

@@ -3,15 +3,15 @@ import React from "react";
 const ServiciosCards = ({ data }) => {
   return (
     <>
-      <div className="card w-75">
+      <div className="card">
         <img
-          variant="top"
+          variant=""
           src={data.imagen}
           alt={data.titulo}
           className="card-img"
         />
-        <div className="card-img-overlay">
-          <h5 className="card-title">{data.titulo}</h5>
+        <h6 className="card-title text-center">{data.titulo}</h6>
+        <div className="card-body">
           <p className="card-text">{data.descripcion}</p>
         </div>
       </div>
