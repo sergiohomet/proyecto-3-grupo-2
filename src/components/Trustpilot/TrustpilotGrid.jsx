@@ -1,9 +1,8 @@
 import React from "react";
 import TrustpilotCard from "./TrustpilotCard";
 import { Carousel, IconButton } from "@material-tailwind/react";
-import { review } from "../../data/reviews";
 
-const TrustpilotGrid = () => {
+const TrustpilotGrid = ({ review }) => {
   const reviewsGroups = [];
   for (let i = 0; i < review.length; i += 3) {
     reviewsGroups.push(review.slice(i, i + 3));

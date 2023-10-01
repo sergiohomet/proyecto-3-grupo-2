@@ -1,93 +1,171 @@
-export const review = [
+export const reviews = [
     //
     {
-        "name": "John Doe",
+        "name": "Juan Perez",
         "rating": 5,
-        "review": "Excelente atención y servicio en la veterinaria Patitas. Mi mascota recibió un tratamiento de calidad y los veterinarios fueron muy amables y profesionales. Recomiendo totalmente este lugar.",
-        "date": "June 1, 2024"
+        "title": "Excelente atención",
+        "review": "Me encantó la atención que recibimos en la veterinaria Patitas. El personal fue muy amable y profesional. Nuestro perro recibió el mejor cuidado y tratamiento. Estamos muy satisfechos con el servicio. Lo recomiendo totalmente.",
+        "date": "julio 2024",
+        "id": 5489
     },
     {
-        "name": "Maria Perez",
+        "name": "María Rodríguez",
         "rating": 4,
-        "review": "Me encanta la veterinaria Patitas. Siempre que llevo a mi perro, recibimos un trato amigable y eficiente. Los veterinarios son muy conocedores y siempre responden a todas mis preguntas. Estoy muy satisfecha con el servicio.",
-        "date": "July 10, 2024"
+        "title": "Muy recomendable",
+        "review": "Mi gato estuvo enfermo y lo llevé a la veterinaria Patitas. El veterinario fue muy atento y resolvió rápidamente el problema de mi mascota. Además, las instalaciones son limpias y modernas. Sin duda, volvería a llevar a mi gato allí.",
+        "date": "agosto 2024",
+        "id": 3196
     },
     {
-        "name": "Carlos Gutierrez",
+        "name": "Luisa Gómez",
         "rating": 5,
-        "review": "La veterinaria Patitas es simplemente increíble. Fui con mi gato para una consulta y quedé impresionado por la atención que recibimos. El personal es muy amable y se nota que realmente se preocupan por el bienestar de los animales. Sin duda, seguiré llevando a mis mascotas aquí.",
-        "date": "August 15, 2024"
+        "title": "Excelente servicio",
+        "review": "Quiero agradecer a la veterinaria Patitas por la excelente atención que le brindaron a mi perro. Fueron muy cuidadosos y cariñosos con él. Además, me explicaron todo detalladamente y me dieron consejos útiles para su cuidado. Los recomiendo 100%.",
+        "date": "septiembre 2024",
+        "id": 7425
     },
     {
-        "name": "Ana Ramirez",
+        "name": "Carlos Martínez",
         "rating": 5,
-        "review": "Patitas es la mejor veterinaria que he visitado. Los veterinarios son muy dedicados y se nota que aman a los animales. Siempre me han brindado un excelente servicio y han sabido resolver todas las necesidades de mis mascotas. Los recomiendo ampliamente.",
-        "date": "September 5, 2024"
+        "title": "La mejor veterinaria",
+        "review": "La veterinaria Patitas es la mejor que he encontrado. El personal es muy profesional y amable, siempre dispuestos a ayudar. Mi perro se siente cómodo y seguro en sus manos. Estoy muy satisfecho con el servicio que brindan.",
+        "date": "octubre 2024",
+        "id": 1567
     },
     {
-        "name": "Pedro Martinez",
+        "name": "Ana López",
         "rating": 4,
-        "review": "La veterinaria Patitas es altamente recomendable. El personal es muy atento y siempre están dispuestos a ayudar. Además, las instalaciones son modernas y cuentan con equipos de última tecnología. Mi perro siempre recibe una atención de primera calidad.",
-        "date": "October 20, 2024"
+        "title": "Buen trato",
+        "review": "Llevé a mi gato a la veterinaria Patitas y recibió un trato excelente. El veterinario fue muy amable y paciente, respondió todas mis preguntas y me dio recomendaciones para su cuidado. Estoy contenta con el servicio recibido.",
+        "date": "julio 2024",
+        "id": 4823
     },
     {
-        "name": "Luisa Fernandez",
+        "name": "José Silva",
         "rating": 5,
-        "review": "Siempre llevo a mis mascotas a la veterinaria Patitas y nunca me han decepcionado. El equipo es muy profesional y se nota que se preocupan por el bienestar de los animales. Además, siempre explican detalladamente los tratamientos y responden a todas mis preguntas.",
-        "date": "June 12, 2024"
-    },
-    {
-        "name": "Andres Lopez",
-        "rating": 5,
-        "review": "La veterinaria Patitas es la mejor de la ciudad. Los veterinarios son muy amables y conocedores. Mi perro ha recibido un excelente cuidado aquí y siempre salimos satisfechos. Recomiendo esta veterinaria a todos los dueños de mascotas.",
-        "date": "July 28, 2024"
+        "title": "Muy profesionales",
+        "review": "El equipo de la veterinaria Patitas es muy profesional y dedicado. Mi perro recibió una atención de calidad y se recuperó rápidamente. Estoy agradecido por el excelente servicio que brindan.",
+        "date": "agosto 2024",
+        "id": 6907
     },
     {
         "name": "Laura Torres",
+        "rating": 5,
+        "title": "Recomendados",
+        "review": "Recomiendo ampliamente la veterinaria Patitas. Mis dos perros han sido atendidos allí y siempre han recibido un trato excelente. Los veterinarios son muy conocedores y amables. Estoy muy contenta con el servicio.",
+        "date": "septiembre 2024",
+        "id": 8245
+    },
+    {
+        "name": "Fernando Ramírez",
         "rating": 4,
-        "review": "Estoy muy contenta con el servicio de la veterinaria Patitas. Siempre que llevo a mi gato, recibimos una atención amable y profesional. Los veterinarios son muy cuidadosos y siempre me dan recomendaciones útiles. Sin duda, seguiré confiando en ellos.",
-        "date": "August 8, 2024"
+        "title": "Buen centro veterinario",
+        "review": "La veterinaria Patitas es un buen centro veterinario. El personal es atento y las instalaciones son modernas. Mi perro recibió un buen cuidado y tratamiento. Sin embargo, a veces hay que esperar un poco más de lo esperado.",
+        "date": "octubre 2024",
+        "id": 4371
     },
     {
-        "name": "Roberto Vargas",
+        "name": "Sofía Herrera",
         "rating": 5,
-        "review": "La veterinaria Patitas es mi lugar favorito para llevar a mis mascotas. El personal es muy experto y siempre se preocupan por el bienestar de los animales. Han ayudado a mis perros en varias ocasiones y siempre han tenido soluciones efectivas.",
-        "date": "September 18, 2024"
+        "title": "Increíble atención",
+        "review": "La atención que recibimos en la veterinaria Patitas fue increíble. El personal fue muy amable y se tomaron el tiempo para explicarnos todo detalladamente. Nuestro perro quedó en buenas manos y estamos muy agradecidos.",
+        "date": "julio 2024",
+        "id": 2098
     },
     {
-        "name": "Isabel Gomez",
+        "name": "Andrés González",
         "rating": 5,
-        "review": "Mi experiencia en la veterinaria Patitas ha sido excelente. Los veterinarios son muy amigables y atentos. Siempre explican detalladamente los tratamientos y se aseguran de que todas mis dudas sean resueltas. Estoy muy satisfecha con el servicio que brindan.",
-        "date": "October 5, 2024"
+        "title": "Servicio de calidad",
+        "review": "La veterinaria Patitas ofrece un servicio de calidad. El personal es muy profesional y los veterinarios son expertos en su campo. Mi gato recibió una excelente atención y se recuperó rápidamente. Los recomiendo sin duda alguna.",
+        "date": "agosto 2024",
+        "id": 9532
     },
     {
-        "name": "Daniel Cruz",
+        "name": "Valentina Castro",
         "rating": 4,
-        "review": "La veterinaria Patitas ha sido de gran ayuda para el cuidado de mis mascotas. Siempre que necesito una consulta o un tratamiento, encuentro el apoyo que requiero. Los veterinarios son muy profesionales y se nota que aman a los animales.",
-        "date": "June 28, 2024"
+        "title": "Buen servicio",
+        "review": "Llevo a mi perro a la veterinaria Patitas desde hace varios años y siempre hemos recibido un buen servicio. Los veterinarios son amables y conocedores. Sin embargo, a veces hay que esperar un poco más de lo deseado.",
+        "date": "septiembre 2024",
+        "id": 3749
     },
     {
-        "name": "Mariana Sanchez",
+        "name": "Roberto Guzmán",
         "rating": 5,
-        "review": "La veterinaria Patitas es simplemente maravillosa. Los veterinarios son muy dedicados y se toman el tiempo para explicar todo detalladamente. Siempre me han brindado un excelente servicio y han cuidado de mis mascotas con mucho cariño.",
-        "date": "July 15, 2024"
+        "title": "Excelente atención al cliente",
+        "review": "Además de brindar una excelente atención a nuestras mascotas, la veterinaria Patitas también se preocupa por el bienestar del cliente. Siempre son amables y responden todas nuestras preguntas. Estoy muy satisfecho con el servicio recibido.",
+        "date": "octubre 2024",
+        "id": 6128
     },
     {
-        "name": "Ricardo Romero",
+        "name": "Carolina Vargas",
         "rating": 5,
-        "review": "Recomiendo ampliamente la veterinaria Patitas. El personal es muy amable y siempre se aseguran de que mis mascotas reciban la atención que necesitan. Además, las instalaciones son muy limpias y modernas. Estoy muy satisfecho con el servicio recibido.",
-        "date": "August 22, 2024"
+        "title": "Muy recomendado",
+        "review": "Recomiendo ampliamente la veterinaria Patitas. El personal es muy amable y los veterinarios son muy profesionales. Mi perro recibió un excelente cuidado y tratamiento. Estoy muy agradecida por su atención.",
+        "date": "julio 2024",
+        "id": 7386
     },
     {
-        "name": "Silvia Ortiz",
+        "name": "Diego Morales",
         "rating": 4,
-        "review": "La veterinaria Patitas es mi opción número uno en cuanto a cuidado de mascotas. Los veterinarios son muy amigables y siempre se preocupan por el bienestar de los animales. Han ayudado a mi perro en varias ocasiones y siempre han sido efectivos.",
-        "date": "September 10, 2024"
+        "title": "Buen trato y servicio",
+        "review": "La veterinaria Patitas ofrece un trato amable y un servicio de calidad. Mi gato fue atendido rápidamente y recibió el mejor cuidado. Sin embargo, a veces hay una pequeña demora en la atención.",
+        "date": "agosto 2024",
+        "id": 1947
     },
     {
-        "name": "Hector Morales",
+        "name": "Natalia Ríos",
         "rating": 5,
-        "review": "La veterinaria Patitas es simplemente excepcional. El personal es muy profesional y siempre se aseguran de que mis mascotas reciban el mejor cuidado. Los veterinarios son muy conocedores y siempre tienen respuesta para todas mis preguntas.",
-        "date": "October 30, 2024"
+        "title": "Excelente veterinaria",
+        "review": "La veterinaria Patitas es excelente. El personal es muy amable y los veterinarios son expertos en su campo. Mi perro recibió un trato excepcional y se recuperó rápidamente. Los recomiendo completamente.",
+        "date": "septiembre 2024",
+        "id": 5684
+    },
+    {
+        "name": "Gabriel Castro",
+        "rating": 5,
+        "title": "Muy buen servicio",
+        "review": "Llevo a mis dos perros a la veterinaria Patitas y siempre han recibido un muy buen servicio. Los veterinarios son amables y conocedores. Estoy muy satisfecho con el cuidado que brindan a mis mascotas.",
+        "date": "octubre 2024",
+        "id": 8256
+    },
+    {
+        "name": "Isabella Fernández",
+        "rating": 4,
+        "title": "Buena atención",
+        "review": "La veterinaria Patitas ofrece una buena atención a nuestras mascotas. Mi perro fue examinado minuciosamente y recibió un cuidado adecuado. Sin embargo, a veces hay una pequeña demora en la atención.",
+        "date": "julio 2024",
+        "id": 9653
+    },
+    {
+        "name": "Javier Méndez",
+        "rating": 5,
+        "title": "Atención personalizada",
+        "review": "La veterinaria Patitas brinda una atención personalizada y de calidad. Los veterinarios se preocupan genuinamente por la salud y bienestar de las mascotas. Estoy muy contento con el servicio recibido.",
+        "date": "agosto 2024",
+        "id": 3087
+    },
+    {
+        "name": "Camila Montenegro",
+        "rating": 5,
+        "title": "Servicio excepcional",
+        "review": "La veterinaria Patitas ofrece un servicio excepcional. El personal es muy amable y los veterinarios son expertos en su campo. Mi gato recibió una atención de primera y se recuperó rápidamente. Los recomiendo ampliamente.",
+        "date": "septiembre 2024",
+        "id": 7412
+    },
+    {
+        "name": "Daniel López",
+        "rating": 4,
+        "title": "Buen servicio en general",
+        "review": "La veterinaria Patitas ofrece un buen servicio en general. Los veterinarios son amables y conocedores. Mi perro recibió un buen cuidado y tratamiento. Sin embargo, a veces hay una pequeña demora en la atención.",
+        "date": "octubre 2024",
+        "id": 4932
+    },
+    {
+        "name": "John",
+        "rating": 5,
+        "title": "Excelente servicio",
+        "review": "Tuve una experiencia maravillosa en la veterinaria Patitas. El personal fue amable y atento, y mi mascota recibió un excelente cuidado. Recomiendo totalmente esta veterinaria.",
+        "date": "September 2024",
+        "id": 1234
     }
 ]

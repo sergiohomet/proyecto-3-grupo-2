@@ -1,21 +1,27 @@
 import React from "react";
 import { Card, CardBody } from "@material-tailwind/react";
+import { getStars } from "../../helpers/trustpilot";
 
 const TrustpilotCard = ({ review }) => {
   return (
     <>
-      <Card className=" mb-5">
+      <Card className="">
         <CardBody>
           <div className="row">
-            <div className="col-6">rating</div>
-            <div className="col-6">date</div>
+            <div className="col-6">
+              <img
+                src={`https://res.cloudinary.com/dhvgi2cmq/image/upload/v1696120142/patitas/trustPilotStars/${review.rating}.png`}
+                alt="stars"
+              />
+            </div>
+            <div className="col-6">{review.date}</div>
           </div>
           <div className="text-start">
             <p className="font-bold text-dark mb-1 text-gray-700">
-              Titulo de la review
+              {review.title}
             </p>
-            <p className="font-normal">detalles de la review</p>
-            <p className="font-normal">usuario</p>
+            <p className="font-normal">{review.review}</p>
+            <p className="font-normal">{review.name}</p>
           </div>
         </CardBody>
       </Card>

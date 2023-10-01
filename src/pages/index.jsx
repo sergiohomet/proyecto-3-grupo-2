@@ -40,7 +40,7 @@ const Index = () => {
           <PlanesGrid />
         </div>
       </div>
-      <div className="container mb-5">
+      <div className="container-fluid mb-5">
         <h3>Opiniones verificadas sobre Patitas</h3>
         <div className="">
           <Trustpilot />
