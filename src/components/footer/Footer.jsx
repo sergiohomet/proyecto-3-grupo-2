@@ -7,6 +7,13 @@ const Footer = () => {
         <div className="footer-middle">
           <div className="container">
             <div className="row">
+
+            <div className="col-md-3 col-sm-6 mx-auto">
+            <ul className="list-unstyled">
+                <li><img src='./public/patitas_logo.png'width={'120'} alt="" ></img></li>
+                </ul>
+            </div>
+
                {/*comlumna 1 */}
               <div className="col-md-3 col-sm-6 mx-auto">
                 <h4>Veterinaria Patitas</h4>
@@ -22,10 +29,10 @@ const Footer = () => {
               <div className="col-md-3 col-sm-6 mx-auto">
                 <h4>redes sociales</h4>
                 <ul className="list-unstyled">
-                <li><a href="/" ><i className="bi bi-facebook"></i></a></li>
-                <li><a href="/" ><i className="bi bi-instagram"></i></a></li>
-                <li><a href="/" ><i className="bi bi-twiter"></i></a></li>
-                <li><a href="/" ><i className="bi bi-tiktok"></i></a></li>
+                <li><a href="/" ><i className="bi bi-facebook"></i></a>Facebook</li>
+                <li><a href="/" ><i className="bi bi-instagram"></i></a>Instagram</li>
+                <li><a href="/" ><i className="bi bi-twitter"></i></a>Twitter</li>
+                <li><a href="/" ><i className="bi bi-tiktok"></i></a>Tik-Tok</li>
                 </ul>
               </div>
             </div>
