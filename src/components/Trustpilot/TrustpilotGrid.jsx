@@ -21,7 +21,7 @@ const TrustpilotGrid = ({ review }) => {
               color="indigo"
               size="lg"
               onClick={handlePrev}
-              className="!absolute top-2/4 left-4 -translate-y-2/4 hidden lg:block"
+              className="!absolute top-2/4 left-4 -translate-y-2/4 hidden lg:block d-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const TrustpilotGrid = ({ review }) => {
               color="indigo"
               size="lg"
               onClick={handleNext}
-              className="!absolute top-2/4 !right-4 -translate-y-2/4 hidden lg:block"
+              className="!absolute top-2/4 !right-4 -translate-y-2/4 hidden lg:block d-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
