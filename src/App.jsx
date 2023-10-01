@@ -11,7 +11,7 @@ import Servicios from './pages/Servicios'
 import Registro from './pages/Registro'
 import { Route, Routes } from "react-router-dom";
 import NavBarpagina from './components/navegacion/NavBarpagina'
-import Footer from './components/footer/footer'
+import Footer from './components/footer/Footer'
 
 
 

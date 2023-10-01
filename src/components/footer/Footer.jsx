@@ -22,9 +22,10 @@ const Footer = () => {
               <div className="col-md-3 col-sm-6 mx-auto">
                 <h4>redes sociales</h4>
                 <ul className="list-unstyled">
-                  <li><a href="/">facebook</a></li>
-                  <li><a href="/">instagram</a></li>
-                  <li><a href="/">twiter</a></li>
+                <li><a href="/" ><i className="bi bi-facebook"></i></a></li>
+                <li><a href="/" ><i className="bi bi-instagram"></i></a></li>
+                <li><a href="/" ><i className="bi bi-twiter"></i></a></li>
+                <li><a href="/" ><i className="bi bi-tiktok"></i></a></li>
                 </ul>
               </div>
             </div>
