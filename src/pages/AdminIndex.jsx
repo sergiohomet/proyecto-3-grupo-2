@@ -1,23 +1,23 @@
-import React from 'react'
-import CarrouselPacientes from '../components/admin/CarrouselPacientes'
-import CarrouselTurnos from '../components/admin/CarrouselTurnos'
+import PacientesDataTable from "../components/admin/PacientesDataTable"
+import TurnosDataTable from "../components/admin/TurnosDataTable"
 
 const AdminIndex = () => {
   return (
     <>
         <div className='mx-auto text-center w-full mb-4'>
             <h1 className='text-center'>
-                Administración de {''}
-                <br />
-                <span className="text-indigo-600">Pacientes </span>
+                Administración {''}
+                <span className="text-indigo-600 font-bold">General </span>
             </h1>
+            <hr />
+            <p className='text-3xl font-bold text-indigo-600 '>Pacientes</p>
 
-            <CarrouselPacientes />
+            <PacientesDataTable />
 
             <hr />
             <p className='text-3xl font-bold text-indigo-600 '>Turnos</p>
 
-            <CarrouselTurnos />
+            <TurnosDataTable />
         </div>
     </>
   )
