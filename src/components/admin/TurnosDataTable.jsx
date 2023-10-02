@@ -20,7 +20,7 @@ const TurnosDataTable = () => {
       }
     };
     fetchData();
-  }, [axiosInstance.get("/turnos")]);
+  }, []);
 
   const paginationComponentOptions = {
     rowsPerPageText: "Filas por página",
