@@ -18,7 +18,7 @@ const ListadoTurnos = () => {
       }
     }
     fetchData();
-  }, [axiosInstance.get('/turnos')])
+  }, [])
 
   return (
     <>
