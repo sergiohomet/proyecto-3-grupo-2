@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TURNOS_SCHEMA } from "../../helpers/validationSchema";
 import Error from "../Error";
+import { axiosInstance } from "../../config/axiosInstance";
 
 const FormularioTurnos = () => {
   const {
@@ -13,10 +14,14 @@ const FormularioTurnos = () => {
     resolver: yupResolver(TURNOS_SCHEMA),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      await axiosInstance.post("/turnos", data);
 
-    reset();
+      reset();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

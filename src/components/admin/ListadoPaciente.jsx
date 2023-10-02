@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { axiosInstance } from "../../config/axiosInstance";
 import Paciente from "./Paciente";
-// import { pacientes } from "../../helpers/data";
 
 const ListadoPaciente = () => {
   const [data, setData] = useState([]);
@@ -9,7 +8,7 @@ const ListadoPaciente = () => {
   useEffect( () => {
     const fetchData = async () => {
       try {
-        axiosInstance.get('/pacientes')
+        await axiosInstance.get('/pacientes')
         .then( response => {
           const { data } = response;
           setData(data);
