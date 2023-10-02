@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PACIENTE_SCHEMA } from "../../helpers/validationSchema";
 import Error from "../Error";
+import { axiosInstance } from "../../config/axiosInstance";
 
 const FormularioPacientes = () => {
   const {
@@ -13,10 +14,15 @@ const FormularioPacientes = () => {
     resolver: yupResolver(PACIENTE_SCHEMA),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+      try {
+        const response = await axiosInstance.post('/pacientes', data)
+        console.log(response);
 
-    reset();
+        reset()
+      } catch (error) {
+        console.log(error);
+      }
   };
 
   return (
