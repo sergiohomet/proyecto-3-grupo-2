@@ -33,6 +33,16 @@
     {
       "breed": "Egipcio",
       "kind": "Gato",
+      "pet": "Dino",
+      "phone": "3813424157",
+      "username": "corre213o@correo.com",
+      "lastname": "Homet21321321",
+      "name": "sergio12321321",
+      "id": "hdz1rf"
+    },
+    {
+      "breed": "Egipcio",
+      "kind": "Gato",
       "pet": "Dino22332",
       "phone": "3813424151",
       "username": "correo123@correo.com",
