@@ -1,11 +1,27 @@
-import React from 'react'
-import { pacientes } from '../../helpers/data';
+import React, { useEffect, useState } from 'react'
 import DataTable from 'react-data-table-component';
 import { Link } from 'react-router-dom';
 import useScreenSize from '../../hooks/useScreenSize'
+import { axiosInstance } from '../../config/axiosInstance';
 
 const PacientesDataTable = () => {
+    const [data, setData] = useState([])
     const { width } = useScreenSize()
+
+    useEffect( () => {
+        const fetchData = async () => {
+          try {
+            axiosInstance.get('/pacientes')
+            .then( response => {
+              const { data } = response;
+              setData(data);
+            })
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        fetchData();
+      }, [])
 
     const paginationComponentOptions = {
         rowsPerPageText: 'Filas por página',
@@ -75,11 +91,11 @@ const PacientesDataTable = () => {
     
       return (
         <>
-          {pacientes && pacientes.length ? (
+          {data && data.length ? (
             <div className="container rounded-lg p-0 mb-4">
                 <DataTable 
                     columns={columns}
-                    data={pacientes}
+                    data={data}
                     pagination
                     paginationComponentOptions={paginationComponentOptions}
                     compact
@@ -103,7 +119,7 @@ const PacientesDataTable = () => {
           <Link 
             to={'/pacientes'}
             className="bg-indigo-600 p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all no-underline">
-            {pacientes && pacientes.length ? "Ver Pacientes" : "Agregar Paciente"}
+            {data && data.length ? "Ver Pacientes" : "Agregar Paciente"}
           </Link>
         </>
       );
