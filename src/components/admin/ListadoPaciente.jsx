@@ -18,7 +18,7 @@ const ListadoPaciente = () => {
       }
     }
     fetchData();
-  }, [])
+  }, [axiosInstance.get("/pacientes")])
 
 
   return (

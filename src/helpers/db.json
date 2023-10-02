@@ -29,6 +29,16 @@
       "lastname": "Homet2",
       "name": "sergio2",
       "id": "yh3ug"
+    },
+    {
+      "breed": "Egipcio",
+      "kind": "Gato",
+      "pet": "Dino22332",
+      "phone": "3813424151",
+      "username": "correo123@correo.com",
+      "lastname": "Homet123",
+      "name": "sergio123",
+      "id": "5rmlmw"
     }
   ],
   "turnos": [
