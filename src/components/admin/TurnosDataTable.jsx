@@ -1,100 +1,115 @@
-import React from 'react'
-import { turnos } from '../../helpers/data';
-import DataTable from 'react-data-table-component';
-import { Link } from 'react-router-dom';
-import useScreenSize from '../../hooks/useScreenSize'
+import React, { useEffect, useState } from "react";
+import DataTable from "react-data-table-component";
+import { Link } from "react-router-dom";
+import useScreenSize from "../../hooks/useScreenSize";
+import { axiosInstance } from "../../config/axiosInstance";
 
 const TurnosDataTable = () => {
-    const { width } = useScreenSize()
+  const [data, setData] = useState([]);
+  const { width } = useScreenSize();
 
-    const paginationComponentOptions = {
-        rowsPerPageText: 'Filas por página',
-        rangeSeparatorText: 'de',
-        selectAllRowsItem: true,
-        selectAllRowsItemText: 'Todos',
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        await axiosInstance.get("/turnos").then((response) => {
+          const { data } = response;
+          setData(data);
+        });
+      } catch (error) {
+        console.log(error);
+      }
     };
+    fetchData();
+  }, [axiosInstance.get("/turnos")]);
 
-    const customStyles = {
-        headCells: {
-            style: {
-                fontSize: width > 992 ? '20px' : '15px'
-            },
-        },
-        cells: {
-            style: {
-                fontSize: '15px',
-            },
-        },
-    };
+  const paginationComponentOptions = {
+    rowsPerPageText: "Filas por página",
+    rangeSeparatorText: "de",
+    selectAllRowsItem: true,
+    selectAllRowsItemText: "Todos",
+  };
 
-    const columns = [
-        {
-            name: 'Nombre',
-            selector: (row) => row.vet,
-            sortable: true,
-            sortable: true,
-            center: true
-        },
-        {
-            name: 'Apellido',
-            selector: (row) => row.pet,
-            sortable: true,
-            center: true
-        },
-        {
-            name: 'Email',
-            selector: (row) => row.date,
-            sortable: true,
-            center: true
-        },
-        {
-            name: 'Número',
-            selector: (row) => row.hour,
-            sortable: true,
-            center: true
-        },
-        {
-            name: 'Mascota',
-            selector: (row) => row.details,
-            sortable: true,
-            center: true
-        }
-    ]
-    
-      return (
-        <>
-          {turnos && turnos.length ? (
-            <div className="container rounded-lg p-0 mb-4">
-                <DataTable 
-                    columns={columns}
-                    data={turnos}
-                    pagination
-                    paginationComponentOptions={paginationComponentOptions}
-                    compact
-                    fixedHeader
-                    highlightOnHover
-                    responsive
-                    customStyles={customStyles}
-                />
-            </div>
+  const customStyles = {
+    headCells: {
+      style: {
+        fontSize: width > 992 ? "20px" : "15px",
+      },
+    },
+    cells: {
+      style: {
+        fontSize: "15px",
+      },
+    },
+  };
 
-          ) : (
-            <div>
-              <p className="mt-10 text-3xl font-semibold">
-                No hay {""}
-                <span className="text-indigo-600 font-bold">Turnos </span>
-                disponibles aún
-              </p>
-              <p className="font-bold text-2xl">Comienza agregandolos</p>
-            </div>
-          )}
-          <Link 
-            to={'/turnos'}
-            className="bg-indigo-600 p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all no-underline">
-            {turnos && turnos.length ? "Ver Turnos" : "Agregar Turno"}
-          </Link>
-        </>
-      );
-}
+  const columns = [
+    {
+      name: "Nombre",
+      selector: (row) => row.vet,
+      sortable: true,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: "Apellido",
+      selector: (row) => row.pet,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: "Email",
+      selector: (row) => row.date,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: "Número",
+      selector: (row) => row.hour,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: "Mascota",
+      selector: (row) => row.details,
+      sortable: true,
+      center: true,
+    },
+  ];
 
-export default TurnosDataTable
+  return (
+    <>
+      {data && data.length ? (
+        <div className="container rounded-lg p-0 mb-4">
+          <DataTable
+            columns={columns}
+            data={data}
+            pagination
+            paginationComponentOptions={paginationComponentOptions}
+            compact
+            fixedHeader
+            highlightOnHover
+            responsive
+            customStyles={customStyles}
+          />
+        </div>
+      ) : (
+        <div>
+          <p className="mt-10 text-3xl font-semibold">
+            No hay {""}
+            <span className="text-indigo-600 font-bold">Turnos </span>
+            disponibles aún
+          </p>
+          <p className="font-bold text-2xl">Comienza agregandolos</p>
+        </div>
+      )}
+      <Link
+        to={"/turnos"}
+        className="bg-indigo-600 p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all no-underline"
+      >
+        {data && data.length ? "Ver Turnos" : "Agregar Turno"}
+      </Link>
+    </>
+  );
+};
+
+export default TurnosDataTable;

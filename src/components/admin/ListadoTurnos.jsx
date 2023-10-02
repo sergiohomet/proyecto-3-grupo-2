@@ -1,11 +1,29 @@
-import { turnos } from "../../helpers/data";
+import { useEffect, useState } from "react";
 import Turnos from "./Turnos";
+import { axiosInstance } from "../../config/axiosInstance";
 
 const ListadoTurnos = () => {
+  const [data, setData] = useState([]);
+
+  useEffect( () => {
+    const fetchData = async () => {
+      try {
+        await axiosInstance.get('/turnos')
+        .then( response => {
+          const { data } = response;
+          setData(data);
+        })
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData();
+  }, [axiosInstance.get('/turnos')])
+
   return (
     <>
       <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll mt-3 md:mt-0">
-        {turnos && turnos.length ? (
+        {data && data.length ? (
           <>
             <h2 className="font-black text-3xl text-center">
               Listado turnos
@@ -18,7 +36,7 @@ const ListadoTurnos = () => {
               </span>
             </p>
 
-            {turnos.map((turno) => (
+            {data.map((turno) => (
               <Turnos key={turno.id} turno={turno} />
             ))}
           </>
