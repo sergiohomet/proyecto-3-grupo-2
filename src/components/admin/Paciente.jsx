@@ -1,7 +1,7 @@
 import React from "react";
 
-const Paciente = ({ paciente }) => {
-  const { name, lastname, email, phone, pet, kind, breed } = paciente;
+const Paciente = ({ paciente, onDelete }) => {
+  const { id, name, lastname, email, phone, pet, kind, breed } = paciente;
 
   return (
     <>
@@ -41,6 +41,7 @@ const Paciente = ({ paciente }) => {
         <button
           type="button"
           className="bg-red-600 hover:bg-red-700 p-2 text-white font-bold rounded transition-all"
+          onClick={() => onDelete(id)}
         >
           Eliminar
         </button>

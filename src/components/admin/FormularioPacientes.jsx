@@ -3,8 +3,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { PACIENTE_SCHEMA } from "../../helpers/validationSchema";
 import Error from "../Error";
 import { axiosInstance } from "../../config/axiosInstance";
+import { useEffect } from "react";
 
-const FormularioPacientes = () => {
+const FormularioPacientes = ({ setPacientes }) => {
   const {
     register,
     handleSubmit,
@@ -14,16 +15,34 @@ const FormularioPacientes = () => {
     resolver: yupResolver(PACIENTE_SCHEMA),
   });
 
+  const fetchData = async () => {
+    try {
+      await axiosInstance.get('/pacientes')
+      .then( response => {
+        const { data } = response;
+        setPacientes(data);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const onSubmit = async (data) => {
       try {
         const response = await axiosInstance.post('/pacientes', data)
-        console.log(response);
 
         reset()
       } catch (error) {
         console.log(error);
+      } finally {
+        fetchData(data)
       }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+  
 
   return (
     <>

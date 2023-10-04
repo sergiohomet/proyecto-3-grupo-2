@@ -1,64 +1,14 @@
 {
   "pacientes": [
     {
-      "breed": "firulais",
-      "kind": "Perro",
+      "breed": "Naranja",
+      "kind": "Gato",
       "pet": "Dino",
       "phone": "3813424158",
       "username": "correo@correo.com",
       "lastname": "Homet",
       "name": "sergio",
-      "id": "uqhfve"
-    },
-    {
-      "breed": "Naranja",
-      "kind": "Gato",
-      "pet": "Hook",
-      "phone": "3813424156",
-      "username": "correo1@correo.com",
-      "lastname": "Homet1",
-      "name": "sergio1",
-      "id": "9meev"
-    },
-    {
-      "breed": "Blanco",
-      "kind": "Gato",
-      "pet": "Dino2",
-      "phone": "3813424157",
-      "username": "correo2@correo.com",
-      "lastname": "Homet2",
-      "name": "sergio2",
-      "id": "yh3ug"
-    },
-    {
-      "breed": "Egipcio",
-      "kind": "Gato",
-      "pet": "Dino",
-      "phone": "3813424157",
-      "username": "corre213o@correo.com",
-      "lastname": "Homet21321321",
-      "name": "sergio12321321",
-      "id": "hdz1rf"
-    },
-    {
-      "breed": "Egipcio",
-      "kind": "Gato",
-      "pet": "Dino22332",
-      "phone": "3813424151",
-      "username": "correo123@correo.com",
-      "lastname": "Homet123",
-      "name": "sergio123",
-      "id": "5rmlmw"
-    },
-    {
-      "breed": "Egipcio55",
-      "kind": "55555",
-      "pet": "Dino5555",
-      "phone": "3813425558",
-      "username": "corr55555eo@correo.com",
-      "lastname": "Homet55555555555",
-      "name": "sergio5555555555555",
-      "id": "ban3us"
+      "id": "pwb8e"
     }
   ],
   "turnos": [
@@ -69,22 +19,6 @@
       "pet": "Dino",
       "vet": "Dr. Jack",
       "id": "02daft"
-    },
-    {
-      "details": "asd",
-      "hour": "17:36",
-      "date": "2023-10-19",
-      "pet": "Dino2",
-      "vet": "Dr. Jack",
-      "id": "vvhdzs"
-    },
-    {
-      "details": "details 2",
-      "hour": "19:27",
-      "date": "2023-10-05",
-      "pet": "Hook",
-      "vet": "Dra. Lisa",
-      "id": "g8td7"
     }
   ]
 }

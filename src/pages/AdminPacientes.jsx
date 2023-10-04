@@ -3,6 +3,8 @@ import FormularioPacientes from "../components/admin/FormularioPacientes";
 import ListadoPaciente from "../components/admin/ListadoPaciente";
 
 const AdminPacientes = () => {
+  const [pacientes, setPacientes] = useState([]);
+
   return (
     <>
       <div className="bg-gray-100 mx-auto text-center">
@@ -12,8 +14,8 @@ const AdminPacientes = () => {
         </h1>
 
         <div className="md:flex justify-center align-middle">
-          <FormularioPacientes />
-          <ListadoPaciente />
+          <FormularioPacientes setPacientes={setPacientes} />
+          <ListadoPaciente pacientes={pacientes} setPacientes={setPacientes} />
         </div>
       </div>
     </>

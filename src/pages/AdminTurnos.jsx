@@ -2,9 +2,8 @@ import { useState } from "react";
 import FormularioTurnos from "../components/admin/FormularioTurnos";
 import ListadoTurnos from "../components/admin/ListadoTurnos";
 
-
 const AdminPacientes = () => {
-  const [turnos, setTurnos] = useState([])
+  const [turnos, setTurnos] = useState([]);
 
   return (
     <>
@@ -15,8 +14,8 @@ const AdminPacientes = () => {
         </h1>
 
         <div className="md:flex justify-center align-middle">
-            <FormularioTurnos setTurno={setTurnos}/>
-            <ListadoTurnos turnos={turnos} setTurno={setTurnos} />
+          <FormularioTurnos setTurno={setTurnos} />
+          <ListadoTurnos turnos={turnos} setTurno={setTurnos} />
         </div>
       </div>
     </>

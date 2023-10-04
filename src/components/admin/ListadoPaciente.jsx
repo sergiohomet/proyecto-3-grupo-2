@@ -1,30 +1,22 @@
-import { useEffect, useState } from "react";
 import { axiosInstance } from "../../config/axiosInstance";
 import Paciente from "./Paciente";
 
-const ListadoPaciente = () => {
-  const [data, setData] = useState([]);
-
-  useEffect( () => {
-    const fetchData = async () => {
-      try {
-        await axiosInstance.get('/pacientes')
-        .then( response => {
-          const { data } = response;
-          setData(data);
-        })
-      } catch (error) {
-        console.log(error);
-      }
+const ListadoPaciente = ({ pacientes, setPacientes }) => {
+  const handleDelete = async (id) => {
+    try {
+      await axiosInstance.delete(`/pacientes/${id}`);
+      setPacientes((newData) =>
+        newData.filter((paciente) => paciente.id !== id)
+      );
+    } catch (error) {
+      console.log(error);
     }
-    fetchData();
-  }, [])
-
+  };
 
   return (
     <>
       <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll mt-3 md:mt-0">
-        {data && data.length ? (
+        {pacientes && pacientes.length ? (
           <>
             <h2 className="font-black text-3xl text-center">
               Listado Pacientes
@@ -37,8 +29,12 @@ const ListadoPaciente = () => {
               </span>
             </p>
 
-            {data.map((paciente) => (
-              <Paciente key={paciente.id} paciente={paciente} />
+            {pacientes.map((paciente) => (
+              <Paciente
+                key={paciente.id}
+                paciente={paciente}
+                onDelete={() => handleDelete(paciente.id)}
+              />
             ))}
           </>
         ) : (
