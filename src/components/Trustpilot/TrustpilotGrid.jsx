@@ -1,11 +1,20 @@
 import React from "react";
 import TrustpilotCard from "./TrustpilotCard";
 import { Carousel, IconButton } from "@material-tailwind/react";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const TrustpilotGrid = ({ review }) => {
+  const { width } = useScreenSize();
   const reviewsGroups = [];
   for (let i = 0; i < review.length; i += 3) {
     reviewsGroups.push(review.slice(i, i + 3));
+  }
+  let cardsToShow = 3;
+
+  if (width >= 100 && width < 900) {
+    cardsToShow = 1;
+  } else if (width >= 640) {
+    cardsToShow = 3;
   }
   return (
     <>
@@ -66,7 +75,7 @@ const TrustpilotGrid = ({ review }) => {
         >
           {reviewsGroups.map((group, index) => (
             <div key={index} className="flex justify-center items-center">
-              {group.map((data, i) => (
+              {group.slice(0, cardsToShow).map((data, i) => (
                 <div key={i} className="mr-5">
                   <TrustpilotCard review={data} />
                 </div>

@@ -5,9 +5,9 @@ import { getStars } from "../../helpers/trustpilot";
 const TrustpilotCard = ({ review }) => {
   return (
     <>
-      <Card className="">
+      <Card className="trustCard">
         <CardBody>
-          <div className="row">
+          <div className="row d-flex align-items-center">
             <div className="col-6">
               <img
                 src={`https://res.cloudinary.com/dhvgi2cmq/image/upload/v1696120142/patitas/trustPilotStars/${review.rating}.png`}
@@ -20,7 +20,7 @@ const TrustpilotCard = ({ review }) => {
             <p className="font-bold text-dark mb-1 text-gray-700">
               {review.title}
             </p>
-            <p className="font-normal">{review.review}</p>
+            <p className="font-normal trustCard__review">{review.review}</p>
             <p className="font-normal">{review.name}</p>
           </div>
         </CardBody>

@@ -29,7 +29,12 @@ const Index = () => {
           <ServiciosGrid />
         </div>
       </div>
-
+      <div className="container-fluid mb-5">
+        <h3>Opiniones verificadas sobre Patitas</h3>
+        <div className="">
+          <Trustpilot />
+        </div>
+      </div>
       <div className="container d-flex flex-column mt-5">
         <div className="d-flex justify-content-center">
           <h3 className="mb-2">
@@ -38,12 +43,6 @@ const Index = () => {
         </div>
         <div className="d-flex justify-content-center mb-5">
           <PlanesGrid />
-        </div>
-      </div>
-      <div className="container-fluid mb-5">
-        <h3>Opiniones verificadas sobre Patitas</h3>
-        <div className="">
-          <Trustpilot />
         </div>
       </div>
     </>
