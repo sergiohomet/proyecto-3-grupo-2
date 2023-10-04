@@ -24,6 +24,20 @@ const FormularioTurnos = () => {
     }
   };
 
+  // const onSubmit = async (data) => {
+  //   try {
+  //     await axiosInstance.post("/turnos", data, {
+  //       headers: {
+  //         'Content-Type': 'multipart/form-data'
+  //       }
+  //     });
+
+  //     reset();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
   return (
     <>
       <div className="md:w-1/2 lg:w-2/5 mx-5">
@@ -144,7 +158,7 @@ const FormularioTurnos = () => {
               type="time"
               name="details"
               placeholder="Ejemplo: Vacunación, checkeo"
-              className="border-2 w-full p-2 mt-1 mb-0 placeholder-gray-400 rounded-md"
+              className="border-2 w-full p-2 mt-1 mb-0 placeholder-gray-400 rounded-md resize-none"
               {...register("details")}
             />
             {errors.details?.message && (

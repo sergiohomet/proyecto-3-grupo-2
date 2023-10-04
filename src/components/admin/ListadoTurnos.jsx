@@ -18,7 +18,24 @@ const ListadoTurnos = () => {
       }
     }
     fetchData();
+
+    const pollingInterval = setInterval(() => {
+      fetchData();
+    }, 5000);
+
+    return () => {
+      clearInterval(pollingInterval);
+    };
   }, [])
+
+  const handleDelete = async (id) => {
+    try {
+      await axiosInstance.delete(`/turnos/${id}`);
+      setData( newData => newData.filter( turno => turno.id !== id))
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -37,7 +54,7 @@ const ListadoTurnos = () => {
             </p>
 
             {data.map((turno) => (
-              <Turnos key={turno.id} turno={turno} />
+              <Turnos key={turno.id} turno={turno} onDelete={() => handleDelete(turno.id)} />
             ))}
           </>
         ) : (
