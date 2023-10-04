@@ -12,7 +12,7 @@ const ServiciosCards = ({ data }) => {
         />
         <h6 className="card-title text-center">{data.titulo}</h6>
         <div className="card-body">
-          <p className="card-text">{data.descripcion}</p>
+          <p className="card-text text-sm">{data.descripcion}</p>
         </div>
       </div>
     </>

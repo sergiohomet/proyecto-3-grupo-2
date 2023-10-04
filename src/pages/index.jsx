@@ -15,10 +15,14 @@ const Index = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
             reiciendis, dicta sequi eveniet hic facere?
           </p>
-          <div className="btn btn-primary me-1">Reservar Turno</div>
-          <div className="btn btn-secondary">Contactanos</div>
+          <div className="d-flex">
+            <div className="btn btn-primary me-1 ">Reservar Turno</div>
+            <div className="btn btn-secondary d-flex align-items-center">
+              Contactanos
+            </div>
+          </div>
         </div>
-        <div className="col-2">
+        <div className="col-2 d-none d-xl-block">
           <Weather />
         </div>
         <div className="col-2"></div>
@@ -29,12 +33,7 @@ const Index = () => {
           <ServiciosGrid />
         </div>
       </div>
-      <div className="container-fluid mb-5">
-        <h3>Opiniones verificadas sobre Patitas</h3>
-        <div className="">
-          <Trustpilot />
-        </div>
-      </div>
+
       <div className="container d-flex flex-column mt-5">
         <div className="d-flex justify-content-center">
           <h3 className="mb-2">
@@ -43,6 +42,12 @@ const Index = () => {
         </div>
         <div className="d-flex justify-content-center mb-5">
           <PlanesGrid />
+        </div>
+      </div>
+      <div className="container-fluid mb-5">
+        <h3>Opiniones verificadas sobre Patitas</h3>
+        <div className="">
+          <Trustpilot />
         </div>
       </div>
     </>
