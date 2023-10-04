@@ -1,8 +1,11 @@
+import { useState } from "react";
 import FormularioTurnos from "../components/admin/FormularioTurnos";
 import ListadoTurnos from "../components/admin/ListadoTurnos";
 
 
 const AdminPacientes = () => {
+  const [turnos, setTurnos] = useState([])
+
   return (
     <>
       <div className="bg-gray-100 mx-auto text-center">
@@ -12,8 +15,8 @@ const AdminPacientes = () => {
         </h1>
 
         <div className="md:flex justify-center align-middle">
-            <FormularioTurnos />
-            <ListadoTurnos />
+            <FormularioTurnos setTurno={setTurnos}/>
+            <ListadoTurnos turnos={turnos} setTurno={setTurnos} />
         </div>
       </div>
     </>

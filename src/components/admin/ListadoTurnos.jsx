@@ -2,36 +2,12 @@ import { useEffect, useState } from "react";
 import Turnos from "./Turnos";
 import { axiosInstance } from "../../config/axiosInstance";
 
-const ListadoTurnos = () => {
-  const [data, setData] = useState([]);
-
-  useEffect( () => {
-    const fetchData = async () => {
-      try {
-        await axiosInstance.get('/turnos')
-        .then( response => {
-          const { data } = response;
-          setData(data);
-        })
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-
-    const pollingInterval = setInterval(() => {
-      fetchData();
-    }, 5000);
-
-    return () => {
-      clearInterval(pollingInterval);
-    };
-  }, [])
+const ListadoTurnos = ({ turnos, setTurno }) => {
 
   const handleDelete = async (id) => {
     try {
       await axiosInstance.delete(`/turnos/${id}`);
-      setData( newData => newData.filter( turno => turno.id !== id))
+      setTurno( newData => newData.filter( turno => turno.id !== id))
     } catch (error) {
       console.log(error);
     }
@@ -40,7 +16,7 @@ const ListadoTurnos = () => {
   return (
     <>
       <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll mt-3 md:mt-0">
-        {data && data.length ? (
+        {turnos && turnos.length ? (
           <>
             <h2 className="font-black text-3xl text-center">
               Listado turnos
@@ -53,7 +29,7 @@ const ListadoTurnos = () => {
               </span>
             </p>
 
-            {data.map((turno) => (
+            {turnos.map((turno) => (
               <Turnos key={turno.id} turno={turno} onDelete={() => handleDelete(turno.id)} />
             ))}
           </>

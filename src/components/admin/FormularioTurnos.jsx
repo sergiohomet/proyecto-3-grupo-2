@@ -3,8 +3,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { TURNOS_SCHEMA } from "../../helpers/validationSchema";
 import Error from "../Error";
 import { axiosInstance } from "../../config/axiosInstance";
+import { useEffect } from "react";
 
-const FormularioTurnos = () => {
+const FormularioTurnos = ({ setTurno }) => {
   const {
     register,
     handleSubmit,
@@ -14,6 +15,18 @@ const FormularioTurnos = () => {
     resolver: yupResolver(TURNOS_SCHEMA),
   });
 
+  const fetchData = async () => {
+    try {
+      await axiosInstance.get('/turnos')
+      .then( response => {
+        const { data } = response;
+        setTurno(data);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const onSubmit = async (data) => {
     try {
       await axiosInstance.post("/turnos", data);
@@ -21,8 +34,15 @@ const FormularioTurnos = () => {
       reset();
     } catch (error) {
       console.log(error);
+    } finally {
+      fetchData(data)
     }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+  
 
   // const onSubmit = async (data) => {
   //   try {
