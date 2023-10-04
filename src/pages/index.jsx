@@ -36,8 +36,8 @@ const Index = () => {
 
       <div className="container d-flex flex-column mt-5">
         <div className="d-flex justify-content-center">
-          <h3 className="mb-2">
-            Elegí el plan que mas le sirva a tu <i>perrhijo</i>
+          <h3 className="mb-2 text-center">
+            Elegí el plan que mas se adapte a tu <i>perrhijo</i>
           </h3>
         </div>
         <div className="d-flex justify-content-center mb-5">

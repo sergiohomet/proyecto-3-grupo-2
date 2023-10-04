@@ -1,7 +1,13 @@
 import React from "react";
 import { MdOutlineDone } from "react-icons/md";
+import { useState } from "react";
+import ModalPlan from "./ModalPlan";
 
 const PlanCard = ({ data }) => {
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(true);
+
   let { caracteristicas } = data;
   return (
     <>
@@ -24,8 +30,13 @@ const PlanCard = ({ data }) => {
         </div>
 
         <div className="d-flex justify-content-center mt-2">
-          <div className="btn btn-primary m-2">Mas informacion</div>
+          <a className="btn btn-primary m-2" onClick={handleShow}>
+            Mas informacion
+          </a>
         </div>
+      </div>
+      <div>
+        <ModalPlan show={show} setShow={setShow} plan={data} />
       </div>
     </>
   );
