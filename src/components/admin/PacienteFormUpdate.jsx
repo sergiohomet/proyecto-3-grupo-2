@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { axiosInstance } from "../../config/axiosInstance";
 
-const FormUpdate = ({ paciente, onUpdate }) => {
+const PacienteFormUpdate = ({ paciente, onUpdate }) => {
   const [formDatos, setFormDatos] = useState({...paciente})
 
   const handleChangeDatos = (e) => {
@@ -159,4 +159,4 @@ const FormUpdate = ({ paciente, onUpdate }) => {
   );
 };
 
-export default FormUpdate;
+export default PacienteFormUpdate;

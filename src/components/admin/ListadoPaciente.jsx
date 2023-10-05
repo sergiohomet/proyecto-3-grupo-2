@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
 import { axiosInstance } from "../../config/axiosInstance";
 import Paciente from "./Paciente";
-import ModalUpdate from "./ModalUpdate";
 import { useState, useEffect } from "react";
+import PacienteModalUpdate from "./PacienteModalUpdate";
 
 const ListadoPaciente = ({ pacientes, setPacientes }) => {
   const [show, setShow] = useState(false);
@@ -97,7 +97,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
             </p>
           </>
         )}
-        <ModalUpdate
+        <PacienteModalUpdate
           show={show}
           handleClose={handleClose}
           pacienteId={pacienteId}

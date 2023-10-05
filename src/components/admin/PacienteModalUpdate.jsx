@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import FormUpdate from "./FormUpdate";
 import { axiosInstance } from "../../config/axiosInstance";
+import PacienteFormUpdate from "./PacienteFormUpdate";
 
-const ModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
+const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
-  // Utiliza un estado para almacenar si el modal está abierto o cerrado
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
@@ -36,16 +35,14 @@ const ModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
     }
   };
 
-  // Utiliza useEffect para detectar cuando el modal se abre o cierra
   useEffect(() => {
     if (show) {
-      setModalOpen(true); // El modal se ha abierto
+      setModalOpen(true);
     } else {
-      setModalOpen(false); // El modal se ha cerrado
+      setModalOpen(false);
     }
   }, [show]);
 
-  // Reiniciar los datos del paciente cuando el modal se cierra
   useEffect(() => {
     if (!modalOpen) {
       setData({});
@@ -61,7 +58,7 @@ const ModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
           {isLoading ? (
             <p>Cargando...</p>
           ) : (
-            <FormUpdate
+            <PacienteFormUpdate
               paciente={data}
               onSubmit={handleFormSubmit}
               onCancel={handleClose}
@@ -79,4 +76,4 @@ const ModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
   );
 };
 
-export default ModalUpdate;
+export default PacienteModalUpdate;
