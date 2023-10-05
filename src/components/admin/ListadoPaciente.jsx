@@ -1,17 +1,62 @@
+import Swal from "sweetalert2";
 import { axiosInstance } from "../../config/axiosInstance";
 import Paciente from "./Paciente";
+import ModalUpdate from "./ModalUpdate";
+import { useState, useEffect } from "react";
 
 const ListadoPaciente = ({ pacientes, setPacientes }) => {
+  const [show, setShow] = useState(false);
+  const [pacienteId, setPacienteId] = useState(null);
+
+  const handleClose = () => {
+    setShow(false);
+    setPacienteId(null);
+  };
+
+  const handleShow = () => setShow(true);
+
+  const handleUpdate = (id) => {
+    setPacienteId(id);
+    handleShow();
+  };
+
   const handleDelete = async (id) => {
     try {
-      await axiosInstance.delete(`/pacientes/${id}`);
-      setPacientes((newData) =>
-        newData.filter((paciente) => paciente.id !== id)
-      );
+      Swal.fire({
+        title: "¿Estás seguro?",
+        text: "Este es un cambio que no se puede revertir",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar",
+        reverseButtons: true,
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await axiosInstance.delete(`/pacientes/${id}`);
+          setPacientes((prevPacientes) =>
+            prevPacientes.filter((paciente) => paciente.id !== id)
+          );
+          Swal.fire("Eliminado!", "El paciente fue eliminado", "success");
+        }
+      });
     } catch (error) {
       console.log(error);
     }
   };
+
+  const loadPacientes = async () => {
+    try {
+      const response = await axiosInstance.get("/pacientes");
+      setPacientes(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    loadPacientes();
+  }, [setPacientes]);
 
   return (
     <>
@@ -34,6 +79,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
                 key={paciente.id}
                 paciente={paciente}
                 onDelete={() => handleDelete(paciente.id)}
+                handleUpdate={() => handleUpdate(paciente.id)}
               />
             ))}
           </>
@@ -51,6 +97,17 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
             </p>
           </>
         )}
+        <ModalUpdate
+          show={show}
+          handleClose={handleClose}
+          pacienteId={pacienteId}
+          onUpdate={(updatedPaciente) => {
+            const updatedPacientes = pacientes.map((paciente) =>
+              paciente.id === pacienteId ? updatedPaciente : paciente
+            );
+            setPacientes(updatedPacientes);
+          }}
+        />
       </div>
     </>
   );

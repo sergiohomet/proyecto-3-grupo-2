@@ -39,7 +39,7 @@ export const PACIENTE_SCHEMA = yup.object({
     .string()
     .required("La Raza de la mascota es obligatoria")
     .min(2, "Minimo 2 caracteres")
-    .max(10, "Maximo 10 caracteres"),
+    .max(20, "Maximo 20 caracteres"),
 });
 
 export const TURNOS_SCHEMA = yup.object({

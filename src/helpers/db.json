@@ -1,16 +1,5 @@
 {
-  "pacientes": [
-    {
-      "breed": "Naranja",
-      "kind": "Gato",
-      "pet": "Dino",
-      "phone": "3813424158",
-      "username": "correo@correo.com",
-      "lastname": "Homet",
-      "name": "sergio",
-      "id": "pwb8e"
-    }
-  ],
+  "pacientes": [],
   "turnos": [
     {
       "details": "details 1",

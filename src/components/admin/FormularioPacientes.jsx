@@ -17,32 +17,30 @@ const FormularioPacientes = ({ setPacientes }) => {
 
   const fetchData = async () => {
     try {
-      await axiosInstance.get('/pacientes')
-      .then( response => {
+      await axiosInstance.get("/pacientes").then((response) => {
         const { data } = response;
         setPacientes(data);
-      })
+      });
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   const onSubmit = async (data) => {
-      try {
-        const response = await axiosInstance.post('/pacientes', data)
+    try {
+      await axiosInstance.post("/pacientes", data);
 
-        reset()
-      } catch (error) {
-        console.log(error);
-      } finally {
-        fetchData(data)
-      }
+      reset();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      fetchData(data);
+    }
   };
 
   useEffect(() => {
     fetchData();
-  }, [])
-  
+  }, []);
 
   return (
     <>
