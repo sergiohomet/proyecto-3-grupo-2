@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button } from 'react-bootstrap/lib/InputGroup'
+
 import useForm from '../hooks/Useform'
+import './Registro.css'
 
 const Registro = () => {
 
@@ -24,7 +25,7 @@ const Registro = () => {
 
 
     <div>
-        <form className='w-50'>
+        <form className='Registro w-50'>
         
              <label className='form-label'>Nombre</label>
              <input type='text' className='form-control'name="Nombre" value={form.Nombre} onChange={handleChange}/>

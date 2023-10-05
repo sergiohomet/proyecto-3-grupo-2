@@ -1,8 +1,9 @@
 import { useState } from'react'; 
 
-const useForm = () => {
-    const [form, setForm] = useState(initialData);
-    const [loading, setLoading] = useState(false);
+
+const useForm = (initialData) => {
+    const [form, setForm] = useState (initialData);
+    const [loading, setLoading] = useState (false);
 
 const handleChange = (e) => {
 
