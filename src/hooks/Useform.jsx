@@ -4,7 +4,13 @@ const useForm = () => {
     const [form, setForm] = useState(initialData);
     const [loading, setLoading] = useState(false);
 
-const handleChange = () => {}
+const handleChange = (e) => {
+
+    const {name, value}= e.target 
+    setForm({...form, [name]: value })
+
+
+}
 
 const handleSubmit = () => {}
 
