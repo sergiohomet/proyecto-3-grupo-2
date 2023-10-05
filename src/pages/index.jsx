@@ -3,6 +3,7 @@ import ServiciosGrid from "../components/Servicios/ServiciosGrid";
 import PlanesGrid from "../components/Planes/PlanesGrid";
 import Trustpilot from "../components/Trustpilot/Trustpilot";
 import Weather from "../components/Weather";
+import SponsorsGrid from "../components/SponsorsGrid";
 
 const Index = () => {
   return (
@@ -48,6 +49,11 @@ const Index = () => {
         <h3>Opiniones verificadas sobre Patitas</h3>
         <div className="">
           <Trustpilot />
+        </div>
+      </div>
+      <div className="container-fluid ">
+        <div className="d-flex justify-content-center mb-5">
+          <SponsorsGrid />
         </div>
       </div>
     </>

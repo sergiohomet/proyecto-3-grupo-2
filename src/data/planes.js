@@ -9,6 +9,7 @@ export const planes = [
         id: 2,
         titulo: "Estandar (Recomendado)",
         caracteristicas: ["50%off en todas las consultas", "1 control mensual presencial gratis"],
+
     },
     {
         id: 3,

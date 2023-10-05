@@ -66,7 +66,7 @@ export const PLANES_SCHEMA = yup.object({
         .max(41, "El maximo son 41 caracteres"),
     lastname: yup
         .string()
-        .required("El nombre  es obligatorio")
+        .required("El apellido es obligatorio")
         .min(2, "El minimo son 2 caracteres")
         .max(28, "El maximo son 28 caracteres"),
     email: yup
