@@ -1,6 +1,7 @@
 import Registro from "./components/Registro"
 import React from "react"
 import { Route, Routes } from "react-router-dom";
+import './app.css'
 
 
 function App() {
@@ -9,18 +10,13 @@ function App() {
   return (
     
       <div className='App'>
-        <NavBarpagina />
+
+        <Registro />
         
         
-        {/* <Router> */}
-          
-        <Routes>
-           
-            <Route path='/Registro' element={<Registro/>}/>
-            </Routes>
-        {/* </Router> */}
+        
        
-        <Footer/>
+     
       </div>
       
     
