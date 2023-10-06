@@ -1,9 +1,10 @@
 import { useState } from'react'; 
 
 
-const useForm = (initialData) => {
+const useForm = (initialData, onValidate) => {
     const [form, setForm] = useState (initialData);
     const [loading, setLoading] = useState (false);
+    const [errors, setErrors] = useState({});
 
 const handleChange = (e) => {
 
@@ -16,12 +17,27 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
 
     e.preventDefault()
+    const err = onValidate(form)
 
+
+    if (err === null) {
+        console.log("Enviando Formulario...")
+    } else {
+        setErrors(err)
+    }
+
+
+
+  
 
 }
 
-return { form, loading, handleChange, handleSubmit }
+                                     
+
+
+return { form, errors, loading, handleChange, handleSubmit }
 
 }
 
 export default useForm;
+ 
