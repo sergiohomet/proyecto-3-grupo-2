@@ -8,7 +8,7 @@ const Error404 = () => {
     <div className="main-container">
       <div className="container-img">
         <Image className="img mx-auto" src="./src/assets/dog.jpg" fluid ></Image>
-          <p className="number mx-auto ">404
+          <p className="number mx-auto text-center">404
           </p>
       </div>
       <div className="container-phrase">
