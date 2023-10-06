@@ -3,11 +3,7 @@ import * as yup from "yup";
 export const PACIENTE_SCHEMA = yup.object({
   id: yup.string().default(() => Math.random().toString(36).substring(7)),
 
-  name: yup
-    .string()
-    .required("El nombre del propietario es obligatorio")
-    .min(2, "El minimo son 2 caracteres")
-    .max(41, "El maximo son 41 caracteres"),
+  name: yup.string().required("El nombre del propietario es obligatorio").min(2, "El minimo son 2 caracteres").max(41, "El maximo son 41 caracteres"),
   lastname: yup
     .string()
     .required("El nombre del propietario es obligatorio")

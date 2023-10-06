@@ -6,11 +6,7 @@ import { axiosInstance } from "../../config/axiosInstance";
 import { useEffect } from "react";
 
 const FormularioPacientes = ({ setPacientes }) => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
+  const { register, handleSubmit, reset, formState: { errors },
   } = useForm({
     resolver: yupResolver(PACIENTE_SCHEMA),
   });
