@@ -1,15 +1,14 @@
-import React from 'react'
-import AcercaDeNosotros from "./Components/AcercaDeNosotros.jsx"
-import "./Components/AcercaDeNosotros.css"
+import React from "react";
+import "./Components/AcercaDeNosotros.css";
+import { Route, Routes } from "react-router-dom";
+import Nosotros from "./pages/Nosotros";
 
 function App() {
-
   return (
-    
-    <div className='App'>
-      <AcercaDeNosotros />
-    </div>
-  )
+    <Routes>
+      <Route path="/nosotros" element={<Nosotros />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
