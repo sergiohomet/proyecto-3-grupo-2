@@ -13,7 +13,12 @@ const handleChange = (e) => {
 
 }
 
-const handleSubmit = () => {}
+const handleSubmit = (e) => {
+
+    e.preventDefault()
+
+
+}
 
 return { form, loading, handleChange, handleSubmit }
 
