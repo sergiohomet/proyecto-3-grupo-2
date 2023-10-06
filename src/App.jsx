@@ -1,26 +1,14 @@
-import Registro from "./components/Registro"
-import React from "react"
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import './app.css'
-
+import "./app.css";
+import Registro from "./pages/Registro";
 
 function App() {
- 
-
   return (
-    
-      <div className='App'>
-
-        <Registro />
-        
-        
-        
-       
-     
-      </div>
-      
-    
+    <Routes>
+      <Route path="/registro" element={<Registro />} />
+    </Routes>
   );
 }
 
-export default App
+export default App;

@@ -3,7 +3,7 @@ import React from 'react'
 import useForm from '../hooks/Useform'
 import './Registro.css'
 
-const Registro = () => {
+const RegistroForm = () => {
 
     const initialData = {
         Nombre: '',
@@ -101,4 +101,4 @@ const Registro = () => {
   )
 }
 
-export default Registro
+export default RegistroForm
