@@ -20,7 +20,7 @@ const Registro = () => {
     const oneValidate = (form) =>{
 
       let isError = false
-      let error = {}
+      let errors = {}
 
         if (!form.Nombre.trim()) {
           errors.Nombre = 'el "Nombre" es obligatorio '
@@ -74,7 +74,7 @@ const Registro = () => {
 
              <label className='form-label'>email</label>
              <input type='email' className='form-control'name="email" value={form.email} onChange={handleChange}/>
-             {errors.email && <div className="alert alert-danger" role="alert">{erros.email}</div>}
+             {errors.email && <div className="alert alert-danger" role="alert">{errors.email}</div>}
 
              <label className='form-label'>Contraseña</label>
              <input type='text' className='form-control'name="Contraseña" value={form.Contraseña} onChange={handleChange}/>
