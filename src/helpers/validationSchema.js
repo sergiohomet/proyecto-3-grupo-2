@@ -3,7 +3,11 @@ import * as yup from "yup";
 export const PACIENTE_SCHEMA = yup.object({
   id: yup.string().default(() => Math.random().toString(36).substring(7)),
 
-  name: yup.string().required("El nombre del propietario es obligatorio").min(2, "El minimo son 2 caracteres").max(41, "El maximo son 41 caracteres"),
+  name: yup
+    .string()
+    .required("El nombre del propietario es obligatorio")
+    .min(2, "El minimo son 2 caracteres")
+    .max(41, "El maximo son 41 caracteres"),
   lastname: yup
     .string()
     .required("El nombre del propietario es obligatorio")
@@ -41,13 +45,13 @@ export const PACIENTE_SCHEMA = yup.object({
 export const TURNOS_SCHEMA = yup.object({
   id: yup.string().default(() => Math.random().toString(36).substring(7)),
 
-  vet: yup.string().required('Seleccione un veterinario'),
+  vet: yup.string().required("Seleccione un veterinario"),
   pet: yup
     .string()
     .required("El nombre de la mascota es obligatorio")
     .min(2, "Minimo 2 caracteres")
     .max(10, "Maximo 10 caracteres"),
-  date: yup.string().required('Seleccione una fecha'),
-  hour: yup.string().required('Seleccione una hora'),
-  details: yup.string().required('Los detalles son obligatorios'),
-})
+  date: yup.string().required("Seleccione una fecha"),
+  hour: yup.string().required("Seleccione una hora"),
+  details: yup.string().required("Los detalles son obligatorios"),
+});
