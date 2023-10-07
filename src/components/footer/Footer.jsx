@@ -14,7 +14,6 @@ const Footer = () => {
                 </ul>
             </div>
 
-               {/*comlumna 1 */}
               <div className="col-md-3 col-sm-6 mx-auto">
                 <h4>Veterinaria Patitas</h4>
                 <ul className="list-unstyled">
@@ -25,7 +24,6 @@ const Footer = () => {
   
                 </ul>
               </div>
-              {/*columna 2*/}
               <div className="col-md-3 col-sm-6 mx-auto">
                 <h4>redes sociales</h4>
                 <ul className="list-unstyled">
@@ -36,7 +34,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            {/*boton del footer*/}
             <div className="footer-bottom">
               <p className="text-xs-enter">
                 &copy;{new Date().getFullYear()} Esta pagina es del equipo 2
