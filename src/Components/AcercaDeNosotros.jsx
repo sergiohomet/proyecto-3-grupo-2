@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "../Components/AcercaDeNosotros.css";
 
 const AcercaDeNosotros = () => {
   return (
