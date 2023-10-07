@@ -2,8 +2,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TURNOS_SCHEMA } from "../../helpers/validationSchema";
 import Error from "../Error";
+import { axiosInstance } from "../../config/axiosInstance";
+import { useEffect } from "react";
 
-const FormularioTurnos = () => {
+const FormularioTurnos = ({ setTurno }) => {
   const {
     register,
     handleSubmit,
@@ -13,11 +15,48 @@ const FormularioTurnos = () => {
     resolver: yupResolver(TURNOS_SCHEMA),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const fetchData = async () => {
+    try {
+      await axiosInstance.get('/turnos')
+      .then( response => {
+        const { data } = response;
+        setTurno(data);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-    reset();
+  const onSubmit = async (data) => {
+    try {
+      await axiosInstance.post("/turnos", data);
+
+      reset();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      fetchData(data)
+    }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+  
+
+  // const onSubmit = async (data) => {
+  //   try {
+  //     await axiosInstance.post("/turnos", data, {
+  //       headers: {
+  //         'Content-Type': 'multipart/form-data'
+  //       }
+  //     });
+
+  //     reset();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <>
@@ -139,7 +178,7 @@ const FormularioTurnos = () => {
               type="time"
               name="details"
               placeholder="Ejemplo: Vacunación, checkeo"
-              className="border-2 w-full p-2 mt-1 mb-0 placeholder-gray-400 rounded-md"
+              className="border-2 w-full p-2 mt-1 mb-0 placeholder-gray-400 rounded-md resize-none"
               {...register("details")}
             />
             {errors.details?.message && (

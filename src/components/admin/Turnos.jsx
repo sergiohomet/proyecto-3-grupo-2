@@ -1,7 +1,7 @@
 import React from "react";
 
-const Turnos = ({ turno }) => {
-  const { vet, pet, date, hour, details } = turno;
+const Turnos = ({ turno, onDelete, handleUpdate }) => {
+  const { id, vet, pet, date, hour, details } = turno;
 
   return (
     <>
@@ -23,15 +23,17 @@ const Turnos = ({ turno }) => {
       </p>
 
       <div className="mt-3">
-        <button
+      <button
           type="button"
           className="bg-blue-700 hover:bg-blue-800 px-4 py-2 mr-2 text-white font-bold rounded transition-all"
+          onClick={() => handleUpdate(id)}
         >
           Editar
         </button>
         <button
           type="button"
           className="bg-red-600 hover:bg-red-700 p-2 text-white font-bold rounded transition-all"
+          onClick={() => onDelete(id)}
         >
           Eliminar
         </button>

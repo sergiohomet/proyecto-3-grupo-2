@@ -1,7 +1,7 @@
 import React from "react";
 
-const Paciente = ({ paciente }) => {
-  const { name, lastname, email, phone, pet, kind, breed } = paciente;
+const Paciente = ({ paciente, onDelete, handleUpdate }) => {
+  const { id, name, lastname, username, phone, pet, kind, breed } = paciente;
 
   return (
     <>
@@ -14,7 +14,7 @@ const Paciente = ({ paciente }) => {
         Apellido: <span className="font-normal normal-case">{lastname}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Email: <span className="font-normal normal-case">{email}</span>
+        Email: <span className="font-normal normal-case">{username}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
         Teléfono: <span className="font-normal normal-case">{phone}</span>
@@ -35,12 +35,14 @@ const Paciente = ({ paciente }) => {
         <button
           type="button"
           className="bg-blue-700 hover:bg-blue-800 px-4 py-2 mr-2 text-white font-bold rounded transition-all"
+          onClick={() => handleUpdate(id)}
         >
           Editar
         </button>
         <button
           type="button"
           className="bg-red-600 hover:bg-red-700 p-2 text-white font-bold rounded transition-all"
+          onClick={() => onDelete(id)}
         >
           Eliminar
         </button>
