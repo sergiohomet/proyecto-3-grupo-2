@@ -1,0 +1,24 @@
+{
+  "pacientes": [
+    {
+      "breed": "firulais",
+      "kind": "Perro",
+      "pet": "Dino",
+      "phone": "3813424158",
+      "username": "correo@correo.com",
+      "lastname": "Homet",
+      "name": "sergio1",
+      "id": "wqgqc"
+    }
+  ],
+  "turnos": [
+    {
+      "details": "details 2",
+      "hour": "15:00",
+      "date": "2023-10-09",
+      "pet": "Hook",
+      "vet": "Dr. Jack",
+      "id": "ksulch"
+    }
+  ]
+}
