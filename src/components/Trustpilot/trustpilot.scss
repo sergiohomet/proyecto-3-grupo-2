@@ -1,0 +1,16 @@
+//trustpilot CARD
+@media (min-width: 768px) and (max-width: 991px) {
+    //tablet
+}
+
+@media (max-width: 800px) {
+    .trustCard {
+        &__review {
+            max-height: 2.4rem;
+            white-space: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2rem;
+        }
+    }
+}
