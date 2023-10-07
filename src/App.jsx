@@ -1,5 +1,6 @@
 import Index from "./pages";
 import { Route, Routes } from "react-router-dom";
+import Error from './pages/Error.jsx'
 import NavBarpagina from "./components/navegacion/NavBarpagina";
 import Footer from "./components/footer/Footer";
 import AdminPacientes from "./pages/AdminPacientes";
@@ -16,6 +17,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="*" element={ <Error /> } />
           <Route path="/registro" element={<Registro />} />
           <Route path="/pacientes" element={<AdminPacientes />} />
           <Route path="/turnos" element={<AdminTurnos />} />
