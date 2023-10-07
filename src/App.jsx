@@ -8,6 +8,8 @@ import AdminTurnos from "./pages/AdminTurnos";
 import AdminIndex from "./pages/AdminIndex";
 import "./app.css";
 import Registro from "./pages/Registro";
+import "./Components/AcercaDeNosotros.css";
+import Nosotros from "./pages/Nosotros";
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={ <Error /> } />
+          <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/pacientes" element={<AdminPacientes />} />
           <Route path="/turnos" element={<AdminTurnos />} />
