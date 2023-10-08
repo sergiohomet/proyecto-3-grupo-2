@@ -17,7 +17,7 @@ const Weather = () => {
   return (
     <>
       {weather && (
-        <div className="card">
+        <div className="card background">
           <div className="card-body">
             <div className="d-flex justify-content-center">
               <div className="d-flex flex-column text-center">
