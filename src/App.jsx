@@ -1,27 +1,25 @@
-import { useDeferredValue, useState } from 'react'
-import { Formulario } from './components/formulario'
-import { Home } from './components/Home'
 
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Login from './pages/Login'
 
 function App() {
 
-   const [user, setUser] = useState ([])
+  
   
 
   return (
     
-      <div className="App">
-        {
-          !user.length > 0
-          ?<Formulario setUser={setUser} />
-          : <Home user={user} setUser={setUser} />
+    <Routes >
+ <Route path="/login" element={<Login/>}
+ />
 
 
-        }
+
+    </Routes>
+    
         
         
-      </div>
+      
       
       
       
