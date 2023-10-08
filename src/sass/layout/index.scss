@@ -1,0 +1,21 @@
+.indexBackground {
+    height: 55vh;
+    background-image: url('https://res.cloudinary.com/dhvgi2cmq/image/upload/v1696805026/patitas/dogsCont_j8xosa.png');
+    background-size: cover;
+    background-color: #DAD7CD;
+}
+
+@media (max-width: 768px) {
+    .displayNoneSm {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .indexBackground {
+        height: 30vh;
+        background-image: url('https://res.cloudinary.com/dhvgi2cmq/image/upload/v1696807786/patitas/dogsSm_aslv2m.png');
+        background-size: cover;
+        background-color: #DAD7CD;
+    }
+}
