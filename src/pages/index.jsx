@@ -42,7 +42,7 @@ const Index = () => {
             Elegí el plan que mas se adapte a tu <i>perrhijo</i>
           </h3>
         </div>
-        <div className="mb-5">
+        <div className="mb-5 planesCont">
           <PlanesGrid />
         </div>
       </div>

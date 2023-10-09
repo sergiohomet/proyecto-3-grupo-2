@@ -7,9 +7,9 @@ const PlanCard = ({ data }) => {
   const handleShow = () => setShow(true);
   let { destacado } = data;
   let { caracteristicas } = data;
-  console.log(data.titulo);
+
   return (
-    <div className="col-12 col-sm-4">
+    <div className="col-12 col-sm-4 ps-5 pe-5 pt-3 pb-3 ps-sm-3 pe-sm-3">
       <div
         className={
           destacado

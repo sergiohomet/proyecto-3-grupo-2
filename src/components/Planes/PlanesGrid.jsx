@@ -4,7 +4,7 @@ import { planes } from "../../data/planes";
 
 const PlanesGrid = () => {
   return (
-    <div className="row d-flex justify-content-center">
+    <div className="row ">
       {planes.map((data) => {
         return <PlanCard data={data} key={data.id} />;
       })}
