@@ -47,7 +47,7 @@ const FormularioPacientes = ({ setPacientes }) => {
 
         <p className="text-lg text-center">
           Añade pacientes y {""}
-          <span className="text-indigo-600 font-bold">Administralos</span>
+          <span className="text-green font-bold">Administralos</span>
         </p>
 
         <form
@@ -207,7 +207,7 @@ const FormularioPacientes = ({ setPacientes }) => {
 
           <input
             type="submit"
-            className="bg-indigo-600 w-full p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all"
+            className="btn btn-primary w-100 fs-5"
             value="Agregar Paciente"
           />
         </form>

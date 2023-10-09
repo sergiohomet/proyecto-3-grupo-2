@@ -118,8 +118,8 @@ const PacientesDataTable = () => {
           )}
           <Link 
             to={'/pacientes'}
-            className="bg-indigo-600 p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all no-underline">
-            {data && data.length ? "Ver Pacientes" : "Agregar Paciente"}
+            className="btn btn-primary fs-5">
+            Agregar Pacientes
           </Link>
         </>
       );
