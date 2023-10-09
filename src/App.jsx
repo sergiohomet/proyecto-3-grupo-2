@@ -12,7 +12,7 @@ import "./Components/AcercaDeNosotros.css";
 import Nosotros from "./pages/Nosotros";
 
 
-import { Route, Routes } from 'react-router-dom'
+
 import Login from './pages/Login'
 
 function App() {
