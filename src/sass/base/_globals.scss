@@ -34,3 +34,23 @@
     color: v.$primary;
     background-color: #baca9f;
 }
+
+.bg-primary {
+    background-color: v.$primary !important;
+}
+
+.bg-secondary {
+    background-color: v.$secondary !important;
+}
+
+.bg-tertiary {
+    background-color: v.$tertiary !important;
+}
+
+.text-primary {
+    color: v.$primary !important;
+}
+
+.text-secondary {
+    color: v.$secondary !important;
+}

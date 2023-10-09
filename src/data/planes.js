@@ -1,6 +1,7 @@
 export const planes = [
     //
     {
+        destacado: false,
         id: 1,
         titulo: "Basico",
         caracteristicas: [
@@ -33,8 +34,9 @@ export const planes = [
         }
     },
     {
+        destacado: true,
         id: 2,
-        titulo: "Estandar (Recomendado)",
+        titulo: "Estandar",
         caracteristicas: [
             "100%off en consultas y clinica general horario diurno",
             "15%off en alimentos y accesorios",
@@ -66,6 +68,7 @@ export const planes = [
         }
     },
     {
+        destacado: false,
         id: 3,
         titulo: "Premium",
         caracteristicas: [

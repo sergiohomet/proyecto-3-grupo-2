@@ -1,0 +1,36 @@
+@use "../base/variables" as v;
+
+.planCard {
+    background-color: v.$tertiary;
+    height: 100%;
+
+    &__titulo {
+        font-weight: normal;
+    }
+
+    &__caract {
+        font-size: smaller;
+    }
+
+    li {
+        list-style-type: disc;
+    }
+}
+
+.planCardDestacado {
+    background-color: v.$secondary;
+    height: 100%;
+
+    &__titulo {
+        font-weight: 600;
+    }
+
+    &__caract {
+        font-size: smaller;
+        font-weight: bold;
+    }
+
+    li {
+        list-style-type: disc;
+    }
+}

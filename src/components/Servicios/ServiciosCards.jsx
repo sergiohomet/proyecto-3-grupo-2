@@ -3,7 +3,7 @@ import React from "react";
 const ServiciosCards = ({ data }) => {
   return (
     <>
-      <div className="cardServicios card p-3">
+      <div className="cardServicios card p-3 bg-tertiary ">
         <img
           variant=""
           src={data.imagen}
