@@ -25,7 +25,7 @@ const Turnos = ({ turno, onDelete, handleUpdate }) => {
       <div className="mt-3">
       <button
           type="button"
-          className="bg-blue-700 hover:bg-blue-800 px-4 py-2 mr-2 text-white font-bold rounded transition-all"
+          className="bg-green px-4 py-2 mr-2 text-white font-bold rounded transition-all"
           onClick={() => handleUpdate(id)}
         >
           Editar
