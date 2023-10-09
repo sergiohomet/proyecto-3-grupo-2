@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Formulario.css'
+import "./formulario.css";
 
 export function Formulario ({setUser}) {
     const [Nombre, setNombre] = useState ("")
@@ -20,7 +20,7 @@ setUser([Nombre])
     } 
 
     return (
-        <section>
+        <section className='form-container'>
             <h1>Login</h1>
 
             <form className='Formulario'
@@ -36,7 +36,7 @@ setUser([Nombre])
                 onChange={e =>setContraseña(e.target.value)}
                 /><a>Ingrese contraseña</a>
 
-                <button>Iniciar Sesión</button>
+                <button className='btn-primary'>Iniciar Sesión</button>
                 
                 
             </form> 
