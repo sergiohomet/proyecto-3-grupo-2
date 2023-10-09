@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
 const AcercaDeNosotros = () => {
   return (
@@ -52,8 +51,8 @@ const AcercaDeNosotros = () => {
                 <div className="card">
                   <img src="./src/assets/sergio.png" alt=""></img>
                   <div className="card-body">
-                    <h4 className="card-title">Sergio Hommet</h4>
-                    <p className="card-text">Back-End</p>
+                    <h4 className="card-title">Sergio Homet</h4>
+                    <p className="card-text">Front-End</p>
                   </div>
                 </div>
               </div>
