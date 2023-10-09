@@ -7,7 +7,7 @@ import SponsorsGrid from "../components/SponsorsGrid";
 
 const Index = () => {
   return (
-    <>
+    <div className="backgroundColor">
       <div className="d-flex justify-content-center container-fluid indexBackground">
         <div className="">
           <h3 className="text-start">
@@ -57,7 +57,7 @@ const Index = () => {
           <SponsorsGrid />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

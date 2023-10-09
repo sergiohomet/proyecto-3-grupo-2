@@ -1,8 +1,14 @@
+@use "../base/variables" as v;
+
+.backgroundColor {
+    background-color: v.$background;
+}
+
 .indexBackground {
     height: 55vh;
     background-image: url('https://res.cloudinary.com/dhvgi2cmq/image/upload/v1696805026/patitas/dogsCont_j8xosa.png');
     background-size: cover;
-    background-color: #DAD7CD;
+    background-color: v.$background;
 }
 
 @media (max-width: 768px) {
@@ -16,6 +22,6 @@
         height: 30vh;
         background-image: url('https://res.cloudinary.com/dhvgi2cmq/image/upload/v1696807786/patitas/dogsSm_aslv2m.png');
         background-size: cover;
-        background-color: #DAD7CD;
+        background-color: v.$background;
     }
 }

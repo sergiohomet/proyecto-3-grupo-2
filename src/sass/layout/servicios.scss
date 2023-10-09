@@ -1,0 +1,16 @@
+@use "../base/variables" as v;
+
+.cardServicios {
+    height: 100%;
+    background-color: v.$secondary;
+
+    &__img {
+        background-color: v.$background;
+    }
+
+    &__titulo {
+        margin: auto;
+        color: v.$background;
+        font-size: smaller;
+    }
+}

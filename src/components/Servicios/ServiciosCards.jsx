@@ -3,17 +3,19 @@ import React from "react";
 const ServiciosCards = ({ data }) => {
   return (
     <>
-      <div className="card">
+      <div className="cardServicios card p-3">
         <img
           variant=""
           src={data.imagen}
           alt={data.titulo}
-          className="card-img"
+          className="card-img cardServicios__img"
         />
-        <h6 className="card-title text-center">{data.titulo}</h6>
-        <div className="card-body">
+        <p className="card-title text-center cardServicios__titulo">
+          {data.titulo}
+        </p>
+        {/* <div className="card-body">
           <p className="card-text text-sm">{data.descripcion}</p>
-        </div>
+        </div> */}
       </div>
     </>
   );
