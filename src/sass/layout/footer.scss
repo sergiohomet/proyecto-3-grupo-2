@@ -4,12 +4,14 @@
 
 
 .footer-container {
-  background-color: v.$tertiary; 
-  //border: 2px solid v.$primary; //
+  background-color: v.$primary; 
+  border: 2px solid v.$secondary;
   padding-top: 1rem;
-  color: v.$primary; 
+  color: white; 
   max-height: 0 200px;
 }
+
+
 
 .h4-footer{
 
@@ -19,7 +21,7 @@
 
 
 ul li a i{
-  color: v.$primary; 
+  color: white; 
   color: #000; 
   transition: color 0.3s ease; 
   font-size: 16px; 
@@ -52,3 +54,14 @@ ul li a:hover i.bi-twitter {
     color: rgb(241, 65, 197);
   }
   
+.pie-footer{
+  color: black
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.pie-footer {
+  margin: 0; 
+}

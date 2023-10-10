@@ -8,13 +8,13 @@ const Footer = () => {
           <div className="container">
             <div className="row">
 
-            <div className="col-md-3 col-sm-6 mx-auto">
+            <div className="col-md-3 col-sm-6 mx-auto center">
             <ul className="list-unstyled">
-                <li><img src='./public/Logo de Patitas Vet.png'width={'250'} alt="" ></img></li>
+                <li><img src='./public/Logo de Patitas Vet.png'width={'250'} alt=""></img></li>
                 </ul>
             </div>
 
-              <div className="col-md-3 col-sm-6 mx-auto">
+              <div className="col-md-3 col-sm-6 mx-auto text-center">
                 <h4 className="h4-footer">Veterinaria Patitas</h4>
                 <ul className="list-unstyled">
                   <li><a href= "/"> Acerca de Nosotros</a></li>
@@ -35,8 +35,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-bottom">
-              <p className="text-xs-enter">
-                &copy;{new Date().getFullYear()} Esta pagina es del equipo 2
+              <p className="pie-footer  text-xs-center">
+                &copy;{new Date().getFullYear()} Esta pagina es del Equipo 2
               </p>
             </div>
           </div>
