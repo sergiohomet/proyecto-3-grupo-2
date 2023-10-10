@@ -11,6 +11,8 @@ import Nosotros from "./pages/Nosotros";
 
 
 
+import Login from './pages/Login'
+
 function App() {
   return (
     <>
@@ -24,6 +26,8 @@ function App() {
           <Route path="/pacientes" element={<AdminPacientes />} />
           <Route path="/turnos" element={<AdminTurnos />} />
           <Route path="/admin" element={<AdminIndex />} />
+          <Route path="/login" element={<Login/>}
+ />
         </Routes>
       <Footer />
       
