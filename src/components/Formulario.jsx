@@ -26,15 +26,19 @@ setUser([Nombre])
             <form className='Formulario'
             onSubmit={handleSubmit}>
                 
-                <input type="text"
+                <a className='letra-formulario'>Email</a>
+                <input type="text" placeholder="ej. ulises@gmail.com"
                 value={Nombre}
                 onChange={e =>setNombre(e.target.value)}
-                /><a>Ingrese nombre de usuario</a>
-                
-                <input type="Password"
+                />
+
+                <a className='letra-formulario' >Contraseña</a>
+                <input type="Password" placeholder="123456789"
                 value={Contraseña}
                 onChange={e =>setContraseña(e.target.value)}
-                /><a>Ingrese contraseña</a>
+                />
+
+                <a className='link-contraseña' href="/">Has olvidado la contraseña?</a>
 
                 <button className='btn-primary'>Iniciar Sesión</button>
                 

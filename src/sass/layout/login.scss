@@ -10,7 +10,18 @@
   
     h1 {
       color: v.$primary;
+     
       text-align: center;
+    }
+
+    .letra-formulario {
+
+      color: white;
+    }
+
+    .link-contraseña {
+
+      color: v.$background;
     }
 
     
@@ -29,13 +40,20 @@
         margin-bottom: 10px;
         width: 100%;
         color: v.$primary;
-  
+        
         &:focus {
           outline: none;
         }
       }
+
+      
   
    
+    }
+
+    .btn-primary {
+
+      color: v.$background;
     }
   
     .error-message {
