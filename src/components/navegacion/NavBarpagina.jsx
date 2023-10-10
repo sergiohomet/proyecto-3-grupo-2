@@ -10,7 +10,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const NavBarpagina = () => {
   return (
     <>
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg " className="navbar-container"  >
       <Container fluid>
         <Navbar.Brand href="#"> <img src='./public/patitas_logo.png'width={'70'} alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -23,7 +23,7 @@ const NavBarpagina = () => {
             <Nav.Link href="#action1">Inicio</Nav.Link>
             
             <NavDropdown title="Turnos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Clínica</NavDropdown.Item>
+              <NavDropdown.Item className="letra-drop"   href="#action3">Clínica</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Peluquería 
               </NavDropdown.Item>

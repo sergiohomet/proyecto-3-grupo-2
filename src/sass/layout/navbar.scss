@@ -1,0 +1,30 @@
+@use "../base/variables" as v;
+
+nav {
+    color: v.$primary;
+}
+
+.letra-drop {
+
+    color: v.$secondary;
+}
+
+.navbar-container {
+  background-color: v.$background; 
+  border: 2px solid v.$secondary; 
+}
+
+.navbar-brand img {
+  width: 70px; 
+  margin-right: 10px; 
+  color: v.$primary;
+}
+
+.navbar-nav .nav-link {
+  color: v.$primary; 
+  margin-right: 10px; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: darken(v.$primary, 10%); 
+}
