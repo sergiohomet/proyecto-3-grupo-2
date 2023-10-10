@@ -1,1 +1,21 @@
 @use "../base/variables" as v;
+
+.card-nosotros {
+    width: 20rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardBody {
+    background-color: v.$tertiary;
+    height: 100%;
+}
+
+.cardTitle {
+    font-size: larger;
+    font-weight: bold;
+
+}
+.visit {
+    font-size: x-large;
+}
