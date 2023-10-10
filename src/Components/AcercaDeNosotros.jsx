@@ -1,12 +1,11 @@
 import React from "react";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
 const AcercaDeNosotros = () => {
   return (
     <div className="container">
       <div className="row">
         <div className="col">
-          <div className="col-12 text-center">
+          <div className="col-12 text-center justify-content-center">
             <h1 className="title fw-bold py-4">¿Quienes Somos?</h1>
             <p>
               Somos estudiantes, aprendices en crecimiento constante con
@@ -31,54 +30,54 @@ const AcercaDeNosotros = () => {
 
             <div className="row row-cols-md-2 row-cols-lg-3 row-cols-1 card-container py-3">
               <div className="col mb-4">
-                <div className="card">
+                <div className="card-nosotros mx-auto">
                   <img src="./src/assets/fran.png" alt=""></img>
-                  <div className="card-body">
-                    <h4 className="card-title">Francisco Vicente</h4>
-                    <p className="card-text">Back-End</p>
+                  <div className="cardBody">
+                    <h4 className="cardTitle">Francisco Vicente</h4>
+                    <p className="cardText">Back-End</p>
                   </div>
                 </div>
               </div>
               <div className="col mb-4">
-                <div className="card">
+                <div className="card-nosotros mx-auto">
                   <img src="./src/assets/gonzalo.png" alt=""></img>
-                  <div className="card-body">
-                    <h4 className="card-title">Gonza Hurtado</h4>
-                    <p className="card-text">Front-End</p>
+                  <div className="cardBody">
+                    <h4 className="cardTitle">Gonza Hurtado</h4>
+                    <p className="cardText">Front-End</p>
                   </div>
                 </div>
               </div>
               <div className="col mb-4">
-                <div className="card">
+                <div className="card-nosotros mx-auto">
                   <img src="./src/assets/sergio.png" alt=""></img>
-                  <div className="card-body">
-                    <h4 className="card-title">Sergio Hommet</h4>
-                    <p className="card-text">Back-End</p>
+                  <div className="cardBody">
+                    <h4 className="cardTitle">Sergio Homet</h4>
+                    <p className="cardText">Front-End</p>
                   </div>
                 </div>
               </div>
               <div className="col mb-4">
-                <div className="card">
+                <div className="card-nosotros mx-auto">
                   <img src="./src/assets/ulises.png" alt=""></img>
-                  <div className="card-body">
-                    <h4 className="card-title">Ulises Burgos</h4>
-                    <p className="card-text">Front-End</p>
+                  <div className="cardBody">
+                    <h4 className="cardTitle">Ulises Burgos</h4>
+                    <p className="cardText">Front-End</p>
                   </div>
                 </div>
               </div>
               <div className="col mb-4">
-                <div className="card">
+                <div className="card-nosotros mx-auto">
                   <img src="./src/assets/cyn.png" alt=""></img>
-                  <div className="card-body">
-                    <h4 className="card-title">Cynthia Pistán</h4>
-                    <p className="card-text">Front-End</p>
+                  <div className="cardBody">
+                    <h4 className="cardTitle">Cynthia Pistán</h4>
+                    <p className="cardText">Front-End</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="container-list py-4">
+            <div className="container-list py-2">
               <ul className="fw-semibold list-unstyled">
-                Visitanos en:
+                <p className="visit py-2">Visitanos en:</p>
                 <li>
                   <i className="bi bi-geo-alt-fill"></i>Gral. Paz 576 T4000 (San
                   Miguel de Tucumán)

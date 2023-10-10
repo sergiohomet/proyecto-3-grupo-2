@@ -1,0 +1,27 @@
+@use "../base/variables" as v;
+
+.card-nosotros {
+    width: 20rem;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 6px v.$primary;
+    transition: transform 0.4s ease-in-out;
+
+}
+.card-nosotros:hover {
+    transform: scale(1.05);
+  }
+
+.cardBody {
+    background-color: v.$tertiary;
+
+}
+
+.cardTitle {
+    font-size: larger;
+    font-weight: bold;
+
+}
+.visit {
+    font-size: x-large;
+}
