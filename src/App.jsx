@@ -6,9 +6,7 @@ import Footer from "./components/footer/Footer";
 import AdminPacientes from "./pages/AdminPacientes";
 import AdminTurnos from "./pages/AdminTurnos";
 import AdminIndex from "./pages/AdminIndex";
-import "./app.css";
 import Registro from "./pages/Registro";
-import "./Components/AcercaDeNosotros.css";
 import Nosotros from "./pages/Nosotros";
 
 
@@ -22,7 +20,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="*" element={ <Error /> } />
           <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/registro" element={<Registro />} />
+          <Route path="/contacto" element={<Registro />} />
           <Route path="/pacientes" element={<AdminPacientes />} />
           <Route path="/turnos" element={<AdminTurnos />} />
           <Route path="/admin" element={<AdminIndex />} />

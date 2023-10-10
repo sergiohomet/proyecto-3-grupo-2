@@ -66,11 +66,6 @@ const TurnoModalUpdate = ({ show, handleClose, turnoId, onUpdate }) => {
             />
           )}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cerrar
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );

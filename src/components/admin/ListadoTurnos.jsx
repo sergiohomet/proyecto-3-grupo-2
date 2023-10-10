@@ -65,7 +65,7 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
 
             <p className="text-lg">
               Administra los {""}
-              <span className="text-indigo-600 font-bold text-xl">turnos</span>
+              <span className="text-green font-bold text-xl">turnos</span>
             </p>
 
             {turnos.map((turno) => (
@@ -83,7 +83,7 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
 
             <p className="text-lg mt-5 mb-5">
               Comienza agregado turnos {""}
-              <span className="text-indigo-600 font-bold text-xl">
+              <span className="text-green font-bold text-xl">
                 y aparecerán en este lugar
               </span>
             </p>

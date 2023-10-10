@@ -82,3 +82,8 @@ export const PLANES_SCHEMA = yup.object({
         .min(8, "El minimo son 10 caracteres")
         .max(15, "El maximo son 10 caracteres"),
 })
+
+export const LOGIN_SCHEMA = yup.object({
+  username: yup.string().required("El email es requerido"),
+  password: yup.string().min(6, "Minimo 6 caracteres").max(20, "Maximo de 20 caracteres").required("La contrasenia es obligatoria"),
+});

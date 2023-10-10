@@ -2,19 +2,19 @@ import React from "react";
 import ServiciosGrid from "../components/Servicios/ServiciosGrid";
 import PlanesGrid from "../components/Planes/PlanesGrid";
 import Trustpilot from "../components/Trustpilot/Trustpilot";
-import Weather from "../components/Weather";
+import Weather from "../Components/Weather";
 import SponsorsGrid from "../components/SponsorsGrid";
 
 const Index = () => {
   return (
-    <>
-      <div className="row d-flex justify-content-center mt-5 container-fluid">
-        <div className="col-2"></div>
-        <div className="col-6">
-          <h3>Dale a esas Patitas todo el amor que necesitan</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            reiciendis, dicta sequi eveniet hic facere?
+    <div className="backgroundColor">
+      <div className="d-flex justify-content-center container-fluid indexBackground">
+        <div className="">
+          <h3 className="text-start">
+            Dale a esas Patitas todo el amor que necesitan
+          </h3>
+          <p className="text-start">
+            <b>Nosotros</b> sabemos como ciudarlos.
           </p>
           <div className="d-flex">
             <div className="btn btn-primary me-1 ">Reservar Turno</div>
@@ -23,10 +23,11 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="col-2 d-none d-xl-block">
-          <Weather />
+        <div className=" d-flex align-items-center">
+          <div className="m-auto displayNoneSm">
+            <Weather />
+          </div>
         </div>
-        <div className="col-2"></div>
       </div>
       <div className="d-flex flex-column container mt-5">
         <h3 className="mb-2">Nuestros Servicios</h3>
@@ -35,13 +36,13 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="container d-flex flex-column mt-5">
+      <div className=" d-flex flex-column mt-5">
         <div className="d-flex justify-content-center">
           <h3 className="mb-2 text-center">
             Elegí el plan que mas se adapte a tu <i>perrhijo</i>
           </h3>
         </div>
-        <div className="d-flex justify-content-center mb-5">
+        <div className="mb-5 planesCont">
           <PlanesGrid />
         </div>
       </div>
@@ -56,7 +57,7 @@ const Index = () => {
           <SponsorsGrid />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

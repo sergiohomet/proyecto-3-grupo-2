@@ -34,7 +34,11 @@ const ModalPlan = ({ show, setShow, plan }) => {
         </Modal.Header>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Modal.Body>
-            <h5 className="mb-3 font-bold">Formulario informacion de plan</h5>
+            <h5 className="mb-1 font-bold">Formulario informacion de plan</h5>
+            <p className="m-0 mb-3">
+              Por favor complete el siguiente formulario para solicitar
+              informacion sobre el plan seleccionado.
+            </p>
             <div className="mb-2">
               <label
                 htmlFor="name"
@@ -137,7 +141,7 @@ const ModalPlan = ({ show, setShow, plan }) => {
             </Button>
 
             <input
-              className="bg-indigo-600 p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all"
+              className="btn btn-primary"
               type="submit"
               value="Solicitar Informacion"
             />
