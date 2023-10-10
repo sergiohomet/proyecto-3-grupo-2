@@ -45,7 +45,7 @@ const NavBarpagina = () => {
             <Nav.Link href="#">
             
         
-              Registro
+              Registrarse
             </Nav.Link>
           </Nav>
           
