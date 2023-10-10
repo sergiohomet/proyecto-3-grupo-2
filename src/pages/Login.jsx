@@ -1,5 +1,4 @@
 import { Formulario } from '../components/formulario'
-import { Home } from '../components/Home'
 
 const Login = () => {
 
@@ -9,7 +8,6 @@ const Login = () => {
     
       <div className="App">
         <Formulario  />
-        <Home />
       </div>
       
       

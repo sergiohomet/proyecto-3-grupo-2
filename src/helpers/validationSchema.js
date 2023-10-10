@@ -1,7 +1,7 @@
 import * as yup from "yup";
 
 export const PACIENTE_SCHEMA = yup.object({
-    id: yup.string().default(() => Math.random().toString(36).substring(7)),
+  id: yup.string().default(() => Math.random().toString(36).substring(7)),
 
   name: yup
     .string()
@@ -43,47 +43,55 @@ export const PACIENTE_SCHEMA = yup.object({
 });
 
 export const TURNOS_SCHEMA = yup.object({
-    id: yup.string().default(() => Math.random().toString(36).substring(7)),
+  id: yup.string().default(() => Math.random().toString(36).substring(7)),
 
-    vet: yup.string().required('Seleccione un veterinario'),
-    pet: yup
-        .string()
-        .required("El nombre de la mascota es obligatorio")
-        .min(2, "Minimo 2 caracteres")
-        .max(10, "Maximo 10 caracteres"),
-    date: yup.string().required('Seleccione una fecha'),
-    hour: yup.string().required('Seleccione una hora'),
-    details: yup.string().required('Los detalles son obligatorios'),
-})
-
-
+  vet: yup.string().required("Seleccione un veterinario"),
+  pet: yup
+    .string()
+    .required("El nombre de la mascota es obligatorio")
+    .min(2, "Minimo 2 caracteres")
+    .max(10, "Maximo 10 caracteres"),
+  date: yup.string().required("Seleccione una fecha"),
+  hour: yup.string().required("Seleccione una hora"),
+  details: yup.string().required("Los detalles son obligatorios"),
+});
 
 export const PLANES_SCHEMA = yup.object({
-    name: yup
-        .string()
-        .required("El nombre es obligatorio")
-        .min(2, "El minimo son 2 caracteres")
-        .max(41, "El maximo son 41 caracteres"),
-    lastname: yup
-        .string()
-        .required("El apellido es obligatorio")
-        .min(2, "El minimo son 2 caracteres")
-        .max(28, "El maximo son 28 caracteres"),
-    email: yup
-        .string()
-        .required("El email es obligatorio")
-        .matches(
-            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-            "Formato de correo no valido"
-        ),
-    cellphone: yup
-        .string()
-        .required("El telefono es obligatorio")
-        .min(8, "El minimo son 10 caracteres")
-        .max(15, "El maximo son 10 caracteres"),
-})
+  name: yup
+    .string()
+    .required("El nombre es obligatorio")
+    .min(2, "El minimo son 2 caracteres")
+    .max(41, "El maximo son 41 caracteres"),
+  lastname: yup
+    .string()
+    .required("El apellido es obligatorio")
+    .min(2, "El minimo son 2 caracteres")
+    .max(28, "El maximo son 28 caracteres"),
+  email: yup
+    .string()
+    .required("El email es obligatorio")
+    .matches(
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      "Formato de correo no valido"
+    ),
+  cellphone: yup
+    .string()
+    .required("El telefono es obligatorio")
+    .min(8, "El minimo son 10 caracteres")
+    .max(15, "El maximo son 10 caracteres"),
+});
 
 export const LOGIN_SCHEMA = yup.object({
-  username: yup.string().required("El email es requerido"),
-  password: yup.string().min(6, "Minimo 6 caracteres").max(20, "Maximo de 20 caracteres").required("La contrasenia es obligatoria"),
+  username: yup
+    .string()
+    .required("El email es obligatorio")
+    .matches(
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      "Formato de correo no valido"
+    ),
+  password: yup
+    .string()
+    .min(6, "Minimo 6 caracteres")
+    .max(20, "Maximo de 20 caracteres")
+    .required("La contraseña es obligatoria"),
 });
