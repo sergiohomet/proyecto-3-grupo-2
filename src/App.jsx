@@ -6,7 +6,6 @@ import Footer from "./components/footer/Footer";
 import AdminPacientes from "./pages/AdminPacientes";
 import AdminTurnos from "./pages/AdminTurnos";
 import AdminIndex from "./pages/AdminIndex";
-import "./app.css";
 import Registro from "./pages/Registro";
 import "./Components/AcercaDeNosotros.css";
 import Nosotros from "./pages/Nosotros";

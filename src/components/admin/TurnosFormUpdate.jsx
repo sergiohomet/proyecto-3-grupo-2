@@ -121,7 +121,7 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
 
       <input
         type="submit"
-        className="bg-indigo-600 w-full p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all"
+        className="btn btn-primary w-100 fs-5"
         value="Modificar"
       />
     </form>

@@ -104,9 +104,9 @@ const TurnosDataTable = () => {
       )}
       <Link
         to={"/turnos"}
-        className="bg-indigo-600 p-2 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer rounded transition-all no-underline"
+        className="btn btn-primary fs-5"
       >
-        {data && data.length ? "Ver Turnos" : "Agregar Turno"}
+        Agregar turnos
       </Link>
     </>
   );
