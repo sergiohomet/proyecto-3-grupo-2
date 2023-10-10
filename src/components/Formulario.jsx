@@ -1,57 +1,32 @@
-import { useState } from 'react'
-import "./formulario.css";
+import { Link } from "react-router-dom";
 
-export function Formulario ({setUser}) {
-    const [Nombre, setNombre] = useState ("")
-    const [Contraseña, setContraseña] = useState ("")
-    const [Error, setError] = useState (false)
+export function Formulario() {
+  return (
+    <section className="form-container mt-5">
+      <h1>Login</h1>
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-if (Nombre ==="" || Contraseña ===""){
-    setError(true)
-    return
-}
+      <form className="Formulario" 
+        
+      >
+        <a className="letra-formulario no-underline">Email</a>
+        <input 
+            type="text" 
+            placeholder="ej. ulises@gmail.com"
+            className="text-white"
+        />
 
-setError(false)
+        <a className="letra-formulario no-underline">Contraseña</a>
+        <input 
+            type="Password" 
+            placeholder="123456789" 
+            className="text-white"
+        />
 
-setUser([Nombre])
+        <Link to={'/error404'} className="text-white font-bolder no-underline">Has olvidado la contraseña?</Link>
 
-    } 
-
-    return (
-        <section className='form-container'>
-            <h1>Login</h1>
-
-            <form className='Formulario'
-            onSubmit={handleSubmit}>
-                
-                <a className='letra-formulario'>Email</a>
-                <input type="text" placeholder="ej. ulises@gmail.com"
-                value={Nombre}
-                onChange={e =>setNombre(e.target.value)}
-                />
-
-                <a className='letra-formulario' >Contraseña</a>
-                <input type="Password" placeholder="123456789"
-                value={Contraseña}
-                onChange={e =>setContraseña(e.target.value)}
-                />
-
-                <a className='link-contraseña' href="/">Has olvidado la contraseña?</a>
-
-                <button className='btn-primary'>Iniciar Sesión</button>
-                
-                
-            </form> 
-            {Error &&<p>Todos los campos son obligatorios</p>}
-
-
-
-        </section>
-    )
-
-
-
-
+        <button className="btn-primary p-2 fs-5">Iniciar Sesión</button>
+      </form>
+      
+    </section>
+  );
 }

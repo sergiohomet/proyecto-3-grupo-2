@@ -26,7 +26,7 @@ function App() {
           <Route path="/pacientes" element={<AdminPacientes />} />
           <Route path="/turnos" element={<AdminTurnos />} />
           <Route path="/admin" element={<AdminIndex />} />
-          <Route path="/login" element={<Login/>}
+          <Route path="/login" element={<Login />}
  />
         </Routes>
       <Footer />
