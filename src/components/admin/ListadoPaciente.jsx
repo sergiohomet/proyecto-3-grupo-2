@@ -69,7 +69,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
 
             <p className="text-lg">
               Administra tus {""}
-              <span className="text-indigo-600 font-bold text-xl">
+              <span className="text-green font-bold text-xl">
                 Pacientes
               </span>
             </p>
@@ -91,7 +91,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
 
             <p className="text-lg mt-5 mb-5">
               Comienza agregado pacientes {""}
-              <span className="text-indigo-600 font-bold text-xl">
+              <span className="text-green font-bold text-xl">
                 y aparecerán en este lugar
               </span>
             </p>

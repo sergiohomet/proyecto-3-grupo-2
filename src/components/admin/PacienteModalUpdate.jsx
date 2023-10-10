@@ -66,11 +66,6 @@ const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
             />
           )}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cerrar
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );
