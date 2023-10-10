@@ -1,0 +1,54 @@
+@use "../base/variables" as v;
+
+
+
+
+.footer-container {
+  background-color: v.$tertiary; 
+  //border: 2px solid v.$primary; //
+  padding-top: 1rem;
+  color: v.$primary; 
+  max-height: 0 200px;
+}
+
+.h4-footer{
+
+    color: black;
+}
+
+
+
+ul li a i{
+  color: v.$primary; 
+  color: #000; 
+  transition: color 0.3s ease; 
+  font-size: 16px; 
+  transition: font-size 0.3s ease; 
+}
+
+ul li a:hover i {
+  color: greenyellow; 
+  
+  font-size: 24px; 
+}
+
+
+ul li a:hover i.bi-twitter {
+    color: yellow;
+  }
+  
+ 
+  ul li a:hover i.bi-facebook {
+    color: rgb(38, 82, 224);
+  }
+  
+ 
+  ul li a:hover i.bi-tiktok {
+    color: red;
+  }
+  
+ 
+  ul li a:hover i.bi-instagram {
+    color: rgb(241, 65, 197);
+  }
+  
