@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardBody } from "@material-tailwind/react";
-import { getStars } from "../../helpers/trustpilot";
 
 const TrustpilotCard = ({ review }) => {
   return (

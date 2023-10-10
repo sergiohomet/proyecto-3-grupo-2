@@ -35,9 +35,22 @@
     background-color: #baca9f;
 }
 
-.bg-green {
-    background-color: v.$primary;
+.bg-primary {
+    background-color: v.$primary !important;
 }
-.text-green {
-    color: v.$primary;
+
+.bg-secondary {
+    background-color: v.$secondary !important;
+}
+
+.bg-tertiary {
+    background-color: v.$tertiary !important;
+}
+
+.text-primary {
+    color: v.$primary !important;
+}
+
+.text-secondary {
+    color: v.$secondary !important;
 }

@@ -6,7 +6,7 @@ const ServiciosGrid = () => {
   return (
     <>
       {servicios.map((data) => (
-        <div key={data.id} className="col-6 col-sm-6 col-lg-3">
+        <div key={data.id} className="serviciosCont col-6 col-sm-6 col-lg-3">
           <ServiciosCards data={data} key={data.id} />
         </div>
       ))}
