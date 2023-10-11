@@ -1,7 +1,6 @@
 import * as yup from "yup";
 
 export const PACIENTE_SCHEMA = yup.object({
-  id: yup.string().default(() => Math.random().toString(36).substring(7)),
 
   name: yup
     .string()
@@ -43,7 +42,6 @@ export const PACIENTE_SCHEMA = yup.object({
 });
 
 export const TURNOS_SCHEMA = yup.object({
-  id: yup.string().default(() => Math.random().toString(36).substring(7)),
 
   vet: yup.string().required("Seleccione un veterinario"),
   pet: yup
