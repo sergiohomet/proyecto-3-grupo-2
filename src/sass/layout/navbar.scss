@@ -1,36 +1,33 @@
 @use "../base/variables" as v;
 
 nav {
-    color: v.$primary;
+  color: v.$primary;
 }
 
 .letra-drop {
-
-    color: v.$secondary;
+  color: v.$secondary;
 }
 
-
-
 .navbar-container {
-  background-color: v.$primary; 
-  border: 2px solid v.$secondary; 
+  background-color: v.$primary;
+  border: 2px solid v.$secondary;
 }
 
 .navbar-brand img {
-  width: 70px; 
-  margin-right: 10px; 
+  width: 70px;
+  margin-right: 10px;
   color: v.$primary;
 }
 
 .navbar-nav .nav-link {
-  color: white; 
-  margin-right: 10px; 
+  color: white;
+  margin-right: 10px;
 }
 
 .navbar-nav .nav-link:hover {
-  color: darken(v.$primary, 10%); 
+  background-color: darken(v.$primary, 5%);
+  border-radius: 5px;
 }
-
 
 .logo {
   height: 6em;
@@ -38,9 +35,11 @@ nav {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -49,6 +48,7 @@ nav {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

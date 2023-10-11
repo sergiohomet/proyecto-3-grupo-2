@@ -10,18 +10,28 @@ import Registro from "./pages/Registro";
 import Nosotros from "./pages/Nosotros";
 import Login from "./pages/Login";
 import PrivateRoutes from "./Routes/PrivateRoutes";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isLogged, setIsLogged] = useState(
+    Boolean(localStorage.getItem("token"))
+  );
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLogged(Boolean(token));
+  }, []);
+
   return (
     <>
-      <NavBarpagina />
+      <NavBarpagina setIsLogged={setIsLogged} isLogged={isLogged} />
       <div className="App">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<Error />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Registro />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login setIsLogged={setIsLogged} />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/pacientes" element={<AdminPacientes />} />
             <Route path="/turnos" element={<AdminTurnos />} />
