@@ -1,0 +1,58 @@
+@use "../base/variables" as v;
+
+
+
+.registro-container {
+  background-color: v.$background;
+  padding: 20px;
+  border: 2px solid v.$secondary;
+  border-radius: 10px;
+  max-width: 70%; 
+  margin: 0 auto;
+
+.registro{
+
+    max-width: 100%;
+    
+}
+
+.mensaje-ayuda {
+    font-size: 12px; 
+    color: v.$primary; 
+    margin-top: 0.5rem;
+  }
+
+  form {
+    background-color: v.$secondary;
+    padding: 20px;
+    border-radius: 8px;
+
+    .form-label {
+      color: white;
+      
+    }
+
+    .form-control {
+      background-color: v.$tertiary;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      color: v.$primary;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+
+    .alert {
+      background-color: red;
+      color: v.$background;
+      padding: 5px;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+  }
+}
