@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 const NavBarpagina = () => {
   const isLogged = localStorage.getItem("token");
+
   const navigate = useNavigate();
 
   const logOut = () => {
