@@ -20,7 +20,7 @@ const Footer = () => {
                   <li><a href= "/"> Acerca de Nosotros</a></li>
                   <li>telefono de contacto - 0800-Martin-Conty-555</li>
                   <li><a href="/">Ubicacion</a></li>
-                  <li>correo-electronico@patitas.com</li>
+                  <li>veterinariapatitas4@gmail.com</li>
   
                 </ul>
               </div>
