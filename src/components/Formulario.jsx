@@ -31,6 +31,8 @@ export function Formulario() {
     } catch (error) {
       console.log(error);
       setError({ status: true, message: error.message });
+      setLoad(false);
+      reset();
     }
   };
 
@@ -67,17 +69,25 @@ export function Formulario() {
         {error.status && (
           <Error>
             <p>{error.message}</p>
+            <p>Intentelo mas tarde</p>
           </Error>
         )}
         <Link to={"/error404"} className="no-underline text-white font-bold">
           Olvidaste la contraseña?
         </Link>
-
-        <button
-          className={!load ? "btn-primary p-2" : "btn-primary p-2 disabled"}
-        >
-          {!load ? "Iniciar Sesión" : "Cargando..."}
-        </button>
+        {!error ? (
+          <button
+            className={!load ? "btn-primary p-2" : "btn-primary p-2 disabled"}
+          >
+            {!load ? "Iniciar Sesión" : "Cargando..."}
+          </button>
+        ) : (
+          <button
+            className={!load ? "btn-primary p-2" : "btn-primary p-2 disabled"}
+          >
+            {!load ? "Iniciar Sesión" : "Cargando..."}
+          </button>
+        )}
       </form>
     </section>
   );
