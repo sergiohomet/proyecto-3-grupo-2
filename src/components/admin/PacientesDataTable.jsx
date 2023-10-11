@@ -49,7 +49,6 @@ const PacientesDataTable = () => {
             name: 'Nombre',
             selector: (row) => row.name,
             sortable: true,
-            sortable: true,
             center: true
         },
         {

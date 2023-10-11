@@ -45,32 +45,32 @@ const TurnosDataTable = () => {
 
   const columns = [
     {
-      name: "Nombre",
+      name: "Veterinario",
       selector: (row) => row.vet,
       sortable: true,
       sortable: true,
       center: true,
     },
     {
-      name: "Apellido",
+      name: "Mascota",
       selector: (row) => row.pet,
       sortable: true,
       center: true,
     },
     {
-      name: "Email",
+      name: "Fecha",
       selector: (row) => row.date,
       sortable: true,
       center: true,
     },
     {
-      name: "Número",
+      name: "Hora",
       selector: (row) => row.hour,
       sortable: true,
       center: true,
     },
     {
-      name: "Mascota",
+      name: "Detalles",
       selector: (row) => row.details,
       sortable: true,
       center: true,

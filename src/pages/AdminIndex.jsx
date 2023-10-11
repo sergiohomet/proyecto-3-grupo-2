@@ -5,7 +5,7 @@ const AdminIndex = () => {
   return (
     <>
         <div className='mx-auto text-center w-full mb-4'>
-            <h1 className='text-center'>
+            <h1 className='text-center mt-5'>
                 Administración {''}
                 <span className="text-green font-bold">General </span>
             </h1>
