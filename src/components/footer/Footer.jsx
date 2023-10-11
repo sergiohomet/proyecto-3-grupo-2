@@ -12,7 +12,6 @@ const Footer = () => {
                 <div className="d-flex justify-content-center">
                   <img
                     src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697058067/patitas/patitasNav_sbn7yu.png"
-                    // width={"100"}
                     alt=""
                     className="imgFooter"
                   ></img>
@@ -78,7 +77,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom bg-tertiary w-100 ">
         <p className="pie-footer  text-xs-center">
-          &copy;{new Date().getFullYear()} Esta pagina es del Equipo 2
+          Todos los derechos reservados &copy;{new Date().getFullYear()}
         </p>
       </div>
     </FooterContainer>
