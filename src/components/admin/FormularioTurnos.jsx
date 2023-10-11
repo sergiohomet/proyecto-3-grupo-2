@@ -31,7 +31,7 @@ const FormularioTurnos = ({ setTurno }) => {
     try {
       await axiosInstance.post("/turnos", data, {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'application/json'
         }
       });
 
