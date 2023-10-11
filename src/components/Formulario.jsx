@@ -1,11 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import { LOGIN_SCHEMA } from "../helpers/validationSchema";
-import Error from "./Error";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { axiosInstance } from "../config/axiosInstance";
+import { useState } from "react";
+import Error from "./Error";
 
 export function Formulario() {
+  const [load, setLoad] = useState(false);
+  const [error, setError] = useState({ status: false, message: "" });
+
   const {
     register,
     handleSubmit,
@@ -18,11 +22,15 @@ export function Formulario() {
 
   const onSubmit = async (data) => {
     try {
+      setLoad(true);
       const response = await axiosInstance.post("/login", data);
+      console.log(response);
+      response && setLoad(false);
       localStorage.setItem("token", response.data.token);
       navigate("/admin");
     } catch (error) {
       console.log(error);
+      setError({ status: true, message: error.message });
     }
   };
 
@@ -56,12 +64,20 @@ export function Formulario() {
             <p>{errors.password.message}</p>
           </Error>
         )}
-
+        {error.status && (
+          <Error>
+            <p>{error.message}</p>
+          </Error>
+        )}
         <Link to={"/error404"} className="no-underline text-white font-bold">
           Olvidaste la contraseña?
         </Link>
 
-        <button className="btn-primary p-2">Iniciar Sesión</button>
+        <button
+          className={!load ? "btn-primary p-2" : "btn-primary p-2 disabled"}
+        >
+          {!load ? "Iniciar Sesión" : "Cargando..."}
+        </button>
       </form>
     </section>
   );
