@@ -4,11 +4,11 @@ import styled from "styled-components";
 const Footer = () => {
     return (
       <FooterContainer className="footer-container">
-        <div className="footer-middle">
+        <div className="flex flex-col md:flex-row justify-center mx-auto ">
           <div className="container">
             <div className="row">
 
-            <div className="col-md-3 col-sm-6 mx-auto center">
+            <div className="col-md-3 col-sm-6 ">
             <ul className="list-unstyled">
                 <li><img src='./public/Logo de Patitas Vet.png'width={'250'} alt=""></img></li>
                 </ul>
