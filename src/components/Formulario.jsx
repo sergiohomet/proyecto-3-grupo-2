@@ -6,7 +6,7 @@ import { axiosInstance } from "../config/axiosInstance";
 import { useState } from "react";
 import Error from "../Components/Error";
 
-export function Formulario() {
+export function Formulario({ setIsLogged }) {
   const [load, setLoad] = useState(false);
   const [error, setError] = useState({ status: false, message: "" });
 
@@ -28,6 +28,7 @@ export function Formulario() {
       response && setLoad(false);
       localStorage.setItem("token", response.data.token);
       navigate("/admin");
+      setIsLogged(true);
     } catch (error) {
       console.log(error);
       setError({ status: true, message: error.message });

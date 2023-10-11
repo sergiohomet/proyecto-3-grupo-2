@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -8,14 +8,13 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Navigate, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-const NavBarpagina = () => {
-  const isLogged = localStorage.getItem("token");
-
+const NavBarpagina = ({ setIsLogged, isLogged }) => {
   const navigate = useNavigate();
 
   const logOut = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/");
+    setIsLogged(false);
   };
   return (
     <>
@@ -40,11 +39,14 @@ const NavBarpagina = () => {
                 <>
                   <p></p>
                   <NavDropdown title="ADMIN" id="navbarScrollingDropdown">
-                    <NavDropdown.Item to="/pacientes">
-                      Administrar Pacientes
+                    <NavDropdown.Item>
+                      <Link to="/admin">Administracion general </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item to="/turnos">
-                      Administrar Turnos
+                    <NavDropdown.Item>
+                      <Link to="/pacientes">Pacientes</Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                      <Link to="/turnos">Turnos</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item onClick={logOut}>

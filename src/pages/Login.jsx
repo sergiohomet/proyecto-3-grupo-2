@@ -1,19 +1,11 @@
-import { Formulario } from '../components/formulario'
+import { Formulario } from "../components/formulario";
 
-const Login = () => {
-
-  
-
+const Login = ({ setIsLogged }) => {
   return (
-    
-      <div className="App">
-        <Formulario  />
-      </div>
-      
-      
-      
+    <div className="App">
+      <Formulario setIsLogged={setIsLogged} />
+    </div>
+  );
+};
 
-  )
-}
-
-export default Login
+export default Login;
