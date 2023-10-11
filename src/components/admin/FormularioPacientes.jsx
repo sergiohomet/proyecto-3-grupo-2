@@ -2,11 +2,18 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PACIENTE_SCHEMA } from "../../helpers/validationSchema";
 import { axiosInstance } from "../../config/axiosInstance";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Error from "../Error";
 
 const FormularioPacientes = ({ setPacientes }) => {
-  const { register, handleSubmit, reset, formState: { errors },
+  const [error, setError] = useState({ status: false, message: "" });
+  const [load, setLoad] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
   } = useForm({
     resolver: yupResolver(PACIENTE_SCHEMA),
   });
@@ -25,22 +32,22 @@ const FormularioPacientes = ({ setPacientes }) => {
 
   const onSubmit = async (data) => {
     try {
+      setLoad(true);
       await axiosInstance.post("/paciente", data, {
         headers: {
-          'Content-Type': 'application/json'
-        }
+          "Content-Type": "application/json",
+        },
       });
 
       reset();
     } catch (error) {
       console.log(error);
+      setError({ status: true, message: error.message });
     } finally {
       fetchData(data);
+      setLoad(false);
     }
   };
-
-  
-    
 
   useEffect(() => {
     fetchData();
@@ -211,12 +218,22 @@ const FormularioPacientes = ({ setPacientes }) => {
                 <p>{errors.breed.message}</p>
               </Error>
             )}
+            {error.status && (
+              <Error>
+                <p>{error.message}</p>
+                <p>Intentelo mas tarde</p>
+              </Error>
+            )}
           </div>
 
           <input
             type="submit"
-            className="btn btn-primary w-100 fs-5"
-            value="Agregar Paciente"
+            className={
+              !load
+                ? "btn btn-primary w-100 fs-5"
+                : "btn btn-primary w-100 fs-5 disabled"
+            }
+            value={!load ? "Agregar Paciente" : "Cargando..."}
           />
         </form>
       </div>
