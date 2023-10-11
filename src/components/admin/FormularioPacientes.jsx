@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PACIENTE_SCHEMA } from "../../helpers/validationSchema";
-import Error from "../Error";
 import { axiosInstance } from "../../config/axiosInstance";
 import { useEffect } from "react";
+import Error from "../Error";
 
 const FormularioPacientes = ({ setPacientes }) => {
   const { register, handleSubmit, reset, formState: { errors },

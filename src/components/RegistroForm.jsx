@@ -3,6 +3,7 @@ import React from 'react'
 import useForm from '../hooks/Useform'
 import './Registro.css'
 
+
 const RegistroForm = () => {
 
     const initialData = {
@@ -56,36 +57,37 @@ const RegistroForm = () => {
 
 
 
-    <div>
+    <div className="registro-container">
         <form className='Registro w-50'onSubmit={handleSubmit}>
         
              <label className='form-label'>Nombre</label>
-             <input type='text' className='form-control'name="Nombre" value={form.Nombre} onChange={handleChange}/>
+             <input type='text' className='form-control'placeholder="ej: Ulises"name="Nombre" value={form.Nombre} onChange={handleChange}/>
              {errors.Nombre && <div className="alert alert-danger" role="alert">{errors.Nombre}</div>}
              
 
              <label className='form-label'>Apellido</label>
-             <input type='text' className='form-control'name="Apellido" value={form.Apellido} onChange={handleChange}/>
+             <input type='text' className='form-control'placeholder="ej: Burgos"name="Apellido" value={form.Apellido} onChange={handleChange}/>
              {errors.Apellido && <div className="alert alert-danger" role="alert">{errors.Apellido} </div>}
 
              <label className='form-label'>Telefono</label>
-             <input type='text' className='form-control'name="Telefono" value={form.Telefono} onChange={handleChange}/>
+             <input type='text' className='form-control'placeholder="ej: 0800-pinki"name="Telefono" value={form.Telefono} onChange={handleChange}/>
+             <p className="mensaje-ayuda">Este campo no es obligatorio</p>
             
 
              <label className='form-label'>email</label>
-             <input type='email' className='form-control'name="email" value={form.email} onChange={handleChange}/>
+             <input type='email' className='form-control'placeholder="ej: chapulin@gmail.com"name="email" value={form.email} onChange={handleChange}/>
              {errors.email && <div className="alert alert-danger" role="alert">{errors.email}</div>}
 
              <label className='form-label'>Contraseña</label>
-             <input type='text' className='form-control'name="Contraseña" value={form.Contraseña} onChange={handleChange}/>
+             <input type='text' className='form-control'placeholder="123456789"name="Contraseña" value={form.Contraseña} onChange={handleChange}/>
              
 
              <label className='form-label'>Confirmar Contraseña</label>
-             <input type='text' className='form-control'name="Contraseña" value={form.Contraseña} onChange={handleChange}/>
+             <input type='text' className='form-control'placeholder="-----------"name="Contraseña" value={form.Contraseña} onChange={handleChange}/>
              {errors.Contraseña && <div className="alert alert-danger" role="alert">{errors.Contraseña}</div>}
 
              <label className='form-label'>Mensaje</label>
-             <textarea className='form-control'name="Mensaje" value={form.Mensaje} onChange={handleChange}/>
+             <textarea className='form-control'placeholder="Hola Patitas..."name="Mensaje" value={form.Mensaje} onChange={handleChange}/>
 
              <button className='btn btn-warning mt-1 w-50'>Enviar Formulario</button>
 
