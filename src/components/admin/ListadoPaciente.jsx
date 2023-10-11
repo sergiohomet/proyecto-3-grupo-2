@@ -48,7 +48,9 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
   const loadPacientes = async () => {
     try {
       const response = await axiosInstance.get("/pacientes");
-      setPacientes(response.data);
+      const { data } = response
+      const { pacientes } = data;
+      setPacientes(pacientes);
     } catch (error) {
       console.log(error);
     }

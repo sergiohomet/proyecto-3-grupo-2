@@ -20,7 +20,7 @@ const FormularioTurnos = ({ setTurno }) => {
       await axiosInstance.get('/turnos')
       .then( response => {
         const { data } = response;
-        setTurno(data);
+        setTurno(data.turnos);
       })
     } catch (error) {
       console.log(error);

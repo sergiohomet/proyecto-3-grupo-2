@@ -11,6 +11,18 @@ const FormularioPacientes = ({ setPacientes }) => {
     resolver: yupResolver(PACIENTE_SCHEMA),
   });
 
+  const fetchData = async () => {
+    try {
+      await axiosInstance.get("/pacientes").then((response) => {
+        const { data } = response;
+        const { pacientes } = data;
+        setPacientes(pacientes);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const onSubmit = async (data) => {
     try {
       await axiosInstance.post("/paciente", data, {
@@ -27,16 +39,7 @@ const FormularioPacientes = ({ setPacientes }) => {
     }
   };
 
-  const fetchData = async () => {
-    try {
-      await axiosInstance.get("/pacientes").then((response) => {
-        const { data } = response;
-        setPacientes(data);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  
     
 
   useEffect(() => {
