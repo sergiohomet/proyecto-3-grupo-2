@@ -10,10 +10,10 @@ const Index = () => {
     <div className="backgroundColor">
       <div className="d-flex justify-content-center container-fluid indexBackground">
         <div className="">
-          <h3 className="text-start">
+          <h3 className="text-start textoIndex">
             Dale a esas Patitas todo el amor que necesitan
           </h3>
-          <p className="text-start">
+          <p className="text-start textoIndex">
             <b>Nosotros</b> sabemos como ciudarlos.
           </p>
           <div className="d-flex">

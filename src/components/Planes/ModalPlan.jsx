@@ -8,6 +8,11 @@ import Error from "../Error";
 import { axiosInstance } from "../../config/axiosInstance";
 
 const ModalPlan = ({ show, setShow, plan }) => {
+  const [enviado, setEnviado] = useState(false);
+  const [error, setError] = useState({ status: false, message: "" });
+  const [mail, setEmail] = useState("");
+  const [load, setLoad] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -19,24 +24,26 @@ const ModalPlan = ({ show, setShow, plan }) => {
 
   const onSubmit = async (data) => {
     try {
-      await axiosInstance.post("/solicitud", data);
+      setLoad(true);
+      const response = await axiosInstance.post("/solicitud", data);
+      response && setLoad(false);
       setEmail(data.email);
       reset();
       setEnviado(true);
     } catch (error) {
       console.log(error);
       setEnviado(true);
-      setError(true);
+      setError({ status: true, message: error.message });
+      setLoad(false);
     }
   };
 
   const handleClose = () => {
-    setShow(false), reset();
+    setShow(false);
+    reset();
+    setEnviado(false);
+    setError({ status: false });
   };
-
-  const [enviado, setEnviado] = useState(false);
-  const [error, setError] = useState(false);
-  const [mail, setEmail] = useState("");
 
   return (
     <>
@@ -47,10 +54,13 @@ const ModalPlan = ({ show, setShow, plan }) => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <Modal.Body>
             {enviado ? (
-              !error ? (
+              !error.status ? (
                 <p>Mensaje enviado al mail {mail}</p>
               ) : (
-                <p>Hubo un error al enviar el mensaje intentelo mas tarde</p>
+                <>
+                  <p>Error {error.message} </p>
+                  <p>Intentelo mas tarde</p>
+                </>
               )
             ) : (
               <>
@@ -134,7 +144,7 @@ const ModalPlan = ({ show, setShow, plan }) => {
                   </label>
                   <input
                     id="cellphone"
-                    type="text"
+                    type="number"
                     name="cellphone"
                     placeholder="381-111111"
                     className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
@@ -158,7 +168,7 @@ const ModalPlan = ({ show, setShow, plan }) => {
                   </select>
                 </div>
               </>
-            )}{" "}
+            )}
           </Modal.Body>
 
           <Modal.Footer>
@@ -169,9 +179,11 @@ const ModalPlan = ({ show, setShow, plan }) => {
                 </Button>
 
                 <input
-                  className="btn btn-primary"
+                  className={
+                    !load ? "btn btn-primary" : "disabled btn btn-primary"
+                  }
                   type="submit"
-                  value="Solicitar Informacion"
+                  value={!load ? "Solicitar Informacion" : "Enviando..."}
                 />
               </>
             ) : (
