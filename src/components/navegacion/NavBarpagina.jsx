@@ -33,7 +33,7 @@ const NavBarpagina = () => {
             >
               <Link to="/">Inicio</Link>
 
-              {isLogged ? (
+              {!isLogged ? (
                 <Link to="/login">Iniciar Sesion</Link>
               ) : (
                 <>
