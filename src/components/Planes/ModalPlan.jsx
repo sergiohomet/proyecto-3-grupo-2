@@ -19,7 +19,7 @@ const ModalPlan = ({ show, setShow, plan }) => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axiosInstance.post("/solicitud", data);
+      await axiosInstance.post("/solicitud", data);
       setEmail(data.email);
       reset();
       setEnviado(true);
