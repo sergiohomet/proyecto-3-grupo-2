@@ -3,6 +3,15 @@ import React from "react";
 const Turnos = ({ turno, onDelete, handleUpdate }) => {
   const { id, vet, pet, date, hour, details } = turno;
 
+  const fechaDesdeBackend = turno.date;
+const dateObj = new Date(fechaDesdeBackend);
+const fechaFormateada = dateObj.toLocaleDateString("es-AR", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+
   return (
     <>
       <div className="bg-white shadow-md mx-5 md:mx-0 mr-5 rounded-xl px-5 py-4 text-start mb-3">
@@ -13,7 +22,7 @@ const Turnos = ({ turno, onDelete, handleUpdate }) => {
         Mascota: <span className="font-normal normal-case">{pet}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Fecha: <span className="font-normal normal-case">{date}</span>
+        Fecha: <span className="font-normal normal-case">{fechaFormateada}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
         Hora: <span className="font-normal normal-case">{hour}</span>
