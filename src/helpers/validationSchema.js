@@ -84,14 +84,8 @@ export const PLANES_SCHEMA = yup.object({
 export const LOGIN_SCHEMA = yup.object({
   username: yup
     .string()
-    .required("El email es obligatorio")
-    .matches(
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-      "Formato de correo no valido"
-    ),
+    .required("El email es obligatorio"),
   password: yup
     .string()
-    .min(6, "Minimo 6 caracteres")
-    .max(20, "Maximo de 20 caracteres")
     .required("La contraseña es obligatoria"),
 });

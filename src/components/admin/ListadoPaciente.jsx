@@ -33,7 +33,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
         reverseButtons: true,
       }).then(async (result) => {
         if (result.isConfirmed) {
-          await axiosInstance.delete(`/pacientes/${id}`);
+          await axiosInstance.delete(`/paciente/${id}`);
           setPacientes((prevPacientes) =>
             prevPacientes.filter((paciente) => paciente.id !== id)
           );

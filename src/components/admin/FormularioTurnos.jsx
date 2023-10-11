@@ -29,34 +29,23 @@ const FormularioTurnos = ({ setTurno }) => {
 
   const onSubmit = async (data) => {
     try {
-      await axiosInstance.post("/turnos", data);
+      await axiosInstance.post("/turnos", data, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
 
       reset();
     } catch (error) {
       console.log(error);
     } finally {
-      fetchData(data)
-    }
+      fetchData(data);
+    } 
   };
-
+    
   useEffect(() => {
     fetchData();
   }, [])
-  
-
-  // const onSubmit = async (data) => {
-  //   try {
-  //     await axiosInstance.post("/turnos", data, {
-  //       headers: {
-  //         'Content-Type': 'multipart/form-data'
-  //       }
-  //     });
-
-  //     reset();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   return (
     <>

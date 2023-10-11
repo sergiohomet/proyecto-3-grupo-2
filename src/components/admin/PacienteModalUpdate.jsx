@@ -13,7 +13,7 @@ const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
   useEffect(() => {
     if (pacienteId) {
       try {
-        axiosInstance.get(`/pacientes/${pacienteId}`).then((resp) => {
+        axiosInstance.get(`/paciente/${pacienteId}`).then((resp) => {
           setData(resp.data);
           setIsLoading(false);
         });

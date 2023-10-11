@@ -13,7 +13,7 @@ const TurnoModalUpdate = ({ show, handleClose, turnoId, onUpdate }) => {
   useEffect(() => {
     if (turnoId) {
       try {
-        axiosInstance.get(`/turnos/${turnoId}`).then((resp) => {
+        axiosInstance.get(`/turno/${turnoId}`).then((resp) => {
           setData(resp.data);
           setIsLoading(false);
         });

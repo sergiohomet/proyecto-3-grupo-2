@@ -24,7 +24,11 @@ const FormularioPacientes = ({ setPacientes }) => {
 
   const onSubmit = async (data) => {
     try {
-      await axiosInstance.post("/pacientes", data);
+      await axiosInstance.post("/paciente", data, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
 
       reset();
     } catch (error) {
@@ -33,6 +37,7 @@ const FormularioPacientes = ({ setPacientes }) => {
       fetchData(data);
     }
   };
+    
 
   useEffect(() => {
     fetchData();

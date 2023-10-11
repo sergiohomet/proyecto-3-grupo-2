@@ -33,7 +33,7 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
         reverseButtons: true,
       }).then(async (result) => {
         if (result.isConfirmed) {
-          await axiosInstance.delete(`/turnos/${id}`);
+          await axiosInstance.delete(`/turno/${id}`);
           setTurno((newData) => newData.filter((turno) => turno.id !== id));
           Swal.fire("Eliminado!", "El turno fue eliminado", "success");
         }

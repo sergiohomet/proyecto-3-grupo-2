@@ -15,12 +15,16 @@ const PacienteFormUpdate = ({ paciente, onUpdate }) => {
     e.preventDefault();
 
     try {
-        await axiosInstance.put(`/pacientes/${paciente.id}`, formDatos);
-        onUpdate(formDatos);
-      } catch (error) {
-        console.log(error);
-      }
-  }
+      await axiosInstance.put(`/pacientes/${paciente.id}`, formDatos, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      onUpdate(formDatos);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <form
