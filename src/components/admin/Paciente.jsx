@@ -1,7 +1,7 @@
 import React from "react";
 
 const Paciente = ({ paciente, onDelete, handleUpdate }) => {
-  const { id, name, lastname, email, cellphone, pet, kind, breed } = paciente;
+  const { id, name, lastname, username, phone, pet, kind, breed } = paciente;
 
   return (
     <>
@@ -14,10 +14,10 @@ const Paciente = ({ paciente, onDelete, handleUpdate }) => {
         Apellido: <span className="font-normal normal-case">{lastname}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Email: <span className="font-normal normal-case">{email}</span>
+        Email: <span className="font-normal normal-case">{username}</span>
       </p>
       <p className="font-bold mb-1 text-gray-700 uppercase">
-        Teléfono: <span className="font-normal normal-case">{cellphone}</span>
+        Teléfono: <span className="font-normal normal-case">{phone}</span>
       </p>
 
       <h5 className="text-center my-2 font-bold">Datos de la mascota</h5>
@@ -35,7 +35,7 @@ const Paciente = ({ paciente, onDelete, handleUpdate }) => {
         <button
           type="button"
           className="bg-primary px-4 py-2 mr-2 text-white font-bold rounded transition-all"
-          onClick={() => handleUpdate(id)}
+          onClick={() => handleUpdate(id, index)}
         >
           Editar
         </button>
