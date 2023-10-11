@@ -18,7 +18,7 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
   };
   return (
     <>
-      <Navbar expand="lg " className="navbar-container">
+      <Navbar expand="lg " className="navbar-container navbar-dark">
         <Container fluid>
           <Navbar.Brand href="#">
             {" "}
