@@ -27,9 +27,8 @@ const Footer = () => {
                   <li>
                     <a href="/nosotros"> Acerca de Nosotros</a>
                   </li>
-
                   <li>
-                    <a href="/nosotros">Ubicacion</a>
+                    <a href="/contacto">Contacto</a>
                   </li>
 
                   <li className="d-flex justify-content-center align-items-center">
