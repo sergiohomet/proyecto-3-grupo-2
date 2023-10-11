@@ -19,7 +19,7 @@ const ContactoForm = () => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Tu Email a sido enviado correctamente",
+      title: "Tu email ha sido enviado correctamente",
       showConfirmButton: true,
     });
     reset();
