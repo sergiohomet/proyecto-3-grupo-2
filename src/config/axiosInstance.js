@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-    baseURL: "https://backend-veterinaria-patitas.onrender.com/api/veterinariaasd",
+    baseURL: "https://backend-veterinaria-patitas.onrender.com/api/veterinaria",
 });
 
 axiosInstance.interceptors.request.use(
