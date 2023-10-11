@@ -31,9 +31,12 @@ export function Formulario({ setIsLogged }) {
       setIsLogged(true);
     } catch (error) {
       console.log(error);
-      setError({ status: true, message: error.message });
+      setError({ status: true, message: error.response.data.mensaje });
       setLoad(false);
       reset();
+      setTimeout(() => {
+        setError({ status: true, message: "" });
+      }, 5000);
     }
   };
 
@@ -67,11 +70,12 @@ export function Formulario({ setIsLogged }) {
             <p>{errors.password.message}</p>
           </Error>
         )}
-        {error.status && (
+        {error.status ? (
           <Error>
             <p>{error.message}</p>
-            <p>Intentelo mas tarde</p>
           </Error>
+        ) : (
+          <></>
         )}
         <Link to={"/error404"} className="no-underline text-white font-bold">
           Olvidaste la contraseña?
