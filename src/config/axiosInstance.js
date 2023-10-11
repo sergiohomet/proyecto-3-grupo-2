@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-    baseURL: "https://backend-veterinaria-patitas.onrender.com/api/veterinaria",
+    baseURL: "https://backend-veterinaria-patitas.onrender.com/api/veterinariaasd",
 });
 
 axiosInstance.interceptors.request.use(
@@ -21,7 +21,7 @@ axiosInstance.interceptors.response.use(
     (response) => {
         return response;
     },
-    async (error) => {
+    async(error) => {
         if (error.response && error.response.status === 401) {
             const refreshToken = localStorage.getItem("refreshToken");
             if (refreshToken) {
@@ -31,12 +31,11 @@ axiosInstance.interceptors.response.use(
                     localStorage.setItem("token", newToken);
                     error.config.headers.Authorization = `Bearer ${newToken}`;
                     return axiosInstance(error.config);
-                } catch (refreshError) {
-                }
+                } catch (refreshError) {}
             }
         }
         return Promise.reject(error);
     }
 );
 
-export default axiosInstance;
+export default  axiosInstance;
