@@ -8,8 +8,8 @@ import AdminTurnos from "./pages/AdminTurnos";
 import AdminIndex from "./pages/AdminIndex";
 import Registro from "./pages/Registro";
 import Nosotros from "./pages/Nosotros";
-
-
+import Login from './pages/Login'
+import PrivateRoutes from "./Routes/PrivateRoutes";
 
 function App() {
   return (
@@ -21,9 +21,12 @@ function App() {
           <Route path="*" element={ <Error /> } />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Registro />} />
-          <Route path="/pacientes" element={<AdminPacientes />} />
-          <Route path="/turnos" element={<AdminTurnos />} />
-          <Route path="/admin" element={<AdminIndex />} />
+          <Route path="/login" element={<Login />} />
+          <Route element={<PrivateRoutes />} >
+            <Route path="/pacientes" element={<AdminPacientes />} />
+            <Route path="/turnos" element={<AdminTurnos />} />
+            <Route path="/admin" element={<AdminIndex />} />
+          </Route>
         </Routes>
       <Footer />
       
