@@ -15,12 +15,12 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
 
   const handleShow = () => setShow(true);
 
-  const handleUpdate = (id) => {
-    setTurnoId(id);
+  const handleUpdate = (_id) => {
+    setTurnoId(_id);
     handleShow();
   };
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (_id) => {
     try {
       Swal.fire({
         title: "¿Estás seguro?",
@@ -33,8 +33,8 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
         reverseButtons: true,
       }).then(async (result) => {
         if (result.isConfirmed) {
-          await axiosInstance.delete(`/turno/${id}`);
-          setTurno((newData) => newData.filter((turno) => turno.id !== id));
+          await axiosInstance.delete(`/turno/${_id}`);
+          setTurno((newData) => newData.filter((turno) => turno._id !== _id));
           Swal.fire("Eliminado!", "El turno fue eliminado", "success");
         }
       });
@@ -70,12 +70,12 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
               <span className="text-green font-bold text-xl">turnos</span>
             </p>
 
-            {turnos.map((turno) => (
+            {turnos.map((turno, index) => (
               <Turnos
-                key={turno.id}
+                key={turno._id || index}
                 turno={turno}
-                onDelete={() => handleDelete(turno.id)}
-                handleUpdate={() => handleUpdate(turno.id)}
+                onDelete={() => handleDelete(turno._id)}
+                handleUpdate={() => handleUpdate(turno._id)}
               />
             ))}
           </>
@@ -97,7 +97,7 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
           turnoId={turnoId}
           onUpdate={(updatedTurno) => {
             const updatedTurnos = turnos.map((turno) =>
-              turno.id === turnoId ? updatedTurno : turno
+              turno._id === turnoId ? updatedTurno : turno
             );
             setTurno(updatedTurnos);
           }}

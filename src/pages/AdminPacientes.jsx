@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormularioPacientes from "../Components/admin/FormularioPacientes";
-import ListadoPaciente from "../components/admin/ListadoPaciente";
+import ListadoPaciente from "../Components/admin/ListadoPaciente";
 
 const AdminPacientes = () => {
   const [pacientes, setPacientes] = useState([]);

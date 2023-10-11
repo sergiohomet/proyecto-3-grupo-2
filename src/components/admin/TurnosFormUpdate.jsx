@@ -20,9 +20,9 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
 
     try {
       setLoad(true);
-      await axiosInstance.put(`/turnos/${turno.id}`, formDatos, {
+      await axiosInstance.put(`/turno/${turno._id}`, formDatos, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
         },
       });
 
@@ -49,7 +49,7 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
         <select
           id="vet"
           name="vet"
-          value={formDatos.vet || ""}
+          value={formDatos.vet}
           className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md text-center"
           onChange={handleChangeDatos}
         >
@@ -75,7 +75,7 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
           id="pet"
           type="text"
           name="pet"
-          value={formDatos.pet || ""}
+          value={formDatos.pet}
           placeholder="Ejemplo: Hook, Dino, etc"
           className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
           onChange={handleChangeDatos}
@@ -92,7 +92,7 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
           id="date"
           type="date"
           name="date"
-          value={formDatos.date || ""}
+          value={formDatos.date}
           className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
           onChange={handleChangeDatos}
         />
@@ -108,7 +108,7 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
           id="hour"
           type="time"
           name="hour"
-          value={formDatos.hour || ""}
+          value={formDatos.hour}
           className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
           onChange={handleChangeDatos}
         />
@@ -124,7 +124,7 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
           id="details"
           type="text"
           name="details"
-          value={formDatos.details || ""}
+          value={formDatos.details}
           placeholder="Ejemplo: Vacunación, checkeo"
           className="border-2 w-full p-2 mt-1 mb-0 placeholder-gray-400 rounded-md resize-none"
           onChange={handleChangeDatos}

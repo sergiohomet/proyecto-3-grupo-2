@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { axiosInstance } from "../../config/axiosInstance";
 import PacienteFormUpdate from "./PacienteFormUpdate";
@@ -25,10 +24,17 @@ const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
 
   const handleFormSubmit = async (updatedData) => {
     try {
-      const response = await axiosInstance.put(`/pacientes/${pacienteId}`, updatedData);
+      const response = await axiosInstance.put(
+        `/paciente/${pacienteId}`,
+        updatedData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       onUpdate(response.data);
-
       handleClose();
     } catch (error) {
       console.log(error);
@@ -59,7 +65,7 @@ const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
             <p>Cargando...</p>
           ) : (
             <PacienteFormUpdate
-              paciente={data}
+              paciente={data.patient}
               onSubmit={handleFormSubmit}
               onCancel={handleClose}
               onUpdate={onUpdate}

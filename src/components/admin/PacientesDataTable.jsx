@@ -60,7 +60,7 @@ const PacientesDataTable = () => {
         },
         {
             name: 'Email',
-            selector: (row) => row.email,
+            selector: (row) => row.username,
             sortable: true,
             center: true
         },

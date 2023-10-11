@@ -30,7 +30,7 @@ const FormularioTurnos = ({ setTurno }) => {
 
   const onSubmit = async (data) => {
     try {
-      await axiosInstance.post("/turnos", data, {
+      await axiosInstance.post("/turno", data, {
         headers: {
           'Content-Type': 'application/json'
         }

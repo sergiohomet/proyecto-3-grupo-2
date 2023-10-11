@@ -24,10 +24,17 @@ const TurnoModalUpdate = ({ show, handleClose, turnoId, onUpdate }) => {
 
   const handleFormSubmit = async (updatedData) => {
     try {
-      const response = await axiosInstance.put(`/turnos/${turnoId}`, updatedData);
+      const response = await axiosInstance.put(
+        `/turnos/${turnoId}`,
+        updatedData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       onUpdate(response.data);
-
       handleClose();
     } catch (error) {
       console.log(error);
@@ -58,7 +65,7 @@ const TurnoModalUpdate = ({ show, handleClose, turnoId, onUpdate }) => {
             <p>Cargando...</p>
           ) : (
             <TurnoFormUpdate
-              turno={data}
+              turno={data.turno}
               onSubmit={handleFormSubmit}
               onCancel={handleClose}
               onUpdate={onUpdate}

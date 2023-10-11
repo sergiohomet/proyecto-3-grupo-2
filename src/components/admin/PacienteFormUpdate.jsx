@@ -15,9 +15,9 @@ const PacienteFormUpdate = ({ paciente, onUpdate }) => {
     e.preventDefault();
 
     try {
-      await axiosInstance.put(`/pacientes/${paciente.id}`, formDatos, {
+      await axiosInstance.put(`/paciente/${paciente._id}`, formDatos, {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          "Content-Type": "application/json",
         }
       });
       onUpdate(formDatos);

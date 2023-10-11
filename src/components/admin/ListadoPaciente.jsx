@@ -15,13 +15,12 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
 
   const handleShow = () => setShow(true);
 
-  const handleUpdate = (id) => {
-    setPacienteId(id);
+  const handleUpdate = (_id) => {
+    setPacienteId(_id);
     handleShow();
   };
 
   const handleDelete = async (_id) => {
-    console.log(_id);
     try {
       Swal.fire({
         title: "¿Estás seguro?",
@@ -106,7 +105,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
           pacienteId={pacienteId}
           onUpdate={(updatedPaciente) => {
             const updatedPacientes = pacientes.map((paciente) =>
-              paciente.id === pacienteId ? updatedPaciente : paciente
+              paciente._id === pacienteId ? updatedPaciente : paciente
             );
             setPacientes(updatedPacientes);
           }}
