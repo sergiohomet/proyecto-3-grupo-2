@@ -7,7 +7,7 @@ import SponsorsGrid from "../components/SponsorsGrid";
 
 const Index = () => {
   return (
-    <div className="backgroundColor">
+    <div className="backgroundColor p-1">
       <div className="d-flex justify-content-center container-fluid indexBackground">
         <div className="">
           <h3 className="text-start textoIndex">
@@ -16,12 +16,6 @@ const Index = () => {
           <p className="text-start textoIndex">
             <b>Nosotros</b> sabemos como ciudarlos.
           </p>
-          <div className="d-flex">
-            <div className="btn btn-primary me-1 ">Reservar Turno</div>
-            <div className="btn btn-secondary d-flex align-items-center">
-              Contactanos
-            </div>
-          </div>
         </div>
         <div className=" d-flex align-items-center">
           <div className="m-auto displayNoneSm">
