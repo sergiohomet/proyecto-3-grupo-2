@@ -87,3 +87,25 @@ export const LOGIN_SCHEMA = yup.object({
     .string()
     .required("La contraseña es obligatoria"),
 });
+
+export const CONTACTO_SCHEMA = yup.object({
+
+  name: yup
+    .string()
+    .required("El nombre del propietario es obligatorio")
+    .min(2, "El minimo son 2 caracteres")
+    .max(41, "El maximo son 41 caracteres"),
+  lastname: yup
+    .string()
+    .required("El nombre del propietario es obligatorio")
+    .min(2, "El minimo son 2 caracteres")
+    .max(28, "El maximo son 28 caracteres"),
+  username: yup
+    .string()
+    .required("El email es obligatorio")
+    .matches(
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      "Formato de correo no valido"
+    ),
+  message: yup.string().required('El mensaje es requerido')
+});
