@@ -25,11 +25,11 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
             <img
               src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697058067/patitas/patitasNav_sbn7yu.png"
               width={"70"}
-              alt=""
+              alt="Patitas Logo"
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse className="visible" id="navbarScroll">
+          <Navbar.Collapse className="visible text-white" id="navbarScroll">
             <Nav className="ms-auto" navbarScroll>
               <Link className="nav-link" to="/">
                 Inicio
