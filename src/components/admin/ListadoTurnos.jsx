@@ -60,7 +60,7 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
 
   return (
     <>
-      <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll mt-3 md:mt-0">
+      <div className="md:w-3/4 lg:w-3/5 md:h-screen overflow-y-scroll mt-3 md:mt-0 mx-auto">
         {turnos && turnos.length ? (
           <>
             <h2 className="font-black text-3xl text-center">Listado turnos</h2>
