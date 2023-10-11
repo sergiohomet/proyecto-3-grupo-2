@@ -1,7 +1,7 @@
 import React from "react";
 
 const Paciente = ({ paciente, onDelete, handleUpdate }) => {
-  const { id, name, lastname, username, phone, pet, kind, breed } = paciente;
+  const { _id, name, lastname, username, phone, pet, kind, breed } = paciente;
 
   return (
     <>
@@ -35,14 +35,14 @@ const Paciente = ({ paciente, onDelete, handleUpdate }) => {
         <button
           type="button"
           className="bg-primary px-4 py-2 mr-2 text-white font-bold rounded transition-all"
-          onClick={() => handleUpdate(id, index)}
+          onClick={() => handleUpdate(_id)}
         >
           Editar
         </button>
         <button
           type="button"
           className="bg-red-600 hover:bg-red-700 p-2 text-white font-bold rounded transition-all"
-          onClick={() => onDelete(id)}
+          onClick={() => onDelete(_id)}
         >
           Eliminar
         </button>

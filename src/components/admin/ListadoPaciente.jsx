@@ -20,8 +20,8 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
     handleShow();
   };
 
-  const handleDelete = async (id) => {
-    console.log(id);
+  const handleDelete = async (_id) => {
+    console.log(_id);
     try {
       Swal.fire({
         title: "¿Estás seguro?",
@@ -34,9 +34,9 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
         reverseButtons: true,
       }).then(async (result) => {
         if (result.isConfirmed) {
-          await axiosInstance.delete(`/paciente/${id}`);
+          await axiosInstance.delete(`/paciente/${_id}`);
           setPacientes((prevPacientes) =>
-            prevPacientes.filter((paciente) => paciente.id !== id)
+            prevPacientes.filter((paciente) => paciente._id !== _id)
           );
           Swal.fire("Eliminado!", "El paciente fue eliminado", "success");
         }
@@ -79,10 +79,10 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
 
             {pacientes.map((paciente, index) => (
               <Paciente
-                key={paciente.id || index}
+                key={paciente._id || index}
                 paciente={paciente}
-                onDelete={() => handleDelete(paciente.id)}
-                handleUpdate={() => handleUpdate(paciente.id)}
+                onDelete={() => handleDelete(paciente._id)}
+                handleUpdate={() => handleUpdate(paciente._id)}
               />
             ))}
           </>
