@@ -17,14 +17,16 @@ const ModalPlan = ({ show, setShow, plan }) => {
     resolver: yupResolver(PLANES_SCHEMA),
   });
 
-  const onSubmit = (data) => {
-    // axiosInstance.post("/solicitud", data);
-    console.log("enviado correctamente", data);
-    reset();
-    setEnviado(true);
+  const onSubmit = async (data) => {
     try {
+      const response = await axiosInstance.post("/solicitud", data);
+      setEmail(data.email);
+      reset();
+      setEnviado(true);
     } catch (error) {
       console.log(error);
+      setEnviado(true);
+      setError(true);
     }
   };
 
@@ -33,6 +35,8 @@ const ModalPlan = ({ show, setShow, plan }) => {
   };
 
   const [enviado, setEnviado] = useState(false);
+  const [error, setError] = useState(false);
+  const [mail, setEmail] = useState("");
 
   return (
     <>
@@ -43,7 +47,11 @@ const ModalPlan = ({ show, setShow, plan }) => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <Modal.Body>
             {enviado ? (
-              <p>Mensaje enviado !</p>
+              !error ? (
+                <p>Mensaje enviado al mail {mail}</p>
+              ) : (
+                <p>Hubo un error al enviar el mensaje intentelo mas tarde</p>
+              )
             ) : (
               <>
                 {" "}
@@ -154,15 +162,23 @@ const ModalPlan = ({ show, setShow, plan }) => {
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Salir
-            </Button>
+            {!enviado ? (
+              <>
+                <Button variant="secondary" onClick={handleClose}>
+                  Salir
+                </Button>
 
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value="Solicitar Informacion"
-            />
+                <input
+                  className="btn btn-primary"
+                  type="submit"
+                  value="Solicitar Informacion"
+                />
+              </>
+            ) : (
+              <Button variant="secondary" onClick={handleClose}>
+                Volver atras
+              </Button>
+            )}
           </Modal.Footer>
         </form>
       </Modal>

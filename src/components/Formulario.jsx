@@ -20,7 +20,7 @@ export function Formulario() {
     try {
       const response = await axiosInstance.post("/login", data);
       localStorage.setItem("token", response.data.token);
-      navigate('/admin')
+      navigate("/admin");
     } catch (error) {
       console.log(error);
     }
