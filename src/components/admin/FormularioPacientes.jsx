@@ -41,7 +41,8 @@ const FormularioPacientes = ({ setPacientes }) => {
     try {
       await axiosInstance.get("/pacientes").then((response) => {
         const { data } = response;
-        setPacientes(data);
+        const { pacientes } = data;
+        setPacientes(pacientes);
       });
     } catch (error) {
       console.log(error);

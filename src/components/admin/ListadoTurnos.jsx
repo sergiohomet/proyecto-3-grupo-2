@@ -46,7 +46,9 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
   const loadTurnos = async () => {
     try {
       const response = await axiosInstance.get("/turnos");
-      setTurno(response.data);
+      const { data } = response;
+      const { turnos } = data;
+      setTurno(turnos);
     } catch (error) {
       console.log(error);
     }
