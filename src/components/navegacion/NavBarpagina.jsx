@@ -5,8 +5,17 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Navigate, useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const NavBarpagina = () => {
+  const isLogged = localStorage.getItem("token");
+  const navigate = useNavigate();
+
+  const logOut = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
   return (
     <>
       <Navbar expand="lg " className="navbar-container">
@@ -22,21 +31,27 @@ const NavBarpagina = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Inicio</Nav.Link>
+              <Link to="/">Inicio</Link>
 
-              <NavDropdown title="Servicios" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">
-                  Asistencia medica
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Peluquería de mascotas
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Venta de Productos y alimentos
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#">Registrarse</Nav.Link>
+              {isLogged ? (
+                <Link to="/login">Iniciar Sesion</Link>
+              ) : (
+                <>
+                  <p></p>
+                  <NavDropdown title="ADMIN" id="navbarScrollingDropdown">
+                    <NavDropdown.Item to="/pacientes">
+                      Administrar Pacientes
+                    </NavDropdown.Item>
+                    <NavDropdown.Item to="/turnos">
+                      Administrar Turnos
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item onClick={logOut}>
+                      Cerrar Sesion
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
