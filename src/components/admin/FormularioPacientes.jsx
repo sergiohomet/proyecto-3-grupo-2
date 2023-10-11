@@ -30,7 +30,10 @@ const FormularioPacientes = ({ setPacientes }) => {
       reset();
     } catch (error) {
       console.log(error);
-      setError({ status: true, message: error.message });
+      setError({ status: true, message: error.response.data.mensaje });
+      setTimeout(() => {
+        setError({ status: true, message: "" });
+      }, 5000);
     } finally {
       fetchData(data);
       setLoad(false);
@@ -221,7 +224,6 @@ const FormularioPacientes = ({ setPacientes }) => {
             {error.status && (
               <Error>
                 <p>{error.message}</p>
-                <p>Intentelo mas tarde</p>
               </Error>
             )}
           </div>

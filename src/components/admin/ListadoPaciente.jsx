@@ -48,7 +48,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
   const loadPacientes = async () => {
     try {
       const response = await axiosInstance.get("/pacientes");
-      const { data } = response
+      const { data } = response;
       const { pacientes } = data;
       setPacientes(pacientes);
     } catch (error) {
@@ -71,9 +71,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
 
             <p className="text-lg">
               Administra tus {""}
-              <span className="text-green font-bold text-xl">
-                Pacientes
-              </span>
+              <span className="text-green font-bold text-xl">Pacientes</span>
             </p>
 
             {pacientes.map((paciente, index) => (
