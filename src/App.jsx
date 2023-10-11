@@ -6,11 +6,11 @@ import Footer from "./components/footer/Footer";
 import AdminPacientes from "./pages/AdminPacientes";
 import AdminTurnos from "./pages/AdminTurnos";
 import AdminIndex from "./pages/AdminIndex";
-import Registro from "./pages/Registro";
 import Nosotros from "./pages/Nosotros";
 import Login from "./pages/Login";
 import PrivateRoutes from "./Routes/PrivateRoutes";
 import { useEffect, useState } from "react";
+import Contacto from "./pages/Contacto";
 
 function App() {
   const [isLogged, setIsLogged] = useState(
@@ -30,7 +30,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="*" element={<Error />} />
           <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/contacto" element={<Registro />} />
+          <Route path="/contacto" element={<Contacto />} />
           <Route path="/login" element={<Login setIsLogged={setIsLogged} />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/pacientes" element={<AdminPacientes />} />
