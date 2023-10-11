@@ -1,13 +1,14 @@
 export const planes = [
     //
     {
+        destacado: false,
         id: 1,
         titulo: "Basico",
         caracteristicas: [
-            "100%off en consultas y clinica general horario diurno",
-            "10%off en alimentos y accesorios",
-            "20%off farmacia",
-            "20oof en cardiologia"
+            "100% en consultas y clinica general horario diurno",
+            "10% en alimentos y accesorios",
+            "20% en farmacia",
+            "20% en en cardiologia"
         ],
         infoPlan: {
             "consulta y controles clinica general (horario diurno)": "100%",
@@ -33,14 +34,15 @@ export const planes = [
         }
     },
     {
+        destacado: true,
         id: 2,
-        titulo: "Estandar (Recomendado)",
+        titulo: "Estandar",
         caracteristicas: [
-            "100%off en consultas y clinica general horario diurno",
-            "15%off en alimentos y accesorios",
-            "30%off farmacia",
-            "50%off baño y corte",
-            "40%off en cardiologia, dermatologia oftalmologia y mas"
+            "100% en consultas y clinica general horario diurno",
+            "15% en alimentos y accesorios",
+            "30% farmacia",
+            "50% baño y corte",
+            "40% en cardiologia, dermatologia oftalmologia y mas"
         ],
         infoPlan: {
             "consulta y controles clinica general (horario diurno)": "100%",
@@ -66,14 +68,15 @@ export const planes = [
         }
     },
     {
+        destacado: false,
         id: 3,
         titulo: "Premium",
         caracteristicas: [
-            "100%off en consultas y clinica general horario diurno",
-            "20%off en alimentos y accesorios",
-            "40%off farmacia",
-            "50%off baño y corte",
-            "100%off en cardiologia, dermatologia oftalmologia y mas"
+            "100% en consultas y clinica general horario diurno",
+            "20% en alimentos y accesorios",
+            "40% farmacia",
+            "50% baño y corte",
+            "100% en cardiologia, dermatologia oftalmologia y mas"
         ],
         infoPlan: {
             "consulta y controles clinica general (horario diurno)": "100%",

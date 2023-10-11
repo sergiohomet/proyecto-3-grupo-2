@@ -7,15 +7,15 @@ const AdminIndex = () => {
         <div className='mx-auto text-center w-full mb-4'>
             <h1 className='text-center'>
                 Administración {''}
-                <span className="text-indigo-600 font-bold">General </span>
+                <span className="text-green font-bold">General </span>
             </h1>
             <hr />
-            <p className='text-3xl font-bold text-indigo-600 '>Pacientes</p>
+            <p className='text-3xl font-bold text-green '>Pacientes</p>
 
             <PacientesDataTable />
 
             <hr />
-            <p className='text-3xl font-bold text-indigo-600 '>Turnos</p>
+            <p className='text-3xl font-bold text-green '>Turnos</p>
 
             <TurnosDataTable />
         </div>

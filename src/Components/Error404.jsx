@@ -1,36 +1,36 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
-import "./Error404.css"
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 
 const Error404 = () => {
-  return ( 
-    <div className="main-container">
-      <div className="container-img">
-        <Image className="img mx-auto" src="./src/assets/dog.jpg" fluid ></Image>
-          <p className="number mx-auto text-center">404
-          </p>
-      </div>
-      <div className="container-phrase">
-        <p className="container-error py-4">
-          Upsss!!! Nada puede malir sal. 
-          Página No Encontrada.
-        </p>
-        <Button className='button-error404'><b>PAGINA DE INICIO</b></Button>
-        <div className="burbujas">
-          <div className="burbuja"></div>
-          <div className="burbuja"></div>
-          <div className="burbuja"></div>
-          <div className="burbuja"></div>
-          <div className="burbuja"></div>
-          <div className="burbuja"></div>
-          <div className="burbuja"></div>
-          <div className="burbuja"></div>
+  return (
+    <div>
+      <div className="container">
+        <div className="row">
+          <div className="containerError col-md-12">
+            <Image
+              className="imgError w-100"
+              src="./src/assets/dog.jpg"
+              alt="Imagen 404"
+            />
+          </div>
+          <div className="col-md-12 text-center">
+            <h1 className="number text-center py-2 fw-bold">
+              <span className="spanError">4</span>
+              <span className="spanError">0</span>
+              <span className="spanError">4</span>
+            </h1>
+            <p className="phrase text-center py-1">
+              Upsss!!! Nada puede salir mal...
+            </p>
+            <p className="phraseError text-center">PAGINA NO ENCONTRADA.</p>
+
+            <Button className="btn-primary">VOLVER A INICIO</Button>
+          </div>
         </div>
       </div>
     </div>
-   
-  )
-}
+  );
+};
 
 export default Error404;
