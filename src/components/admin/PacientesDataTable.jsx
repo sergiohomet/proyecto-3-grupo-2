@@ -14,7 +14,8 @@ const PacientesDataTable = () => {
             axiosInstance.get('/pacientes')
             .then( response => {
               const { data } = response;
-              setData(data);
+              const { pacientes } = data;
+              setData(pacientes);
             })
           } catch (error) {
             console.log(error);

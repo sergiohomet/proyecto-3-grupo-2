@@ -13,7 +13,8 @@ const TurnosDataTable = () => {
       try {
         await axiosInstance.get("/turnos").then((response) => {
           const { data } = response;
-          setData(data);
+          const { turnos } = data;
+          setData(turnos);
         });
       } catch (error) {
         console.log(error);

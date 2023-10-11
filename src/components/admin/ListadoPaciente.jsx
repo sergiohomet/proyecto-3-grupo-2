@@ -21,6 +21,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
   };
 
   const handleDelete = async (id) => {
+    console.log(id);
     try {
       Swal.fire({
         title: "¿Estás seguro?",
@@ -76,9 +77,9 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
               </span>
             </p>
 
-            {pacientes.map((paciente) => (
+            {pacientes.map((paciente, index) => (
               <Paciente
-                key={paciente.id}
+                key={paciente.id || index}
                 paciente={paciente}
                 onDelete={() => handleDelete(paciente.id)}
                 handleUpdate={() => handleUpdate(paciente.id)}
