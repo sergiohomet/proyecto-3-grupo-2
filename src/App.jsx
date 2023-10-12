@@ -1,7 +1,6 @@
 import Index from "./pages";
 import { Route, Routes } from "react-router-dom";
 import Error from "./pages/Error.jsx";
-import NavBarpagina from "./Components/navegacion/NavBarpagina";
 import Footer from "./components/footer/Footer";
 import AdminPacientes from "./pages/AdminPacientes";
 import AdminTurnos from "./pages/AdminTurnos";
@@ -11,6 +10,7 @@ import Login from "./pages/Login";
 import PrivateRoutes from "./Routes/PrivateRoutes";
 import { useEffect, useState } from "react";
 import Contacto from "./pages/Contacto";
+import NavBarpagina from "./components/navegacion/NavBarpagina";
 
 function App() {
   const [isLogged, setIsLogged] = useState(
