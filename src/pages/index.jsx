@@ -1,5 +1,5 @@
 import React from "react";
-import ServiciosGrid from "../Components/Servicios/ServiciosGrid";
+import ServiciosGrid from "../Components/ServiciosGrid";
 import PlanesGrid from "../Components/Planes/PlanesGrid";
 import Trustpilot from "../Components/Trustpilot/Trustpilot";
 import SponsorsGrid from "../Components/SponsorsGrid";

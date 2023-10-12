@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { servicios } from "../../data/servicios";
+import { servicios } from "../data/servicios";
 import ServiciosCards from "./ServiciosCards";
 
 const ServiciosGrid = () => {
