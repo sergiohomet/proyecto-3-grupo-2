@@ -10,7 +10,7 @@ const Error404 = () => {
           <div className="containerError col-md-12">
             <Image
               className="imgError w-100"
-              src="./src/assets/dog.jpg"
+              src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083321/patitas/cyn/dog_guzr4o.jpg"
               alt="Imagen 404"
             />
           </div>
