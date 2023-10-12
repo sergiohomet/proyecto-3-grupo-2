@@ -1,4 +1,4 @@
-import { Formulario } from "../components/formulario";
+import { Formulario } from "../Components/formulario";
 
 const Login = ({ setIsLogged }) => {
   return (

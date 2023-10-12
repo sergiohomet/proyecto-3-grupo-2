@@ -1,5 +1,5 @@
-import PacientesDataTable from "../components/admin/PacientesDataTable"
-import TurnosDataTable from "../components/admin/TurnosDataTable"
+import PacientesDataTable from "../Components/admin/PacientesDataTable"
+import TurnosDataTable from "../Components/admin/TurnosDataTable"
 
 const AdminIndex = () => {
   return (

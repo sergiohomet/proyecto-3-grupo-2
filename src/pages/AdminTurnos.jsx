@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormularioTurnos from "../Components/admin/FormularioTurnos";
-import ListadoTurnos from "../components/admin/ListadoTurnos";
+import ListadoTurnos from "../Components/admin/ListadoTurnos";
 
 const AdminPacientes = () => {
   const [turnos, setTurnos] = useState([]);
