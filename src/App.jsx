@@ -1,7 +1,6 @@
 import Index from "./pages";
 import { Route, Routes } from "react-router-dom";
-import Error from "./pages/Error.jsx";
-import Footer from "./components/footer/Footer";
+import Footer from "./Components/footer/Footer";
 import AdminPacientes from "./pages/AdminPacientes";
 import AdminTurnos from "./pages/AdminTurnos";
 import AdminIndex from "./pages/AdminIndex";
@@ -11,6 +10,7 @@ import PrivateRoutes from "./Routes/PrivateRoutes";
 import { useEffect, useState } from "react";
 import Contacto from "./pages/Contacto";
 import NavBarpagina from "./components/navegacion/NavBarpagina";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const [isLogged, setIsLogged] = useState(
@@ -29,7 +29,7 @@ function App() {
         <div className="content">
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="*" element={<Error />} />
+          <Route path="*" element={<ErrorPage />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/login" element={<Login setIsLogged={setIsLogged} />} />

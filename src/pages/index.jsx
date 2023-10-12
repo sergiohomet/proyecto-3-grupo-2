@@ -1,9 +1,9 @@
 import React from "react";
-import ServiciosGrid from "../components/Servicios/ServiciosGrid";
-import PlanesGrid from "../components/Planes/PlanesGrid";
-import Trustpilot from "../components/Trustpilot/Trustpilot";
-import Weather from "../Components/Weather";
-import SponsorsGrid from "../components/SponsorsGrid";
+import ServiciosGrid from "../Components/Servicios/ServiciosGrid";
+import PlanesGrid from "../Components/Planes/PlanesGrid";
+import Trustpilot from "../Components/Trustpilot/Trustpilot";
+import SponsorsGrid from "../Components/SponsorsGrid";
+import Weather from '../Components/Weather'
 
 const Index = () => {
   return (
