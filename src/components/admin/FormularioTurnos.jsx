@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TURNOS_SCHEMA } from "../../helpers/validationSchema";
-import Error from "../Error";
+import Error from "../../hooks/Error";
 import { axiosInstance } from "../../config/axiosInstance";
 import { useEffect } from "react";
 

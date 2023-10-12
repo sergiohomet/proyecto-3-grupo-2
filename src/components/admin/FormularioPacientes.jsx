@@ -3,7 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { PACIENTE_SCHEMA } from "../../helpers/validationSchema";
 import { axiosInstance } from "../../config/axiosInstance";
 import { useEffect, useState } from "react";
-import Error from "../Error";
+import Error from "../../hooks/Error";
 
 const FormularioPacientes = ({ setPacientes }) => {
   const [error, setError] = useState({ status: false, message: "" });

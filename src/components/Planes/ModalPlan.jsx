@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { PLANES_SCHEMA } from "../../helpers/validationSchema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Error from "../Error";
+import Error from "../../hooks/Error";
 import { axiosInstance } from "../../config/axiosInstance";
 
 const ModalPlan = ({ show, setShow, plan }) => {

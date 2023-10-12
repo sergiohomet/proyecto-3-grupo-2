@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 
-const Error404 = () => {
+const Error404Component = () => {
   return (
     <div className="mb-5">
       <div className="container">
@@ -33,4 +33,4 @@ const Error404 = () => {
   );
 };
 
-export default Error404;
+export default Error404Component;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { axiosInstance } from "../../config/axiosInstance";
-import Error from "../Error";
+import Error from "../../hooks/Error";
 
 const TurnoFormUpdate = ({ turno, onUpdate }) => {
   const [error, setError] = useState({ status: false, message: "" });

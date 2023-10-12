@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import Error from "./Error";
+import Error from "../hooks/Error";
 import { CONTACTO_SCHEMA } from "../helpers/validationSchema";
 import Swal from "sweetalert2";
 
