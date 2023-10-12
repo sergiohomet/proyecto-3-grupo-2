@@ -11,10 +11,10 @@ const Index = () => {
       <div className="d-flex justify-content-center container-fluid indexBackground">
         <div className="">
           <h3 className="text-start textoIndex">
-            Dale a esas Patitas todo el amor que necesitan1
+            Dale a esas Patitas todo el amor que necesitan!
           </h3>
           <p className="text-start textoIndex">
-            <b>Nosotros</b> sabemos como ciudarlos.
+            <b>Nosotros</b> sabemos como cuidarlos.
           </p>
         </div>
         <div className=" d-flex align-items-center">
@@ -33,7 +33,7 @@ const Index = () => {
       <div className=" d-flex flex-column mt-5">
         <div className="d-flex justify-content-center">
           <h3 className="mb-2 text-center">
-            Elegí el plan que mas se adapte a tu <i>perrhijo</i>
+            Elegí el plan que más se adapte a tu <i>perrhijo</i>
           </h3>
         </div>
         <div className="mb-5 planesCont container-fluid">

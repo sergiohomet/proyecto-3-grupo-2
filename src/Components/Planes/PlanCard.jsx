@@ -46,7 +46,7 @@ const PlanCard = ({ data }) => {
         </div>
         <div className="d-flex justify-content-center mt-2">
           <a className="btn btn-primary m-2" onClick={handleShow}>
-            Mas informacion
+            Más información
           </a>
         </div>
       </div>
