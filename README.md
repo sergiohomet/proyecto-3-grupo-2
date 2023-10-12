@@ -73,6 +73,10 @@ npm install
 * [tailwindcss](https://tailwindcss.com/) - Marco de CSS con enfoque en utilidades.
 * [yup](https://www.npmjs.com/package/yup) - Biblioteca de validación de esquemas para formularios.
 
+# Deploy en Netlify
+
+* [Patitas](https://patitasvet1.netlify.app/) - Netlify
+
 ## Autor
 * **Francisco José Vicente**
 
