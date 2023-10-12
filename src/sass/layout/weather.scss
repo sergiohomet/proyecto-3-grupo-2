@@ -1,0 +1,10 @@
+@use "../base/variables" as v;
+
+.weather {
+    font-size: x-small;
+    background-color: v.$background;
+
+    &__day {
+        color: v.$primary;
+    }
+}

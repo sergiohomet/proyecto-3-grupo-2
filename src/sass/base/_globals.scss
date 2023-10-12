@@ -1,0 +1,74 @@
+@use "../base/variables" as v;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.btn-primary {
+  font-weight: 600;
+  background-color: v.$primary;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4d7260;
+}
+
+.btn-secondary {
+  font-weight: 600;
+  color: v.$primary;
+  background-color: v.$tertiary;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-secondary:hover {
+  color: v.$primary;
+  background-color: #baca9f;
+}
+
+.bg-primary {
+  background-color: v.$primary !important;
+}
+
+.bg-secondary {
+  background-color: v.$secondary !important;
+}
+
+.bg-tertiary {
+  background-color: v.$tertiary !important;
+}
+
+.text-primary {
+  color: v.$primary !important;
+}
+
+.text-secondary {
+  color: v.$secondary !important;
+}
+
+.text-tertiary {
+  color: v.$tertiary !important;
+}
+
+.disabled {
+  background-color: gray !important;
+}
