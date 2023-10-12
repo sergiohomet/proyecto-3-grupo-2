@@ -16,7 +16,7 @@ const Weather = () => {
   }, []);
   return (
     <>
-      {weather && (
+      {weather ? (
         <div className="card weather ms-3">
           <div className="card-body p-0">
             <div className="row">
@@ -41,6 +41,14 @@ const Weather = () => {
                 <img src={weather.afterTomorrow.icon} alt="icon" />
                 <h6>{weather.afterTomorrow.temp}</h6>
               </div>
+            </div>
+          </div>{" "}
+        </div>
+      ) : (
+        <div className="card weather ms-3">
+          <div className="card-body p-0">
+            <div className="row">
+              <p>Error al obtener datos del clima</p>
             </div>
           </div>{" "}
         </div>
