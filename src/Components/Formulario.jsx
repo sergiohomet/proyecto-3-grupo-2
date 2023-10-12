@@ -45,8 +45,12 @@ const Formulario = ({ setIsLogged }) => {
       <h1>Login</h1>
 
       <form className="Formulario" onSubmit={handleSubmit(onSubmit)}>
-        <a className="text-white text-xl font-bold no-underline">Email</a>
+        <label 
+          className="text-white text-xl font-bold no-underline"
+          htmlFor='username'
+        >Email</label>
         <input
+          id="username"
           type="text"
           placeholder="ej. ulises@gmail.com"
           className="mb-0"
@@ -58,8 +62,12 @@ const Formulario = ({ setIsLogged }) => {
           </Error>
         )}
 
-        <a className="text-white text-xl font-bold no-underline">Contraseña</a>
+        <label 
+          className="text-white text-xl font-bold no-underline"
+          htmlFor='password'
+        >Contraseña</label>
         <input
+          id='password'
           type="Password"
           placeholder="123456789"
           className="mb-0"
@@ -82,6 +90,7 @@ const Formulario = ({ setIsLogged }) => {
         </Link>
         {!error ? (
           <button
+            alt='Iniciar sesion'
             className={
               !load
                 ? "btn-primary p-2 text-white"
@@ -92,6 +101,7 @@ const Formulario = ({ setIsLogged }) => {
           </button>
         ) : (
           <button
+            alt='Iniciar sesion'
             className={
               !load
                 ? "btn-primary p-2 text-white"

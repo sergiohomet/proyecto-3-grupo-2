@@ -33,7 +33,7 @@ const AcercaDeNosotros = () => {
                 <div className="card-nosotros mx-auto h-100">
                   <img
                     src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/fran_mhogqp.png"
-                    alt=""
+                    alt="Fran"
                   ></img>
                   <div>
                     <h4 className="cardTitle">Francisco Vicente</h4>
@@ -45,7 +45,7 @@ const AcercaDeNosotros = () => {
                 <div className="card-nosotros mx-auto h-100">
                   <img
                     src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083321/patitas/cyn/gonzalo_yshur4.png"
-                    alt=""
+                    alt="Gonza"
                   ></img>
                   <div>
                     <h4 className="cardTitle">Gonza Hurtado</h4>
@@ -57,7 +57,7 @@ const AcercaDeNosotros = () => {
                 <div className="card-nosotros mx-auto h-100">
                   <img
                     src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/sergio_y6meu3.png"
-                    alt=""
+                    alt="Sergio"
                   ></img>
                   <div>
                     <h4 className="cardTitle">Sergio Homet</h4>
@@ -69,7 +69,7 @@ const AcercaDeNosotros = () => {
                 <div className="card-nosotros mx-auto h-100">
                   <img
                     src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/ulises_vrwvv0.png"
-                    alt=""
+                    alt="Ulises"
                   ></img>
                   <div>
                     <h4 className="cardTitle">Ulises Burgos</h4>
@@ -81,7 +81,7 @@ const AcercaDeNosotros = () => {
                 <div className="card-nosotros mx-auto h-100">
                   <img
                     src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/cyn_zsxwsz.png"
-                    alt=""
+                    alt="Cyn"
                   ></img>
                   <div>
                     <h4 className="cardTitle">Cynthia Pistán</h4>
