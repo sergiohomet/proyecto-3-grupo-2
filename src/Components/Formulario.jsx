@@ -6,7 +6,7 @@ import { axiosInstance } from "../config/axiosInstance";
 import { useState } from "react";
 import Error from "../hooks/Error";
 
-export function Formulario({ setIsLogged }) {
+const Formulario = ({ setIsLogged }) => {
   const [load, setLoad] = useState(false);
   const [error, setError] = useState({ status: false, message: "" });
 
@@ -105,3 +105,5 @@ export function Formulario({ setIsLogged }) {
     </section>
   );
 }
+
+export default Formulario;
