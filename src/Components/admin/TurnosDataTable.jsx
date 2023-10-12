@@ -27,7 +27,6 @@ const TurnosDataTable = () => {
     return `${dia} de ${mes} de ${ano}`;
   };
   
-  // ...
   
   const formattedData = data.map((row) => ({
     vet: row.vet,
