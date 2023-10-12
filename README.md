@@ -42,7 +42,7 @@ Espero que esta descripción te sea útil para comprender la funcionalidad de tu
 
 ```
 git clone https://github.com/sergiohomet/proyecto-3-grupo-2-front.git
-cd veterinaria-project
+cd proyecto-3-grupo-2-front
 npm install
 ```
 
