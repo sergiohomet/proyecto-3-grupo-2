@@ -31,7 +31,10 @@ const AcercaDeNosotros = () => {
             <div className="row row-cols-md-2 row-cols-lg-3 row-cols-1 card-container py-3">
               <div className="col mb-4">
                 <div className="card-nosotros mx-auto h-100">
-                  <img src="./src/assets/fran.png" alt=""></img>
+                  <img
+                    src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/fran_mhogqp.png"
+                    alt=""
+                  ></img>
                   <div>
                     <h4 className="cardTitle">Francisco Vicente</h4>
                     <p className="cardText">Back-End</p>
@@ -40,7 +43,10 @@ const AcercaDeNosotros = () => {
               </div>
               <div className="col mb-4">
                 <div className="card-nosotros mx-auto h-100">
-                  <img src="./src/assets/gonzalo.png" alt=""></img>
+                  <img
+                    src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083321/patitas/cyn/gonzalo_yshur4.png"
+                    alt=""
+                  ></img>
                   <div>
                     <h4 className="cardTitle">Gonza Hurtado</h4>
                     <p className="cardText">Front-End</p>
@@ -49,7 +55,10 @@ const AcercaDeNosotros = () => {
               </div>
               <div className="col mb-4">
                 <div className="card-nosotros mx-auto h-100">
-                  <img src="./src/assets/sergio.png" alt=""></img>
+                  <img
+                    src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/sergio_y6meu3.png"
+                    alt=""
+                  ></img>
                   <div>
                     <h4 className="cardTitle">Sergio Homet</h4>
                     <p className="cardText">Front-End</p>
@@ -58,7 +67,10 @@ const AcercaDeNosotros = () => {
               </div>
               <div className="col mb-4">
                 <div className="card-nosotros mx-auto h-100">
-                  <img src="./src/assets/ulises.png" alt=""></img>
+                  <img
+                    src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/ulises_vrwvv0.png"
+                    alt=""
+                  ></img>
                   <div>
                     <h4 className="cardTitle">Ulises Burgos</h4>
                     <p className="cardText">Front-End</p>
@@ -67,7 +79,10 @@ const AcercaDeNosotros = () => {
               </div>
               <div className="col mb-4">
                 <div className="card-nosotros mx-auto h-100">
-                  <img src="./src/assets/cyn.png" alt=""></img>
+                  <img
+                    src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697083322/patitas/cyn/cyn_zsxwsz.png"
+                    alt=""
+                  ></img>
                   <div>
                     <h4 className="cardTitle">Cynthia Pistán</h4>
                     <p className="cardText">Front-End</p>
