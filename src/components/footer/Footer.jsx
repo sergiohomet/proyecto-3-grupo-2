@@ -27,7 +27,7 @@ const Footer = () => {
                   </h4>
                   <ul className="list-unstyled">
                     <li>
-                      <a href="/nosotros"> Acerca de Nosotros</a>
+                      <Link to={'/nosotros'}>Acerca de Nosotros</Link>
                     </li>
                     <li>
                       <a href="/contacto">Contacto</a>
