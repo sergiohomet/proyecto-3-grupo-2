@@ -28,10 +28,10 @@ const Footer = () => {
                   </h4>
                   <ul className="list-unstyled">
                     <li>
-                      <Link to={'/nosotros'}>Acerca de Nosotros</Link>
+                      <Link to={"/nosotros"}>Acerca de Nosotros</Link>
                     </li>
                     <li>
-                    <Link to={'/contacto'}>Contacto</Link>
+                      <Link to={"/contacto"}>Contacto</Link>
                     </li>
 
                     <li className="d-flex justify-content-center align-items-center">
@@ -51,27 +51,27 @@ const Footer = () => {
                 <h4 className="h4-footer text-tertiary">Redes sociales</h4>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="/error">
-                      <i className="bi bi-facebook"></i>
-                    </a>
+                    <Link to={'/error'}>
+                      <i className="bi bi-facebook me-1"></i>
+                    </Link>
                     Facebook
                   </li>
                   <li>
-                    <a href="/error">
-                      <i className="bi bi-instagram"></i>
-                    </a>
+                    <Link to={'/error'}>
+                      <i className="bi bi-instagram me-1"></i>
+                    </Link>
                     Instagram
                   </li>
                   <li>
-                    <a href="/error">
-                      <i className="bi bi-twitter"></i>
-                    </a>
+                    <Link to={'/error'}>
+                      <i className="bi bi-twitter me-1"></i>
+                    </Link>
                     Twitter
                   </li>
                   <li>
-                    <a href="/error">
-                      <i className="bi bi-tiktok"></i>
-                    </a>
+                    <Link to={'/error'}>
+                      <i className="bi bi-tiktok me-1"></i>
+                    </Link>
                     Tik-Tok
                   </li>
                 </ul>

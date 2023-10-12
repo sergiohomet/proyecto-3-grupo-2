@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import Contacto from "./pages/Contacto";
 import NavBarpagina from "./components/navegacion/NavBarpagina";
 import ErrorPage from "./pages/ErrorPage";
-import Footer from "./Components/footer/Footer";
+import Footer from "./Components/Footer";
 import AcercaDeNosotros from "./Components/AcercaDeNosotros";
 
 function App() {
