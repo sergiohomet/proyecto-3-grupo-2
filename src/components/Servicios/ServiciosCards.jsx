@@ -13,9 +13,6 @@ const ServiciosCards = ({ data }) => {
         <p className="card-title text-center cardServicios__titulo">
           {data.titulo}
         </p>
-        {/* <div className="card-body">
-          <p className="card-text text-sm">{data.descripcion}</p>
-        </div> */}
       </div>
     </>
   );

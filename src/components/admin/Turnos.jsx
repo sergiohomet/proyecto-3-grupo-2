@@ -3,7 +3,7 @@ import React from "react";
 const Turnos = ({ turno, onDelete, handleUpdate }) => {
   const { id, vet, pet, date, hour, details } = turno;
 
-  const fechaDesdeBackend = turno.date;
+  const fechaDesdeBackend = date;
 const dateObj = new Date(fechaDesdeBackend);
 const fechaFormateada = dateObj.toLocaleDateString("es-AR", {
   year: "numeric",

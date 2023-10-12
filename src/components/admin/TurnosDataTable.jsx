@@ -48,6 +48,7 @@ const TurnosDataTable = () => {
       name: "Veterinario",
       selector: (row) => row.vet,
       sortable: true,
+      sortable: true,
       center: true,
     },
     {
