@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { axiosInstance } from "../config/axiosInstance";
 import { useState } from "react";
-import Error from "../helpers/Error";
+import Error from "../hooks/Error";
 
 const Formulario = ({ setIsLogged }) => {
   const [load, setLoad] = useState(false);
