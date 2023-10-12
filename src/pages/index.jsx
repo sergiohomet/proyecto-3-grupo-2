@@ -36,13 +36,13 @@ const Index = () => {
             Elegí el plan que mas se adapte a tu <i>perrhijo</i>
           </h3>
         </div>
-        <div className="mb-5 planesCont">
+        <div className="mb-5 planesCont container-fluid">
           <PlanesGrid />
         </div>
       </div>
       <div className="container-fluid mb-5">
         <h3>Opiniones verificadas sobre Patitas</h3>
-        <div className="">
+        <div className="container-fluid">
           <Trustpilot />
         </div>
       </div>
