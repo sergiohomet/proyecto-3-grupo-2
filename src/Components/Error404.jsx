@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 
 const Error404 = () => {
   return (
-    <div>
+    <div className="mb-5">
       <div className="container">
         <div className="row">
           <div className="containerError col-md-12">
