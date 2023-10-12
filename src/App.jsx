@@ -1,7 +1,7 @@
 import Index from "./pages";
 import { Route, Routes } from "react-router-dom";
 import Error from "./pages/Error.jsx";
-import NavBarpagina from "./Components/navegacion/NavBarpagina.jsx";
+import NavBarpagina from "./Components/navegacion/NavBarpagina";
 import Footer from "./components/footer/Footer";
 import AdminPacientes from "./pages/AdminPacientes";
 import AdminTurnos from "./pages/AdminTurnos";
