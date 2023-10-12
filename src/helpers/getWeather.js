@@ -8,7 +8,7 @@ export const getWeather = async(zone = 'tucuman') => {
         url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
         params: { q: zone, days: '3' },
         headers: {
-            'X-RapidAPI-Key': import.meta.env.REACT_APP_WATHER_API_KEY,
+            'X-RapidAPI-Key': '9f181d525cmsh2362f587f1856e2p1e2df6jsn2bde18f329ce',
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
     };

@@ -20,14 +20,13 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
     <>
       <Navbar expand="lg " className="navbar-container navbar-dark">
         <Container fluid>
-          <Navbar.Brand href="#">
-            {" "}
+          <Link to={"/"}>
             <img
               src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697058067/patitas/patitasNav_sbn7yu.png"
               width={"70"}
               alt="Patitas Logo"
             />
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse className="visible text-white" id="navbarScroll">
             <Nav className="ms-auto" navbarScroll>
