@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 import PrivateRoutes from "./Routes/PrivateRoutes";
 import { useEffect, useState } from "react";
 import Contacto from "./pages/Contacto";
-import NavBarpagina from "./components/navegacion/NavBarpagina";
+import NavBarpagina from "./Components/navegacion/NavBarpagina";
 import ErrorPage from "./pages/ErrorPage";
 import Footer from "./Components/Footer";
 import AcercaDeNosotros from "./Components/AcercaDeNosotros";
