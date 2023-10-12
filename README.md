@@ -50,7 +50,7 @@ npm install
 
 * [React](https://es.react.dev/) - Biblioteca JavaScript para crear interfaces de usuario.
 
-## Frameworks adicionales y otras implementaciones
+### Frameworks adicionales y otras implementaciones
 
 * [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers) - Resolutores para React Hook Form.
 * [@material-tailwind/react](https://www.npmjs.com/package/@material-tailwind/react) - Componentes de diseño Material para React.
