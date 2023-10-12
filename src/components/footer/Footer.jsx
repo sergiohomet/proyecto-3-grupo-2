@@ -31,7 +31,7 @@ const Footer = () => {
                       <Link to={'/nosotros'}>Acerca de Nosotros</Link>
                     </li>
                     <li>
-                      <a href="/contacto">Contacto</a>
+                    <Link to={'/contacto'}>Contacto</Link>
                     </li>
 
                     <li className="d-flex justify-content-center align-items-center">
