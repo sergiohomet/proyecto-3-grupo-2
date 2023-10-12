@@ -14,7 +14,7 @@ const Index = () => {
             Dale a esas Patitas todo el amor que necesitan!
           </h3>
           <p className="text-start textoIndex">
-            <b>Nosotros</b> sabemos como cuidarlos.
+            <b>Nosotros</b> sabemos cómo cuidarlos.
           </p>
         </div>
         <div className=" d-flex align-items-center">

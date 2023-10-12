@@ -5,7 +5,7 @@ export const planes = [
         id: 1,
         titulo: "Basico",
         caracteristicas: [
-            "100% de reintegro en consultas y clínica general horario diurno.",
+            "100% de reintegro en consultas y clínica general en horario diurno.",
             "10% de reintegro en alimentos y accesorios.",
             "20% de reintegro en farmacia.",
             "20% de reintegro en cardiología."
@@ -38,11 +38,11 @@ export const planes = [
         id: 2,
         titulo: "Estandar",
         caracteristicas: [
-            "100% de reintegro en consultas y clínica general horario diurno.",
+            "100% de reintegro en consultas y clínica en horario diurno.",
             "15% de reintegro en alimentos y accesorios.",
             "30% de reintegro farmacia.",
             "50% de reintegro baño y corte.",
-            "40% de reintegro en cardiologia, dermatologia oftalmologia y más."
+            "40% de reintegro en cardiología, dermatología, oftalmología y más."
         ],
         infoPlan: {
             "consulta y controles clinica general (horario diurno)": "100%",
@@ -72,11 +72,11 @@ export const planes = [
         id: 3,
         titulo: "Premium",
         caracteristicas: [
-            "100% de reintegro en consultas y clinica general horario diurno.",
+            "100% de reintegro en consultas y clinica general en horario diurno.",
             "20% de reintegro en alimentos y accesorios.",
             "40% de reintegro en farmacia.",
             "50% de reintegro en baño y corte.",
-            "100% de reintegro en cardiologia, dermatologia oftalmologia y más."
+            "100% de reintegro en cardiología, dermatología, oftalmología y más."
         ],
         infoPlan: {
             "consulta y controles clinica general (horario diurno)": "100%",
