@@ -51,7 +51,7 @@ const Formulario = ({ setIsLogged }) => {
         >Email</label>
         <input
           id="username"
-          type="text"
+          type="email"
           placeholder="ej. ulises@gmail.com"
           className="mb-0"
           {...register("username")}
