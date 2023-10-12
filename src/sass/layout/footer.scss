@@ -5,7 +5,6 @@
   border: 2px solid v.$secondary;
   padding-top: 1rem;
   color: white;
-  max-height: 0 200px;
 
   a {
     color: white;
@@ -22,7 +21,6 @@
 
 ul li a i {
   color: white;
-  // color: #000;
   transition: color 0.3s ease;
   font-size: 17px;
   transition: font-size 0.3s ease;
@@ -30,7 +28,6 @@ ul li a i {
 
 ul li a:hover i {
   color: greenyellow;
-  // font-size: 24px;
 }
 
 ul li a:hover i.bi-twitter {

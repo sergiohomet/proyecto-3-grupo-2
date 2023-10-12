@@ -14,14 +14,6 @@
     text-align: center;
   }
 
-  .letra-formulario {
-    color: white;
-  }
-
-  .link-contraseña {
-    color: v.$background;
-  }
-
   .Formulario {
     display: flex;
     justify-content: center;
@@ -46,14 +38,5 @@
         outline: none;
       }
     }
-  }
-
-  .btn-primary {
-    color: v.$background;
-  }
-
-  .error-message {
-    color: red;
-    text-align: center;
   }
 }

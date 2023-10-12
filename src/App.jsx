@@ -24,8 +24,10 @@ function App() {
 
   return (
     <>
-      <NavBarpagina setIsLogged={setIsLogged} isLogged={isLogged} />
-      <Routes>
+      <div className="app-container">
+        <NavBarpagina setIsLogged={setIsLogged} isLogged={isLogged} />
+        <div className="content">
+        <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<Error />} />
           <Route path="/nosotros" element={<Nosotros />} />
@@ -37,7 +39,9 @@ function App() {
             <Route path="/admin" element={<AdminIndex />} />
           </Route>
         </Routes>
+        </div>
         <Footer />
+      </div>
     </>
   );
 }

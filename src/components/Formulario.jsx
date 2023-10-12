@@ -41,11 +41,11 @@ export function Formulario({ setIsLogged }) {
   };
 
   return (
-    <section className="form-container mt-5">
+    <section className="form-container">
       <h1>Login</h1>
 
       <form className="Formulario" onSubmit={handleSubmit(onSubmit)}>
-        <a className="letra-formulario font-bolder no-underline">Email</a>
+        <a className="text-white text-xl font-bold no-underline">Email</a>
         <input
           type="text"
           placeholder="ej. ulises@gmail.com"
@@ -58,7 +58,7 @@ export function Formulario({ setIsLogged }) {
           </Error>
         )}
 
-        <a className="letra-formulario font-bolder no-underline">Contraseña</a>
+        <a className="text-white text-xl font-bold no-underline">Contraseña</a>
         <input
           type="Password"
           placeholder="123456789"
@@ -82,13 +82,21 @@ export function Formulario({ setIsLogged }) {
         </Link>
         {!error ? (
           <button
-            className={!load ? "btn-primary p-2" : "btn-primary p-2 disabled"}
+            className={
+              !load
+                ? "btn-primary p-2 text-white"
+                : "btn-primary p-2 text-white disabled"
+            }
           >
             {!load ? "Iniciar Sesión" : "Cargando..."}
           </button>
         ) : (
           <button
-            className={!load ? "btn-primary p-2" : "btn-primary p-2 disabled"}
+            className={
+              !load
+                ? "btn-primary p-2 text-white"
+                : "btn-primary p-2 text-white disabled"
+            }
           >
             {!load ? "Iniciar Sesión" : "Cargando..."}
           </button>
