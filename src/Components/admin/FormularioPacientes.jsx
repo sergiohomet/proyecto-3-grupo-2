@@ -5,7 +5,7 @@ import { axiosInstance } from "../../config/axiosInstance";
 import { useEffect, useState } from "react";
 import Error from "../../hooks/Error";
 
-const FormularioPacientes = ({ setPacientes }) => {
+const FormularioPacientes = ({ setUpdateCounter }) => {
   const [error, setError] = useState({ status: false, message: "" });
   const [load, setLoad] = useState(false);
 
@@ -28,33 +28,16 @@ const FormularioPacientes = ({ setPacientes }) => {
       });
 
       reset();
+      setUpdateCounter(setUpdateCounter + 1);
+      setLoad(false);
     } catch (error) {
       console.log(error);
       setError({ status: true, message: error.response.data.mensaje });
       setTimeout(() => {
         setError({ status: true, message: "" });
       }, 5000);
-    } finally {
-      fetchData(data);
-      setLoad(false);
     }
   };
-
-  const fetchData = async () => {
-    try {
-      await axiosInstance.get("/pacientes").then((response) => {
-        const { data } = response;
-        const { pacientes } = data;
-        setPacientes(pacientes);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <>

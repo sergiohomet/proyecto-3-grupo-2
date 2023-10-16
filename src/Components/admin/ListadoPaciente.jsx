@@ -4,7 +4,7 @@ import Paciente from "./Paciente";
 import { useState, useEffect } from "react";
 import PacienteModalUpdate from "./PacienteModalUpdate";
 
-const ListadoPaciente = ({ pacientes, setPacientes }) => {
+const ListadoPaciente = ({ pacientes, setPacientes, updateCounter, setUpdateCounter }) => {
   const [show, setShow] = useState(false);
   const [pacienteId, setPacienteId] = useState(null);
 
@@ -58,7 +58,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
 
   useEffect(() => {
     loadPacientes();
-  }, [setPacientes]);
+  }, [setPacientes, updateCounter]);
 
   return (
     <>
@@ -106,6 +106,7 @@ const ListadoPaciente = ({ pacientes, setPacientes }) => {
               paciente._id === pacienteId ? updatedPaciente : paciente
             );
             setPacientes(updatedPacientes);
+            setUpdateCounter(setUpdateCounter)
           }}
         />
       </div>

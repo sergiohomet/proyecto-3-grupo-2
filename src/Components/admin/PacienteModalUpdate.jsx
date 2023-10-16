@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import { axiosInstance } from "../../config/axiosInstance";
 import PacienteFormUpdate from "./PacienteFormUpdate";
 
-const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
+const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate, setUpdateCounter }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,6 +35,7 @@ const PacienteModalUpdate = ({ show, handleClose, pacienteId, onUpdate }) => {
       );
 
       onUpdate(response.data);
+      setUpdateCounter(setUpdateCounter + 1);
       handleClose();
     } catch (error) {
       console.log(error);

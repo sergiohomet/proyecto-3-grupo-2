@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { axiosInstance } from "../../config/axiosInstance";
 
 const PacienteFormUpdate = ({ paciente, onUpdate }) => {
   const [formDatos, setFormDatos] = useState({...paciente})
@@ -11,19 +10,10 @@ const PacienteFormUpdate = ({ paciente, onUpdate }) => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      await axiosInstance.put(`/paciente/${paciente._id}`, formDatos, {
-        headers: {
-          "Content-Type": "application/json",
-        }
-      });
-      onUpdate(formDatos);
-    } catch (error) {
-      console.log(error);
-    }
+    onUpdate(formDatos);
   };
 
   return (
