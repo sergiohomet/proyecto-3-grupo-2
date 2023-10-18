@@ -4,6 +4,7 @@ import ListadoTurnos from "../Components/admin/ListadoTurnos";
 
 const AdminPacientes = () => {
   const [turnos, setTurnos] = useState([]);
+  const [updateCounter, setUpdateCounter] = useState(0);
 
   return (
     <>
@@ -14,8 +15,8 @@ const AdminPacientes = () => {
         </h1>
 
         <div className="flex flex-col lg:flex-row justify-center align-middle">
-          <FormularioTurnos setTurno={setTurnos} />
-          <ListadoTurnos turnos={turnos} setTurno={setTurnos} />
+          <FormularioTurnos setUpdateCounter={setUpdateCounter} />
+          <ListadoTurnos turnos={turnos} setTurno={setTurnos} updateCounter={updateCounter} setUpdateCounter={setUpdateCounter} />
         </div>
       </div>
     </>

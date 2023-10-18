@@ -3,9 +3,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { TURNOS_SCHEMA } from "../../helpers/validationSchema";
 import Error from "../../hooks/Error";
 import { axiosInstance } from "../../config/axiosInstance";
-import { useEffect } from "react";
 
-const FormularioTurnos = ({ setTurno }) => {
+const FormularioTurnos = ({ setUpdateCounter }) => {
   const {
     register,
     handleSubmit,
@@ -14,19 +13,6 @@ const FormularioTurnos = ({ setTurno }) => {
   } = useForm({
     resolver: yupResolver(TURNOS_SCHEMA),
   });
-
-  const fetchData = async () => {
-    try {
-      await axiosInstance.get('/turnos')
-      .then( response => {
-        const { data } = response;
-        const { turnos } = data;
-        setTurno(turnos);
-      })
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   const onSubmit = async (data) => {
     try {
@@ -37,16 +23,11 @@ const FormularioTurnos = ({ setTurno }) => {
       });
 
       reset();
+      setUpdateCounter(setUpdateCounter + 1);
     } catch (error) {
       console.log(error);
-    } finally {
-      fetchData(data);
-    } 
+    }
   };
-    
-  useEffect(() => {
-    fetchData();
-  }, [])
 
   return (
     <>

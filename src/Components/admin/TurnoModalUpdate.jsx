@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import { axiosInstance } from "../../config/axiosInstance";
 import TurnoFormUpdate from "./TurnosFormUpdate";
 
-const TurnoModalUpdate = ({ show, handleClose, turnoId, onUpdate }) => {
+const TurnoModalUpdate = ({ show, handleClose, turnoId, onUpdate, setUpdateCounter }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,6 +35,7 @@ const TurnoModalUpdate = ({ show, handleClose, turnoId, onUpdate }) => {
       );
 
       onUpdate(response.data);
+      setUpdateCounter(setUpdateCounter + 1);
       handleClose();
     } catch (error) {
       console.log(error);

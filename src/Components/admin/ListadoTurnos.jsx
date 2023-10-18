@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 import TurnoModalUpdate from "./TurnoModalUpdate";
 
-const ListadoTurnos = ({ turnos, setTurno }) => {
+const ListadoTurnos = ({ turnos, setTurno, updateCounter, setUpdateCounter }) => {
   const [show, setShow] = useState(false);
   const [turnoId, setTurnoId] = useState(null);
 
@@ -56,7 +56,7 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
 
   useEffect(() => {
     loadTurnos();
-  }, [setTurno]);
+  }, [setTurno, updateCounter]);
 
   return (
     <>
@@ -100,6 +100,7 @@ const ListadoTurnos = ({ turnos, setTurno }) => {
               turno._id === turnoId ? updatedTurno : turno
             );
             setTurno(updatedTurnos);
+            setUpdateCounter(setUpdateCounter)
           }}
         />
       </div>

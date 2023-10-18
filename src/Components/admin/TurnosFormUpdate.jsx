@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import { axiosInstance } from "../../config/axiosInstance";
-import Error from "../../hooks/Error";
 
 const TurnoFormUpdate = ({ turno, onUpdate }) => {
-  const [error, setError] = useState({ status: false, message: "" });
-  const [load, setLoad] = useState(false);
 
   const [formDatos, setFormDatos] = useState({ ...turno });
 
@@ -18,20 +14,7 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      setLoad(true);
-      await axiosInstance.put(`/turno/${turno._id}`, formDatos, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      onUpdate(formDatos);
-    } catch (error) {
-      console.log(error);
-      setError({ status: true, message: error.message });
-      setLoad(false);
-    }
+    onUpdate(formDatos);
   };
 
   return (
@@ -130,11 +113,6 @@ const TurnoFormUpdate = ({ turno, onUpdate }) => {
           onChange={handleChangeDatos}
         />
       </div>
-      {/* {error.status && (
-        <Error>
-          <p>{error.message}</p>
-        </Error>
-      )} */}
       <input
         type="submit"
         className="btn btn-primary w-100 fs-5"

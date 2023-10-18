@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PACIENTE_SCHEMA } from "../../helpers/validationSchema";
 import { axiosInstance } from "../../config/axiosInstance";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Error from "../../hooks/Error";
 
 const FormularioPacientes = ({ setUpdateCounter }) => {
