@@ -32,6 +32,12 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
               <Link className="nav-link" to="/">
                 Inicio
               </Link>
+              <Link className="nav-link" to="/nosotros">
+                Nosotros
+              </Link>
+              <Link className="nav-link" to="/contacto">
+                Contacto
+              </Link>
 
               {!isLogged ? (
                 <Link className="nav-link" to="/login">
@@ -56,12 +62,6 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
               ) : (
                 userData.rol === "user" && (
                   <>
-                    <Link className="nav-link" to="/nosotros">
-                      Nosotros
-                    </Link>
-                    <Link className="nav-link" to="/contacto">
-                      Contacto
-                    </Link>
                     <Link className="nav-link" onClick={logOut}>
                       Cerrar Sesion
                     </Link>
