@@ -24,7 +24,6 @@ const Formulario = ({ setIsLogged }) => {
     try {
       setLoad(true);
       const response = await axiosInstance.post("/login", data);
-      console.log(response);
       response && setLoad(false);
       localStorage.setItem("token", response.data.token);
       navigate("/admin");

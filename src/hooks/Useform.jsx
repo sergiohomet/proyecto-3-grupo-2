@@ -1,43 +1,27 @@
-import { useState } from'react'; 
-
+import { useState } from "react";
 
 const useForm = (initialData, onValidate) => {
-    const [form, setForm] = useState (initialData);
-    const [loading, setLoading] = useState (false);
-    const [errors, setErrors] = useState({});
+  const [form, setForm] = useState(initialData);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
 
-const handleChange = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
-    const {name, value}= e.target 
-    setForm({...form, [name]: value })
-
-
-}
-
-const handleSubmit = (e) => {
-
-    e.preventDefault()
-    const err = onValidate(form)
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const err = onValidate(form);
 
     if (err === null) {
-        console.log("Enviando Formulario...")
+      console.log("Enviando Formulario...");
     } else {
-        setErrors(err)
+      setErrors(err);
     }
+  };
 
-
-
-  
-
-}
-
-                                     
-
-
-return { form, errors, loading, handleChange, handleSubmit }
-
-}
+  return { form, errors, loading, handleChange, handleSubmit };
+};
 
 export default useForm;
- 
