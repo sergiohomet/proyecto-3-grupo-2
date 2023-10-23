@@ -85,7 +85,9 @@ export const LOGIN_SCHEMA = yup.object({
     .required("El email es obligatorio"),
   password: yup
     .string()
-    .required("La contraseña es obligatoria"),
+    .required("La contraseña es obligatoria")
+    .min(8, "El minimo son 2 caracteres")
+    .max(20, "El maximo son 28 caracteres")
 });
 
 export const CONTACTO_SCHEMA = yup.object({
