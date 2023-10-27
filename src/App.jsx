@@ -11,6 +11,7 @@ import NavBarpagina from "./Components/navegacion/NavBarpagina";
 import ErrorPage from "./pages/ErrorPage";
 import Footer from "./Components/Footer";
 import AcercaDeNosotros from "./Components/AcercaDeNosotros";
+import AdminUsuarios from "./pages/AdminUsuarios";
 
 function App() {
   const [isLogged, setIsLogged] = useState(
@@ -32,6 +33,7 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
             <Route path="/nosotros" element={<AcercaDeNosotros />} />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/usuarios" element={<AdminUsuarios />} />
             <Route
               path="/login"
               element={<Login setIsLogged={setIsLogged} />}
