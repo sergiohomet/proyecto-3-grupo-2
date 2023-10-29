@@ -33,7 +33,6 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
             <Route path="/nosotros" element={<AcercaDeNosotros />} />
             <Route path="/contacto" element={<Contacto />} />
-            <Route path="/usuarios" element={<AdminUsuarios />} />
             <Route
               path="/login"
               element={<Login setIsLogged={setIsLogged} />}
@@ -42,6 +41,7 @@ function App() {
               <Route path="/pacientes" element={<AdminPacientes />} />
               <Route path="/turnos" element={<AdminTurnos />} />
               <Route path="/admin" element={<AdminIndex />} />
+              <Route path="/usuarios" element={<AdminUsuarios />} />
             </Route>
           </Routes>
         </div>
