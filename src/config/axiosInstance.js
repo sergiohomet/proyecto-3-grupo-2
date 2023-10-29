@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
+    // baseURL: `https://backend-veterinaria-patitas.onrender.com/api/veterinaria`,
     baseURL: `${import.meta.env.VITE_APP_URL}/api/veterinaria`,
 });
 
