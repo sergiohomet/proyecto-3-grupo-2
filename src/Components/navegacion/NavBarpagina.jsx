@@ -55,6 +55,11 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
                   <Link className="nav-link" to="/turnos">
                     Turnos
                   </Link>
+                  {userData.rol === "dueno" && (
+                    <Link className="nav-link" to="/usuarios">
+                      Usuarios
+                    </Link>
+                  )}
                   <Link className="nav-link" onClick={logOut}>
                     Cerrar Sesion
                   </Link>
