@@ -8,17 +8,22 @@ export const getRating = (reviews) => {
 
     let promedio = reviewsSumadas / reviews.length;
     let resultado = promedio.toFixed(1);
+
     return resultado
 }
 
 export const getStars = (reviews) => {
     let resultado = Math.ceil(getRating(reviews))
+
+
     return resultado
 }
 
 
 export const getStarsLabel = (reviews) => {
+
     let rating = getStars(reviews)
+
     let resultado = "";
     switch (rating) {
         case 1:
