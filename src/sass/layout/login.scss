@@ -26,6 +26,11 @@
     padding: 20px;
     border-radius: 8px;
 
+    .contenedor {
+      background-color: v.$tertiary;
+      border-radius: 4px;
+    }
+
     input {
       background-color: v.$tertiary;
       border: none;
