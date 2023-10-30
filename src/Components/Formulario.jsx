@@ -71,7 +71,7 @@ const Formulario = ({ setIsLogged }) => {
         >
           Contraseña
         </label>
-        <div className="d-flex align-items-center w-100 contenedor bg-blue-gray-300">
+        <div className="d-flex align-items-center w-100 contenedor">
           <input
             id="password"
             type={viewPassword ? "text" : "password"}

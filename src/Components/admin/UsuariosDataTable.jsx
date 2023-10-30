@@ -44,6 +44,7 @@ const UsuariosDataTable = () => {
         });
         setUser(updatedUser);
         setCount(count + 1);
+        handleClose();
       } catch (error) {
         console.log(error);
       }
