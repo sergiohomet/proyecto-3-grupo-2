@@ -4,11 +4,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { axiosInstance } from "../config/axiosInstance";
 import { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import Error from "../hooks/Error";
 
 const Formulario = ({ setIsLogged }) => {
   const [load, setLoad] = useState(false);
   const [error, setError] = useState({ status: false, message: "" });
+  const [viewPassword, setViewPassword] = useState(false);
 
   const {
     register,
@@ -24,7 +26,6 @@ const Formulario = ({ setIsLogged }) => {
     try {
       setLoad(true);
       const response = await axiosInstance.post("/login", data);
-      console.log(response);
       response && setLoad(false);
       localStorage.setItem("token", response.data.token);
       navigate("/admin");
@@ -45,14 +46,16 @@ const Formulario = ({ setIsLogged }) => {
       <h1>Login</h1>
 
       <form className="Formulario" onSubmit={handleSubmit(onSubmit)}>
-        <label 
+        <label
           className="text-white text-xl font-bold no-underline"
-          htmlFor='username'
-        >Email</label>
+          htmlFor="username"
+        >
+          Email
+        </label>
         <input
           id="username"
-          type="text"
-          placeholder="ej. ulises@gmail.com"
+          type="email"
+          placeholder=""
           className="mb-0"
           {...register("username")}
         />
@@ -62,17 +65,31 @@ const Formulario = ({ setIsLogged }) => {
           </Error>
         )}
 
-        <label 
+        <label
           className="text-white text-xl font-bold no-underline"
-          htmlFor='password'
-        >Contraseña</label>
-        <input
-          id='password'
-          type="Password"
-          placeholder="123456789"
-          className="mb-0"
-          {...register("password")}
-        />
+          htmlFor="password"
+        >
+          Contraseña
+        </label>
+        <div className="d-flex align-items-center w-100 contenedor">
+          <input
+            id="password"
+            type={viewPassword ? "text" : "password"}
+            placeholder=""
+            className="mb-0"
+            {...register("password")}
+          />
+          <span
+            onClick={() => setViewPassword(!viewPassword)}
+            className="cursor-pointer"
+          >
+            {viewPassword ? (
+              <FaRegEye className="icon me-2" />
+            ) : (
+              <FaRegEyeSlash className="icon me-2" />
+            )}
+          </span>
+        </div>
         {errors.password?.message && (
           <Error>
             <p>{errors.password.message}</p>
@@ -90,7 +107,7 @@ const Formulario = ({ setIsLogged }) => {
         </Link>
         {!error ? (
           <button
-            alt='Iniciar sesion'
+            alt="Iniciar sesion"
             className={
               !load
                 ? "btn-primary p-2 text-white"
@@ -101,7 +118,7 @@ const Formulario = ({ setIsLogged }) => {
           </button>
         ) : (
           <button
-            alt='Iniciar sesion'
+            alt="Iniciar sesion"
             className={
               !load
                 ? "btn-primary p-2 text-white"
@@ -114,6 +131,6 @@ const Formulario = ({ setIsLogged }) => {
       </form>
     </section>
   );
-}
+};
 
 export default Formulario;

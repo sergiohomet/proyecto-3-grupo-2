@@ -4,6 +4,7 @@ import ListadoPaciente from "../Components/admin/ListadoPaciente";
 
 const AdminPacientes = () => {
   const [pacientes, setPacientes] = useState([]);
+  const [updateCounter, setUpdateCounter] = useState(0);
 
   return (
     <>
@@ -14,8 +15,8 @@ const AdminPacientes = () => {
         </h1>
 
         <div className="flex flex-col lg:flex-row justify-center align-middle">
-          <FormularioPacientes setPacientes={setPacientes} />
-          <ListadoPaciente pacientes={pacientes} setPacientes={setPacientes} />
+          <FormularioPacientes setUpdateCounter={setUpdateCounter} />
+          <ListadoPaciente pacientes={pacientes} setPacientes={setPacientes} updateCounter={updateCounter} setUpdateCounter={setUpdateCounter} />
         </div>
       </div>
     </>

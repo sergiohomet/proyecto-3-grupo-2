@@ -3,9 +3,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import { getUserData } from "../../hooks/getUserData";
 
 const NavBarpagina = ({ setIsLogged, isLogged }) => {
   const navigate = useNavigate();
+
+  const userData = getUserData();
 
   const logOut = () => {
     localStorage.removeItem("token");
@@ -29,12 +32,19 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
               <Link className="nav-link" to="/">
                 Inicio
               </Link>
+              <Link className="nav-link" to="/nosotros">
+                Nosotros
+              </Link>
+              <Link className="nav-link" to="/contacto">
+                Contacto
+              </Link>
 
               {!isLogged ? (
                 <Link className="nav-link" to="/login">
                   Iniciar Sesion
                 </Link>
-              ) : (
+              ) : userData &&
+                (userData.rol === "admin" || userData.rol === "dueno") ? (
                 <>
                   <Link className="nav-link" to="/admin">
                     Administracion{" "}
@@ -45,10 +55,23 @@ const NavBarpagina = ({ setIsLogged, isLogged }) => {
                   <Link className="nav-link" to="/turnos">
                     Turnos
                   </Link>
+                  {userData.rol === "dueno" && (
+                    <Link className="nav-link" to="/usuarios">
+                      Usuarios
+                    </Link>
+                  )}
                   <Link className="nav-link" onClick={logOut}>
                     Cerrar Sesion
                   </Link>
                 </>
+              ) : (
+                userData.rol === "user" && (
+                  <>
+                    <Link className="nav-link" onClick={logOut}>
+                      Cerrar Sesion
+                    </Link>
+                  </>
+                )
               )}
             </Nav>
           </Navbar.Collapse>

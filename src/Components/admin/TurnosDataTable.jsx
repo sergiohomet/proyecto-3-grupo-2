@@ -8,6 +8,35 @@ const TurnosDataTable = () => {
   const [data, setData] = useState([]);
   const { width } = useScreenSize();
 
+  const formatFecha = (fecha) => {
+    if (!fecha) {
+      return 'N/D';
+    }
+  
+    const date = new Date(fecha);
+  
+    if (isNaN(date.getTime())) {
+      return 'Fecha no válida';
+    }
+  
+    const dia = date.getDate();
+    const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    const mes = meses[date.getMonth()];
+    const ano = date.getFullYear();
+  
+    return `${dia} de ${mes} de ${ano}`;
+  };
+  
+  
+  const formattedData = data.map((row) => ({
+    vet: row.vet,
+    pet: row.pet,
+    date: formatFecha(row.date),
+    hour: row.hour,
+    details: row.details,
+  }));
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -83,7 +112,7 @@ const TurnosDataTable = () => {
         <div className="container rounded-lg p-0 mb-4">
           <DataTable
             columns={columns}
-            data={data}
+            data={formattedData}
             pagination
             paginationComponentOptions={paginationComponentOptions}
             compact

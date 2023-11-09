@@ -13,13 +13,14 @@ const TrustpilotCard = ({ review }) => {
                 alt="stars"
               />
             </div>
-            <div className="col-6">{review.date}</div>
           </div>
           <div className="text-start">
             <p className="font-bold text-dark mb-1 text-gray-700">
               {review.title}
             </p>
-            <p className="font-normal trustCard__review">{review.review}</p>
+            <p className="font-normal trustCard__review">
+              {review.description}
+            </p>
             <p className="font-normal">{review.name}</p>
           </div>
         </CardBody>
