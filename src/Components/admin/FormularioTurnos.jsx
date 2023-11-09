@@ -127,6 +127,7 @@ const FormularioTurnos = ({ setTurno }) => {
               id="date"
               type="date"
               name="date"
+              min={new Date().toISOString().split("T")[0]}
               className="border-2 w-full p-2 mt-1 placeholder-gray-400 rounded-md"
               {...register("date")}
             />
