@@ -1,10 +1,52 @@
 @use "../base/variables" as v;
 
 .weather {
+    position: absolute;
+    left: 90px;
+    width: 140px;
+    width: 210px;
     font-size: x-small;
     background-color: v.$background;
 
     &__day {
         color: v.$primary;
+    }
+}
+
+.contWeather {
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .weather {
+        position: relative;
+        left: 0;
+        width: 140px;
+        width: 210px;
+        font-size: x-small;
+        background-color: v.$background;
+
+        &__day {
+            color: v.$primary;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .weather {
+        width: 140px;
+        width: 210px;
+        font-size: x-small;
+        background-color: v.$background;
+
+        &__day {
+            color: v.$primary;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .weather {
+        display: none;
     }
 }

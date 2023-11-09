@@ -11,7 +11,7 @@
     background-color: v.$background;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
     .indexBackground {
         height: 38vh;
         background-image: url('https://res.cloudinary.com/dhvgi2cmq/image/upload/v1696807786/patitas/dogsSm_aslv2m.png');
@@ -19,17 +19,14 @@
         background-color: v.$background;
     }
 
-    .textoIndex {
-        margin-top: 10px;
-        font-weight: bold;
-        // color: whitesmoke;
-        background-color: rgba(255, 255, 255, 0.568);
-    }
-}
-
-@media (max-width: 768px) {
-    .displayNoneSm {
-        display: none;
+    .contTextIndex {
+        .textoIndex {
+            margin-top: 10px;
+            font-weight: bold;
+            margin-right: 190px;
+            background-color: rgba(255, 255, 255, 0.568);
+            width: 100%;
+        }
     }
 }
 
@@ -48,7 +45,6 @@
     .textoIndex {
         margin-top: 10px;
         font-weight: bold;
-        // color: whitesmoke;
         background-color: rgba(255, 255, 255, 0.568);
     }
 }

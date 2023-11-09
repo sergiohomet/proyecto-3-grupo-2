@@ -3,13 +3,13 @@ import ServiciosGrid from "../Components/ServiciosGrid";
 import PlanesGrid from "../Components/Planes/PlanesGrid";
 import Trustpilot from "../Components/Trustpilot/Trustpilot";
 import SponsorsGrid from "../Components/SponsorsGrid";
-import Weather from '../Components/Weather'
+import Weather from "../Components/Weather";
 
 const Index = () => {
   return (
     <div className="backgroundColor p-1">
       <div className="d-flex justify-content-center container-fluid indexBackground">
-        <div className="">
+        <div className="contTextIndex">
           <h3 className="text-start textoIndex">
             Dale a esas Patitas todo el amor que necesitan!
           </h3>
@@ -17,10 +17,9 @@ const Index = () => {
             <b>Nosotros</b> sabemos cómo cuidarlos.
           </p>
         </div>
-        <div className=" d-flex align-items-center">
-          <div className="m-auto displayNoneSm">
-            <Weather />
-          </div>
+
+        <div className="displayNoneSm contWeather">
+          <Weather />
         </div>
       </div>
       <div className="d-flex flex-column container mt-5">
