@@ -12,11 +12,11 @@ const Footer = () => {
               <div className="col-md-3 col-sm-6">
                 <ul className="list-unstyled ">
                   <div className="d-flex justify-content-center">
-                    <img
+                    <Link to={"/"}><img
                       src="https://res.cloudinary.com/dhvgi2cmq/image/upload/v1697058067/patitas/patitasNav_sbn7yu.png"
                       alt=""
                       className="imgFooter"
-                    ></img>
+                    ></img></Link>
                   </div>
                 </ul>
               </div>
@@ -53,26 +53,27 @@ const Footer = () => {
                   <li>
                     <Link to={'/error'}>
                       <i className="bi bi-facebook me-1"></i>
+                      <span>Facebook</span>
                     </Link>
-                    Facebook
+                    
                   </li>
                   <li>
                     <Link to={'/error'}>
                       <i className="bi bi-instagram me-1"></i>
+                      <span>Instagram</span>
                     </Link>
-                    Instagram
                   </li>
                   <li>
                     <Link to={'/error'}>
                       <i className="bi bi-twitter me-1"></i>
+                      <span>Twitter</span>
                     </Link>
-                    Twitter
                   </li>
                   <li>
                     <Link to={'/error'}>
                       <i className="bi bi-tiktok me-1"></i>
+                      <span>Tik-Tok</span>
                     </Link>
-                    Tik-Tok
                   </li>
                 </ul>
               </div>
